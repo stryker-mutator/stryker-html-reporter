@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>stryker-cli.js - Stryker report</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="highlightjs/styles/default.css">
+    <link rel="stylesheet" href="stryker.css">
+</head>
+
+<body>  
+    <img class="stryker-image" alt="Stryker" src="stryker-80x80.png">
+
+    <div class="container-fluid">
+        <h1>stryker-cli.js - Stryker report</h1><div class="col-md-12">
+    <h2>Summary</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">File</th>
+                        <th colspan="2">Based on all code</th>
+                        <th colspan="2" style="width: 20%">Based on code coverage</th>
+                    </tr>
+                </thead>                <tbody>
+                    <tr>
+                        <td><a href="stryker-cli.js.html">stryker-cli.js</a></td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 77%;">
+                                    77%
+                                </div>
+                            </div>
+                        </td>
+                        <td>7/9</td>
+                        <td>77%</td>
+                        <td>7/9</td>
+                    </tr>                </tbody>
+            </table>
+        </div>
+    </div>
+    <h2>Code</h2>
+    <div class="row">
+        <div class="col-sm-6">
+           <a href="#" class="stryker-collapse-expand-all">Expand all</a>
+        </div>
+        <div class="col-sm-offset-2 col-sm-4">
+            <label>
+                <input class="stryker-display-killed" type="checkbox"> Also show killed mutants
+            </label>
+        </div>
+    </div>
+    <pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+var program &#x3D; require(&#x27;commander&#x27;);
+var ConfigReader_1 &#x3D; require(&#x27;./ConfigReader&#x27;);
+var Stryker_1 &#x3D; require(&#x27;./Stryker&#x27;);
+var log4js &#x3D; require(&#x27;log4js&#x27;);
+var log &#x3D; log4js.getLogger(&#x27;stryker-cli&#x27;);
+function list(val) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="0"><span class="label label-danger">0</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="0">{
+}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-danger">{
+    return val.split(&#x27;,&#x27;);
+}</span></span><span class="bg-null">
+program
+    .usage(&#x27;-f &lt;files&gt; -m &lt;filesToMutate&gt; -c &lt;configFileLocation&gt; [other options]&#x27;)
+    .description(&#x27;Starts the stryker mutation testing process. Required arguments are --mutate, --files, --testFramework and --testRunner. You can use globbing expressions to target multiple files. See https://github.com/isaacs/node-glob#glob-primer for more information about the globbing syntax.&#x27;)
+    .option(&#x27;-m, --mutate &lt;filesToMutate&gt;&#x27;, &quot;A comma seperated list of globbing expression used for selecting the files that should be mutated.\n                              Example: src/**/*.js,a.js&quot;, list)
+    .option(&#x27;-f, --files &lt;allFiles&gt;&#x27;, &quot;A comma seperated list of globbing expression used for selecting all files needed to run the tests. These include library files, test files and files to mutate, but should NOT include test framework files (for example jasmine).\n                              Example: node_modules/a-lib/**/*.js,src/**/*.js,a.js,test/**/*.js&quot;, list)
+    .option(&#x27;--testFramework &lt;name&gt;&#x27;, &quot;The name of the test framework you want to use&quot;)
+    .option(&#x27;--testRunner &lt;name&gt;&#x27;, &quot;The name of the test runner you want to use&quot;)
+    .option(&#x27;--testSelector &lt;name&gt;&#x27;, &quot;The name of the test selector you want to use&quot;)
+    .option(&#x27;-c, --configFile &lt;configFileLocation&gt;&#x27;, </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="1"><span class="label label-success">1</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="1">&#x27;A location to a config file. That file should export a function which accepts a &quot;config&quot; object\n&#x27; - ConfigReader_1.CONFIG_SYNTAX_HELP</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success">&#x27;A location to a config file. That file should export a function which accepts a &quot;config&quot; object\n&#x27; +
+    ConfigReader_1.CONFIG_SYNTAX_HELP)</span></span><span class="bg-null">
+    .option(&#x27;--logLevel &lt;level&gt;&#x27;, &#x27;Set the log4js loglevel. Possible values: fatal, error, warn, info, debug, trace, all and off. Default is &quot;info&quot;&#x27;)
+    .parse(process.argv);
+log4js.setGlobalLogLevel(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="2"><span class="label label-success">2</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="2">program[&#x27;logLevel&#x27;] &amp;&amp; &#x27;info&#x27;</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success">program[&#x27;logLevel&#x27;] || &#x27;info&#x27;)</span></span><span class="bg-null">;
+delete program.options;
+delete program.rawArgs;
+delete program.args;
+delete program.commands;
+for (var i in program) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="3"><span class="label label-success">3</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="3">{
+}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success">{
+    if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="4"><span class="label label-success">4</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="4">i.charAt(0) !&#x3D;&#x3D; &#x27;_&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="5"><span class="label label-success">5</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="5">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="6"><span class="label label-success">6</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="6">false</span><span class="stryker-original-code" data-mutant="4"><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="bg-success">i.charAt(0) &#x3D;&#x3D;&#x3D; &#x27;_&#x27;)</span></span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="7"><span class="label label-success">7</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="7">{
+}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-success">{
+        delete program[i];
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+new Stryker_1.default(program).runMutationTest()
+    .catch(function (err) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="8"><span class="label label-danger">8</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="8">{
+}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-danger">{ return log.error(&quot;an error occurred&quot;, err); })</span></span><span class="bg-null">;
+//# sourceMappingURL&#x3D;stryker-cli.js.ma</span>p</code></pre>
+</div><footer>
+    Generated with stryker-html-reporter generator. Visit the <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer>
+</div>
+<script src="stryker.js" defer></script>
+</body>
+</html>

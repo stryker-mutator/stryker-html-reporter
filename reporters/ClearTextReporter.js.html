@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>ClearTextReporter.js - Stryker report</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../highlightjs/styles/default.css">
+    <link rel="stylesheet" href="../stryker.css">
+</head>
+
+<body>  
+    <img class="stryker-image" alt="Stryker" src="../stryker-80x80.png">
+
+    <div class="container-fluid">
+        <h1>ClearTextReporter.js - Stryker report</h1><div class="col-md-12">
+    <h2>Summary</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">File</th>
+                        <th colspan="2">Based on all code</th>
+                        <th colspan="2" style="width: 20%">Based on code coverage</th>
+                    </tr>
+                </thead>                <tbody>
+                    <tr>
+                        <td><a href="ClearTextReporter.js.html">ClearTextReporter.js</a></td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 93%;">
+                                    93%
+                                </div>
+                            </div>
+                        </td>
+                        <td>57/61</td>
+                        <td>93%</td>
+                        <td>57/61</td>
+                    </tr>                </tbody>
+            </table>
+        </div>
+    </div>
+    <h2>Code</h2>
+    <div class="row">
+        <div class="col-sm-6">
+           <a href="#" class="stryker-collapse-expand-all">Expand all</a>
+        </div>
+        <div class="col-sm-offset-2 col-sm-4">
+            <label>
+                <input class="stryker-display-killed" type="checkbox"> Also show killed mutants
+            </label>
+        </div>
+    </div>
+    <pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+var report_1 &#x3D; require(&#x27;stryker-api/report&#x27;);
+var chalk &#x3D; require(&#x27;chalk&#x27;);
+var _ &#x3D; require(&#x27;lodash&#x27;);
+var log4js &#x3D; require(&#x27;log4js&#x27;);
+var log &#x3D; log4js.getLogger(&#x27;ClearTextReporter&#x27;);
+var ClearTextReporter &#x3D; (function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="0"><span class="label label-success">0</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="0">{
+}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success">{
+    function ClearTextReporter() </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="1"><span class="label label-success">1</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="1">{
+}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success">{
+        this.out &#x3D; process.stdout;
+    }</span></span><span class="bg-success">
+    ClearTextReporter.prototype.writeLine &#x3D; function (output) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="2"><span class="label label-success">2</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="2">{
+}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success">{
+        this.out.write(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="3"><span class="label label-success">3</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="3">(output || &#x27;&#x27;) - &#x27;\n&#x27;</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success">(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="4"><span class="label label-success">4</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="4">output &amp;&amp; &#x27;&#x27;</span><span class="stryker-original-code" data-mutant="4"><span class="bg-success">output || &#x27;&#x27;)</span></span><span class="bg-success"> + &quot;\n&quot;)</span></span><span class="bg-success">;
+    };</span></span><span class="bg-success">
+    ClearTextReporter.prototype.onAllMutantsTested &#x3D; function (mutantResults) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="5"><span class="label label-success">5</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="5">{
+}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success">{
+        var _this &#x3D; this;
+        this.writeLine();
+        var mutantsKilled &#x3D; 0;
+        var mutantsTimedOut &#x3D; 0;
+        var mutantsUntested &#x3D; 0;
+        var logDebugFn &#x3D; function (input) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="6"><span class="label label-success">6</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="6">{
+}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-success">{ return log.debug(input); };</span></span><span class="bg-success">
+        var writeLineFn &#x3D; function (input) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="7"><span class="label label-success">7</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="7">{
+}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-success">{ return _this.writeLine(input); };</span></span><span class="bg-success">
+        mutantResults.forEach(function (result) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="8"><span class="label label-success">8</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="8">{
+}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-success">{
+            switch (result.status) {
+                case report_1.MutantStatus.KILLED:
+                    </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="9"><span class="label label-success">9</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="9">mutantsKilled--</span><span class="stryker-original-code" data-mutant="9"><span class="bg-success">mutantsKilled++;</span></span><span class="bg-success">
+                    log.debug(chalk.bold.green(&#x27;Mutant killed!&#x27;));
+                    _this.logMutantResult(result, logDebugFn);
+                    break;
+                case report_1.MutantStatus.TIMEDOUT:
+                    </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="10"><span class="label label-success">10</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="10">mutantsTimedOut--</span><span class="stryker-original-code" data-mutant="10"><span class="bg-success">mutantsTimedOut++;</span></span><span class="bg-success">
+                    log.debug(chalk.bold.yellow(&#x27;Mutant timed out!&#x27;));
+                    _this.logMutantResult(result, logDebugFn);
+                    break;
+                case report_1.MutantStatus.SURVIVED:
+                    _this.writeLine(chalk.bold.red(&#x27;Mutant survived!&#x27;));
+                    _this.logMutantResult(result, writeLineFn);
+                    break;
+                case report_1.MutantStatus.UNTESTED:
+                    </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="11"><span class="label label-success">11</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="11">mutantsUntested--</span><span class="stryker-original-code" data-mutant="11"><span class="bg-success">mutantsUntested++;</span></span><span class="bg-success">
+                    log.debug(chalk.bold.yellow(&#x27;Mutant untested!&#x27;));
+                    _this.logMutantResult(result, logDebugFn);
+                    break;
+            }
+        })</span></span><span class="bg-success">;
+        var mutationScoreCodebase &#x3D; (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="12"><span class="label label-success">12</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="12">(mutantsKilled + mutantsTimedOut) / mutantResults.length / 100</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success">(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="13"><span class="label label-success">13</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="13">(mutantsKilled + mutantsTimedOut) * mutantResults.length</span><span class="stryker-original-code" data-mutant="13"><span class="bg-success">(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="14"><span class="label label-success">14</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="14">mutantsKilled - mutantsTimedOut</span><span class="stryker-original-code" data-mutant="14"><span class="bg-success">mutantsKilled + mutantsTimedOut)</span></span><span class="bg-success"> / mutantResults.length)</span></span><span class="bg-success"> * 100)</span></span><span class="bg-success">.toFixed(2);
+        var mutationScoreCodeCoverage &#x3D; (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="15"><span class="label label-success">15</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="15">(mutantsKilled + mutantsTimedOut) / (mutantResults.length - mutantsUntested || 1) / 100</span><span class="stryker-original-code" data-mutant="15"><span class="bg-success">(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="16"><span class="label label-success">16</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="16">(mutantsKilled + mutantsTimedOut) * (mutantResults.length - mutantsUntested || 1)</span><span class="stryker-original-code" data-mutant="16"><span class="bg-success">(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="17"><span class="label label-success">17</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="17">mutantsKilled - mutantsTimedOut</span><span class="stryker-original-code" data-mutant="17"><span class="bg-success">mutantsKilled + mutantsTimedOut)</span></span><span class="bg-success"> / (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="18"><span class="label label-success">18</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="18">mutantResults.length - mutantsUntested &amp;&amp; 1</span><span class="stryker-original-code" data-mutant="18"><span class="bg-success">(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="19"><span class="label label-success">19</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="19">mutantResults.length + mutantsUntested</span><span class="stryker-original-code" data-mutant="19"><span class="bg-success">mutantResults.length - mutantsUntested)</span></span><span class="bg-success"> || 1)</span></span><span class="bg-success">)</span></span><span class="bg-success"> * 100)</span></span><span class="bg-success">.toFixed(2);
+        var codebaseColor &#x3D; this.getColorForMutationScore(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="20"><span class="label label-success">20</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="20">-mutationScoreCodebase</span><span class="stryker-original-code" data-mutant="20"><span class="bg-success">+mutationScoreCodebase)</span></span><span class="bg-success">;
+        var codecoverageColor &#x3D; this.getColorForMutationScore(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="21"><span class="label label-success">21</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="21">-mutationScoreCodeCoverage</span><span class="stryker-original-code" data-mutant="21"><span class="bg-success">+mutationScoreCodeCoverage)</span></span><span class="bg-success">;
+        this.writeLine(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="22"><span class="label label-success">22</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="22">mutantResults.length - mutantsUntested - &#x27; mutants tested.&#x27;</span><span class="stryker-original-code" data-mutant="22"><span class="bg-success">(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="23"><span class="label label-success">23</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="23">mutantResults.length + mutantsUntested</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success">mutantResults.length - mutantsUntested)</span></span><span class="bg-success"> + &#x27; mutants tested.&#x27;)</span></span><span class="bg-success">;
+        this.writeLine(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="24"><span class="label label-success">24</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="24">mutantsUntested - &#x27; mutants untested.&#x27;</span><span class="stryker-original-code" data-mutant="24"><span class="bg-success">mutantsUntested + &#x27; mutants untested.&#x27;)</span></span><span class="bg-success">;
+        this.writeLine(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="25"><span class="label label-danger">25</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="25">mutantsTimedOut - &#x27; mutants timed out.&#x27;</span><span class="stryker-original-code" data-mutant="25"><span class="bg-danger">mutantsTimedOut + &#x27; mutants timed out.&#x27;)</span></span><span class="bg-success">;
+        this.writeLine(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="26"><span class="label label-success">26</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="26">mutantsKilled - &#x27; mutants killed.&#x27;</span><span class="stryker-original-code" data-mutant="26"><span class="bg-success">mutantsKilled + &#x27; mutants killed.&#x27;)</span></span><span class="bg-success">;
+        this.writeLine(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="27"><span class="label label-success">27</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="27">&#x27;Mutation score based on covered code: &#x27; - codecoverageColor(mutationScoreCodeCoverage + &#x27;%&#x27;)</span><span class="stryker-original-code" data-mutant="27"><span class="bg-success">&#x27;Mutation score based on covered code: &#x27; + codecoverageColor(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="28"><span class="label label-success">28</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="28">mutationScoreCodeCoverage - &#x27;%&#x27;</span><span class="stryker-original-code" data-mutant="28"><span class="bg-success">mutationScoreCodeCoverage + &#x27;%&#x27;)</span></span><span class="bg-success">)</span></span><span class="bg-success">;
+        this.writeLine(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="29"><span class="label label-success">29</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="29">&#x27;Mutation score based on all code: &#x27; - codebaseColor(mutationScoreCodebase + &#x27;%&#x27;)</span><span class="stryker-original-code" data-mutant="29"><span class="bg-success">&#x27;Mutation score based on all code: &#x27; + codebaseColor(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="30"><span class="label label-success">30</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="30">mutationScoreCodebase - &#x27;%&#x27;</span><span class="stryker-original-code" data-mutant="30"><span class="bg-success">mutationScoreCodebase + &#x27;%&#x27;)</span></span><span class="bg-success">)</span></span><span class="bg-success">;
+    };</span></span><span class="bg-success">
+    ClearTextReporter.prototype.logMutantResult &#x3D; function (result, logImplementation) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="31"><span class="label label-success">31</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="31">{
+}</span><span class="stryker-original-code" data-mutant="31"><span class="bg-success">{
+        logImplementation(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="32"><span class="label label-success">32</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="32">result.sourceFilePath + &#x27;: line &#x27; + result.location.start.line + &#x27;:&#x27; - result.location.start.column</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="33"><span class="label label-success">33</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="33">result.sourceFilePath + &#x27;: line &#x27; + result.location.start.line - &#x27;:&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="34"><span class="label label-success">34</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="34">result.sourceFilePath + &#x27;: line &#x27; - result.location.start.line</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="35"><span class="label label-success">35</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="35">result.sourceFilePath - &#x27;: line &#x27;</span><span class="stryker-original-code" data-mutant="32"><span class="stryker-original-code" data-mutant="33"><span class="stryker-original-code" data-mutant="34"><span class="stryker-original-code" data-mutant="35"><span class="bg-success">result.sourceFilePath + &#x27;: line &#x27; </span></span><span class="bg-success">+ result.location.start.line </span></span><span class="bg-success">+ &#x27;:&#x27; </span></span><span class="bg-success">+ result.location.start.column)</span></span><span class="bg-success">;
+        logImplementation(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="36"><span class="label label-success">36</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="36">&#x27;Mutator: &#x27; - result.mutatorName</span><span class="stryker-original-code" data-mutant="36"><span class="bg-success">&#x27;Mutator: &#x27; + result.mutatorName)</span></span><span class="bg-success">;
+        result.originalLines.split(&#x27;\n&#x27;).forEach(function (line) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="37"><span class="label label-success">37</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="37">{
+}</span><span class="stryker-original-code" data-mutant="37"><span class="bg-success">{
+            logImplementation(chalk.red(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="38"><span class="label label-success">38</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="38">&#x27;-   &#x27; - line</span><span class="stryker-original-code" data-mutant="38"><span class="bg-success">&#x27;-   &#x27; + line)</span></span><span class="bg-success">);
+        })</span></span><span class="bg-success">;
+        result.mutatedLines.split(&#x27;\n&#x27;).forEach(function (line) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="39"><span class="label label-success">39</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="39">{
+}</span><span class="stryker-original-code" data-mutant="39"><span class="bg-success">{
+            logImplementation(chalk.green(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="40"><span class="label label-success">40</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="40">&#x27;+   &#x27; - line</span><span class="stryker-original-code" data-mutant="40"><span class="bg-success">&#x27;+   &#x27; + line)</span></span><span class="bg-success">);
+        })</span></span><span class="bg-success">;
+        logImplementation(&#x27;&#x27;);
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="41"><span class="label label-success">41</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="41">result.testsRan || result.testsRan.length &gt; 0</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="42"><span class="label label-success">42</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="42">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="43"><span class="label label-success">43</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="43">false</span><span class="stryker-original-code" data-mutant="41"><span class="stryker-original-code" data-mutant="42"><span class="stryker-original-code" data-mutant="43"><span class="bg-success">result.testsRan &amp;&amp; </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="44"><span class="label label-success">44</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="44">result.testsRan.length &gt;&#x3D; 0</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="45"><span class="label label-danger">45</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="45">result.testsRan.length &lt;&#x3D; 0</span><span class="stryker-original-code" data-mutant="44"><span class="stryker-original-code" data-mutant="45"><span class="bg-danger">result.testsRan.length &gt; 0)</span></span></span></span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="46"><span class="label label-danger">46</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="46">{
+}</span><span class="stryker-original-code" data-mutant="46"><span class="bg-danger">{
+            logImplementation(&#x27;Tests ran: &#x27;);
+            _.forEach(result.testsRan, function (spec) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="47"><span class="label label-success">47</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="47">{
+}</span><span class="stryker-original-code" data-mutant="47"><span class="bg-danger">{
+                logImplementation(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="48"><span class="label label-danger">48</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="48">&#x27;    &#x27; - spec</span><span class="stryker-original-code" data-mutant="48"><span class="bg-danger">&#x27;    &#x27; + spec)</span></span><span class="bg-danger">;
+            })</span></span><span class="bg-danger">;
+            logImplementation(&#x27;&#x27;);
+        }</span></span><span class="bg-success">
+    };</span></span><span class="bg-success">
+    ClearTextReporter.prototype.getColorForMutationScore &#x3D; function (score) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="49"><span class="label label-success">49</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="49">{
+}</span><span class="stryker-original-code" data-mutant="49"><span class="bg-success">{
+        var color;
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="50"><span class="label label-success">50</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="50">score &lt;&#x3D; 80</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="51"><span class="label label-success">51</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="51">score &gt;&#x3D; 80</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="52"><span class="label label-success">52</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="52">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="53"><span class="label label-success">53</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="53">false</span><span class="stryker-original-code" data-mutant="50"><span class="stryker-original-code" data-mutant="51"><span class="stryker-original-code" data-mutant="52"><span class="stryker-original-code" data-mutant="53"><span class="bg-success">score &gt; 80)</span></span></span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="54"><span class="label label-success">54</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="54">{
+}</span><span class="stryker-original-code" data-mutant="54"><span class="bg-success">{
+            color &#x3D; chalk.green;
+        }</span></span><span class="bg-success">
+        else if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="55"><span class="label label-success">55</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="55">score &lt;&#x3D; 50</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="56"><span class="label label-success">56</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="56">score &gt;&#x3D; 50</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="57"><span class="label label-success">57</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="57">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="58"><span class="label label-success">58</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="58">false</span><span class="stryker-original-code" data-mutant="55"><span class="stryker-original-code" data-mutant="56"><span class="stryker-original-code" data-mutant="57"><span class="stryker-original-code" data-mutant="58"><span class="bg-success">score &gt; 50)</span></span></span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="59"><span class="label label-success">59</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="59">{
+}</span><span class="stryker-original-code" data-mutant="59"><span class="bg-success">{
+            color &#x3D; chalk.yellow;
+        }</span></span><span class="bg-success">
+        else </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="60"><span class="label label-success">60</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="60">{
+}</span><span class="stryker-original-code" data-mutant="60"><span class="bg-success">{
+            color &#x3D; chalk.red;
+        }</span></span><span class="bg-success">
+        return color;
+    };</span></span><span class="bg-success">
+    return ClearTextReporter;
+}(</span></span><span class="bg-null">));
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: true });
+exports.default &#x3D; ClearTextReporter;
+//# sourceMappingURL&#x3D;ClearTextReporter.js.ma</span>p</code></pre>
+</div><footer>
+    Generated with stryker-html-reporter generator. Visit the <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer>
+</div>
+<script src="../stryker.js" defer></script>
+</body>
+</html>

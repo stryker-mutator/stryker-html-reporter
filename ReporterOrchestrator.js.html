@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>ReporterOrchestrator.js - Stryker report</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="highlightjs/styles/default.css">
+    <link rel="stylesheet" href="stryker.css">
+</head>
+
+<body>  
+    <img class="stryker-image" alt="Stryker" src="stryker-80x80.png">
+
+    <div class="container-fluid">
+        <h1>ReporterOrchestrator.js - Stryker report</h1><div class="col-md-12">
+    <h2>Summary</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">File</th>
+                        <th colspan="2">Based on all code</th>
+                        <th colspan="2" style="width: 20%">Based on code coverage</th>
+                    </tr>
+                </thead>                <tbody>
+                    <tr>
+                        <td><a href="ReporterOrchestrator.js.html">ReporterOrchestrator.js</a></td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 94%;">
+                                    94%
+                                </div>
+                            </div>
+                        </td>
+                        <td>18/19</td>
+                        <td>94%</td>
+                        <td>18/19</td>
+                    </tr>                </tbody>
+            </table>
+        </div>
+    </div>
+    <h2>Code</h2>
+    <div class="row">
+        <div class="col-sm-6">
+           <a href="#" class="stryker-collapse-expand-all">Expand all</a>
+        </div>
+        <div class="col-sm-offset-2 col-sm-4">
+            <label>
+                <input class="stryker-display-killed" type="checkbox"> Also show killed mutants
+            </label>
+        </div>
+    </div>
+    <pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+var report_1 &#x3D; require(&#x27;stryker-api/report&#x27;);
+var ClearTextReporter_1 &#x3D; require(&#x27;./reporters/ClearTextReporter&#x27;);
+var ProgressReporter_1 &#x3D; require(&#x27;./reporters/ProgressReporter&#x27;);
+var EventRecorderReporter_1 &#x3D; require(&#x27;./reporters/EventRecorderReporter&#x27;);
+var BroadcastReporter_1 &#x3D; require(&#x27;./reporters/BroadcastReporter&#x27;);
+var log4js &#x3D; require(&#x27;log4js&#x27;);
+var log &#x3D; log4js.getLogger(&#x27;ReporterOrchestrator&#x27;);
+var ReporterOrchestrator &#x3D; (function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="0"><span class="label label-success">0</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="0">{
+}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success">{
+    function ReporterOrchestrator(options) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="1"><span class="label label-success">1</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="1">{
+}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success">{
+        this.options &#x3D; options;
+        this.registerDefaultReporters();
+    }</span></span><span class="bg-success">
+    ReporterOrchestrator.prototype.createBroadcastReporter &#x3D; function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="2"><span class="label label-danger">2</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="2">{
+}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-danger">{
+        var _this &#x3D; this;
+        var reporters &#x3D; [];
+        var reporterOption &#x3D; this.options.reporter;
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="3"><span class="label label-success">3</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="3">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="4"><span class="label label-success">4</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="4">false</span><span class="stryker-original-code" data-mutant="3"><span class="stryker-original-code" data-mutant="4"><span class="bg-danger">reporterOption)</span></span></span><span class="bg-danger"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="5"><span class="label label-success">5</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="5">{
+}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-danger">{
+            if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="6"><span class="label label-success">6</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="6">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="7"><span class="label label-success">7</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="7">false</span><span class="stryker-original-code" data-mutant="6"><span class="stryker-original-code" data-mutant="7"><span class="bg-danger">Array.isArray(reporterOption))</span></span></span><span class="bg-danger"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="8"><span class="label label-success">8</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="8">{
+}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-danger">{
+                reporterOption.forEach(function (reporterName) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="9"><span class="label label-success">9</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="9">{
+}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-danger">{ return reporters.push({ name: reporterName, reporter: report_1.ReporterFactory.instance().create(reporterName, _this.options) }); })</span></span><span class="bg-danger">;
+            }</span></span><span class="bg-danger">
+            else </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="10"><span class="label label-success">10</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="10">{
+}</span><span class="stryker-original-code" data-mutant="10"><span class="bg-danger">{
+                reporters.push({ name: reporterOption, reporter: report_1.ReporterFactory.instance().create(reporterOption, this.options) });
+            }</span></span><span class="bg-danger">
+        }</span></span><span class="bg-danger">
+        else </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="11"><span class="label label-success">11</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="11">{
+}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-danger">{
+            log.warn(&quot;No reporter configured. Please configure one or more reporters in the (for example: reporter: &#x27;progress&#x27;)&quot;);
+            this.logPossibleReporters();
+        }</span></span><span class="bg-danger">
+        return new BroadcastReporter_1.default(reporters);
+    };</span></span><span class="bg-success">
+    ReporterOrchestrator.prototype.logPossibleReporters &#x3D; function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="12"><span class="label label-success">12</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="12">{
+}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success">{
+        var possibleReportersCsv &#x3D; &#x27;&#x27;;
+        report_1.ReporterFactory.instance().knownNames().forEach(function (name) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="13"><span class="label label-success">13</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="13">{
+}</span><span class="stryker-original-code" data-mutant="13"><span class="bg-success">{
+            if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="14"><span class="label label-success">14</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="14">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="15"><span class="label label-success">15</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="15">false</span><span class="stryker-original-code" data-mutant="14"><span class="stryker-original-code" data-mutant="15"><span class="bg-success">possibleReportersCsv.length)</span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="16"><span class="label label-success">16</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="16">{
+}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-success">{
+                possibleReportersCsv +&#x3D; &#x27;, &#x27;;
+            }</span></span><span class="bg-success">
+            possibleReportersCsv +&#x3D; name;
+        })</span></span><span class="bg-success">;
+        log.warn(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="17"><span class="label label-success">17</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="17">&#x27;Possible reporters: &#x27; - possibleReportersCsv</span><span class="stryker-original-code" data-mutant="17"><span class="bg-success">&quot;Possible reporters: &quot; + possibleReportersCsv)</span></span><span class="bg-success">;
+    };</span></span><span class="bg-success">
+    ReporterOrchestrator.prototype.registerDefaultReporters &#x3D; function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="18"><span class="label label-success">18</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="18">{
+}</span><span class="stryker-original-code" data-mutant="18"><span class="bg-success">{
+        report_1.ReporterFactory.instance().register(&#x27;progress&#x27;, ProgressReporter_1.default);
+        report_1.ReporterFactory.instance().register(&#x27;clear-text&#x27;, ClearTextReporter_1.default);
+        report_1.ReporterFactory.instance().register(&#x27;event-recorder&#x27;, EventRecorderReporter_1.default);
+    };</span></span><span class="bg-success">
+    return ReporterOrchestrator;
+}(</span></span><span class="bg-null">));
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: true });
+exports.default &#x3D; ReporterOrchestrator;
+//# sourceMappingURL&#x3D;ReporterOrchestrator.js.ma</span>p</code></pre>
+</div><footer>
+    Generated with stryker-html-reporter generator. Visit the <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer>
+</div>
+<script src="stryker.js" defer></script>
+</body>
+</html>
