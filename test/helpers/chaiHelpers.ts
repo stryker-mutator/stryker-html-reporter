@@ -2,7 +2,7 @@ import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
 import * as sinonChai from 'sinon-chai';
 
-(<any>chai.Assertion).addMethod('equalData', function (expected: any) {
+(<any>chai).Assertion.addMethod('equalData', function (expected: any) {
   var actual = this._obj;
   for(var i in expected){
     this.assert(expected[i] === actual[i], 
