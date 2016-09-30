@@ -32,7 +32,7 @@
     "mkdirp": "^0.5.1"
   },
   "peerDependencies": {
-    "stryker-api": "^0.2.0"
+    "stryker-api": "^0.3.0-0"
   },
   "devDependencies": {
     "@types/chai": "^3.4.32",
@@ -44,7 +44,8 @@
     "@types/mkdirp": "^0.3.28",
     "@types/mocha": "^2.2.31",
     "@types/node": "^6.0.38",
-    "@types/protractor": "^1.5.18",
+    "@types/protractor": "^1.5.20",
+    "@types/selenium-webdriver": "2.44.*",
     "@types/sinon": "^1.16.29",
     "@types/sinon-chai": "^2.7.26",
     "bootstrap": "3.3.6",
@@ -67,7 +68,7 @@
     "protractor": "^3.3.0",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
-    "stryker-api": "file:///C:\\z\\github\\stryker-mutator\\stryker-api",
+    "stryker-api": "^0.3.0-0",
     "typescript": "^2.0.2"
   }
 }
