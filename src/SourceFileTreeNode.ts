@@ -1,4 +1,4 @@
-import {SourceFile, MutantResult, MutantStatus} from 'stryker-api/report';
+import { SourceFile, MutantResult, MutantStatus } from 'stryker-api/report';
 import * as log4js from 'log4js';
 import * as path from 'path';
 import * as util from './util';
@@ -32,7 +32,7 @@ export default class SourceFileTreeNode {
     if (!pathComponents) {
       pathComponents = file.path.split(path.sep);
     }
-    let nextPathComponent = pathComponents.shift();
+    let nextPathComponent = pathComponents.shift() || 'root';
 
     if (!pathComponents.length) {
       this.leafs.push(new SourceFileTreeLeaf(file));
@@ -132,14 +132,16 @@ export default class SourceFileTreeNode {
 
   private static mutantStatusToString(status: MutantStatus) {
     switch (status) {
-      case MutantStatus.KILLED:
+      case MutantStatus.Killed:
         return '.';
-      case MutantStatus.SURVIVED:
+      case MutantStatus.Survived:
         return 'S';
-      case MutantStatus.TIMEDOUT:
+      case MutantStatus.TimedOut:
         return 'T';
-      case MutantStatus.UNTESTED:
+      case MutantStatus.NoCoverage:
         return 'O';
+      case MutantStatus.Error:
+        return 'E';
     }
   }
 }

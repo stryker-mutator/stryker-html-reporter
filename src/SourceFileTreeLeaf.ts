@@ -22,14 +22,14 @@ export default class SourceFileTreeLeaf {
     let killed = 0, survived = 0, untested = 0;
     this.results.forEach(mutation => {
       switch (mutation.status) {
-        case MutantStatus.KILLED:
-        case MutantStatus.TIMEDOUT:
+        case MutantStatus.Killed:
+        case MutantStatus.TimedOut:
           killed++;
           break;
-        case MutantStatus.SURVIVED:
+        case MutantStatus.Survived:
           survived++;
           break;
-        case MutantStatus.UNTESTED:
+        case MutantStatus.NoCoverage:
           untested++;
           break;
       }

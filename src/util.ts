@@ -164,7 +164,7 @@ handlebars.registerPartial('resultRow', readTemplate('resultRow'));
 handlebars.registerPartial('resultTableHead', readTemplate('resultTableHead'));
 handlebars.registerHelper('code', function () {
   let leaf: SourceFileTreeLeaf = this;
-  let currentBackground: string = null;
+  let currentBackground: string | null = null;
   let currentCursorMutantStatusses = {
     killed: 0,
     survived: 0,
@@ -177,16 +177,16 @@ handlebars.registerHelper('code', function () {
 
   let adjustCurrentMutantResult = (valueToAdd: number) => (numberedMutant: { mutant: MutantResult, index: number }) => {
     switch (numberedMutant.mutant.status) {
-      case MutantStatus.KILLED:
+      case MutantStatus.Killed:
         currentCursorMutantStatusses.killed += valueToAdd;
         break;
-      case MutantStatus.SURVIVED:
+      case MutantStatus.Survived:
         currentCursorMutantStatusses.survived += valueToAdd;
         break;
-      case MutantStatus.TIMEDOUT:
+      case MutantStatus.TimedOut:
         currentCursorMutantStatusses.timeout += valueToAdd;
         break;
-      case MutantStatus.UNTESTED:
+      case MutantStatus.NoCoverage:
         currentCursorMutantStatusses.untested += valueToAdd;
         break;
     }
@@ -194,13 +194,13 @@ handlebars.registerHelper('code', function () {
 
   let determineBackground = () => {
     if (currentCursorMutantStatusses.survived > 0) {
-      return getContextClassForStatus(MutantStatus.SURVIVED);
+      return getContextClassForStatus(MutantStatus.Survived);
     } else if (currentCursorMutantStatusses.untested > 0) {
-      return getContextClassForStatus(MutantStatus.UNTESTED);
+      return getContextClassForStatus(MutantStatus.NoCoverage);
     } else if (currentCursorMutantStatusses.timeout > 0) {
-      return getContextClassForStatus(MutantStatus.TIMEDOUT);
+      return getContextClassForStatus(MutantStatus.TimedOut);
     } else if (currentCursorMutantStatusses.killed > 0) {
-      return getContextClassForStatus(MutantStatus.KILLED);
+      return getContextClassForStatus(MutantStatus.Killed);
     }
     return null;
   };
@@ -230,12 +230,12 @@ handlebars.registerHelper('code', function () {
 
 function getContextClassForStatus(status: MutantStatus) {
   switch (status) {
-    case MutantStatus.KILLED:
+    case MutantStatus.Killed:
       return 'success';
-    case MutantStatus.UNTESTED:
-    case MutantStatus.SURVIVED:
+    case MutantStatus.NoCoverage:
+    case MutantStatus.Survived:
       return 'danger';
-    case MutantStatus.TIMEDOUT:
+    case MutantStatus.TimedOut:
       return 'warning';
   }
 }

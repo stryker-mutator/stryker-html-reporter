@@ -1,6 +1,6 @@
 import SourceFileTreeNode from '../../src/SourceFileTreeNode';
-import {expect} from 'chai';
-import {SourceFile, MutantStatus, MutantResult} from 'stryker-api/report';
+import { expect } from 'chai';
+import { SourceFile, MutantStatus, MutantResult } from 'stryker-api/report';
 import logger from '../helpers/log4jsMock';
 import * as path from 'path';
 
@@ -50,10 +50,10 @@ describe('SourceFileTreeNode', () => {
     describe('for existing files', () => {
 
       beforeEach(() => {
-        sut.addMutantResult(mutantResult('some/path/file1.js', MutantStatus.KILLED));
-        sut.addMutantResult(mutantResult('some/other/path/file2.js', MutantStatus.SURVIVED));
-        sut.addMutantResult(mutantResult('some/path/file3.js', MutantStatus.TIMEDOUT));
-        sut.addMutantResult(mutantResult('blaat/file4.js', MutantStatus.UNTESTED));
+        sut.addMutantResult(mutantResult('some/path/file1.js', MutantStatus.Killed));
+        sut.addMutantResult(mutantResult('some/other/path/file2.js', MutantStatus.Survived));
+        sut.addMutantResult(mutantResult('some/path/file3.js', MutantStatus.TimedOut));
+        sut.addMutantResult(mutantResult('blaat/file4.js', MutantStatus.NoCoverage));
       });
 
       it('should add the results to the correct files', () => {
@@ -65,9 +65,9 @@ describe('SourceFileTreeNode', () => {
 
   describe('for not existing file', () => {
     let notExistingMutantResult: MutantResult;
-    const mutantResultPath = path.normalize('some/path/that/does/not/exits');
+    const mutantResultPath = path.normalize('some/path/that/does/not/exists');
     beforeEach(() => {
-      notExistingMutantResult = mutantResult(mutantResultPath, MutantStatus.KILLED);
+      notExistingMutantResult = mutantResult(mutantResultPath, MutantStatus.Killed);
       sut.addMutantResult(notExistingMutantResult);
     });
 
@@ -80,6 +80,16 @@ describe('SourceFileTreeNode', () => {
   }
 
   function mutantResult(sourceFilePath: string, status: MutantStatus): MutantResult {
-    return { sourceFilePath: path.normalize(sourceFilePath), status, mutatorName: '', mutatedLines: '', originalLines: '', replacement: '', location: null, range: null, testsRan: [] };
+    return {
+      sourceFilePath: path.normalize(sourceFilePath),
+      status,
+      mutatorName: '',
+      mutatedLines: '',
+      originalLines: '',
+      replacement: '',
+      location: { start: { line: 0, column: 3 }, end: { line: 0, column: 5 } },
+      range: [1, 1],
+      testsRan: []
+    };
   }
 });
