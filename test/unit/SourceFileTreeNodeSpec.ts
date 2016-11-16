@@ -45,6 +45,7 @@ describe('SourceFileTreeNode', () => {
       sut.addSourceFile(file('some/other/path/file2.js'));
       sut.addSourceFile(file('some/path/file3.js'));
       sut.addSourceFile(file('blaat/file4.js'));
+      sut.addSourceFile(file('error/errors.js'));
     });
 
     describe('for existing files', () => {
@@ -54,11 +55,11 @@ describe('SourceFileTreeNode', () => {
         sut.addMutantResult(mutantResult('some/other/path/file2.js', MutantStatus.Survived));
         sut.addMutantResult(mutantResult('some/path/file3.js', MutantStatus.TimedOut));
         sut.addMutantResult(mutantResult('blaat/file4.js', MutantStatus.NoCoverage));
+        sut.addMutantResult(mutantResult('error/errors.js', MutantStatus.Error));
       });
 
-      it('should add the results to the correct files', () => {
-        expect(sut.toString()).to.eq('/\n.some\n..path\n.../file1.js [.]\n.../file3.js [T]\n..other\n...path\n..../file2.js [S]\n.blaat\n../file4.js [O]\n');
-      });
+      it('should add the results to the correct files', () => 
+        expect(sut.toString()).to.eq('/\n.some\n..path\n.../file1.js [.]\n.../file3.js [T]\n..other\n...path\n..../file2.js [S]\n.blaat\n../file4.js [O]\n.error\n../errors.js [E]\n'));
     });
 
   });

@@ -1,19 +1,19 @@
-import * as fs from 'fs';
+import * as mzfs from 'mz/fs';
 import * as path from 'path';
 import * as handlebars from 'handlebars';
 import * as _ from 'lodash';
 import * as mkdirp from 'mkdirp';
-import {MutantStatus, MutantResult} from 'stryker-api/report';
+import { MutantStatus, MutantResult } from 'stryker-api/report';
 import SourceFileTreeNode from './SourceFileTreeNode';
 import SourceFileTreeLeaf from './SourceFileTreeLeaf';
 
 export function copyFolder(fromPath: string, to: string): Promise<any> {
-  return mkdirRecursive(to).then(() => readdir(fromPath).then(files => {
+  return mkdirRecursive(to).then(() => mzfs.readdir(fromPath).then(files => {
     let promisses: Promise<void>[] = [];
     files.forEach(file => {
       let currentPath = path.join(fromPath, file);
       let toCurrentPath = path.join(to, file);
-      promisses.push(stats(currentPath).then(stats => {
+      promisses.push(mzfs.stat(currentPath).then(stats => {
         if (stats.isDirectory()) {
           return copyFolder(currentPath, toCurrentPath);
         } else {
@@ -28,8 +28,8 @@ export function copyFolder(fromPath: string, to: string): Promise<any> {
 
 export function copyFile(fromFilename: string, toFilename: string): Promise<void> {
   return new Promise<void>((resolve, reject) => {
-    let readStream = fs.createReadStream(fromFilename);
-    let writeStream = fs.createWriteStream(toFilename);
+    let readStream = mzfs.createReadStream(fromFilename);
+    let writeStream = mzfs.createWriteStream(toFilename);
     readStream.on('error', reject);
     writeStream.on('error', reject);
     readStream.pipe(writeStream);
@@ -39,60 +39,16 @@ export function copyFile(fromFilename: string, toFilename: string): Promise<void
 
 
 function rmFile(path: string) {
-  return new Promise<void>((fileResolve, fileReject) => {
-    fs.unlink(path, error => {
-      if (error) {
-        fileReject(error);
-      } else {
-        fileResolve();
-      }
-    });
-  });
-}
-
-function mkdir(path: string): Promise<void> {
-  return new Promise<void>((resolve, reject) => {
-    fs.mkdir(path, error => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve();
-      }
-    });
-  });
-}
-
-function stats(path: string): Promise<fs.Stats> {
-  return new Promise((resolve, reject) => {
-    fs.stat(path, (error, stats) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(stats);
-      }
-    });
-  });
-}
-
-function rmdir(dirToDelete: string): Promise<void> {
-  return new Promise<void>((resolve, reject) => {
-    fs.rmdir(dirToDelete, error => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve();
-      }
-    });
-  });
+  return mzfs.unlink(path);
 }
 
 export function deleteDir(dirToDelete: string): Promise<void> {
   return fileOrFolderExists(dirToDelete).then(exists => {
     if (exists) {
-      return readdir(dirToDelete).then(files => {
+      return mzfs.readdir(dirToDelete).then(files => {
         let promisses = files.map(file => {
           let currentPath = path.join(dirToDelete, file);
-          return stats(currentPath).then(stats => {
+          return mzfs.stat(currentPath).then(stats => {
             if (stats.isDirectory()) {
               // recursive
               return deleteDir(currentPath);
@@ -103,22 +59,9 @@ export function deleteDir(dirToDelete: string): Promise<void> {
           });
         });
         // delete dir
-        return Promise.all(promisses).then(() => rmdir(dirToDelete));
+        return Promise.all(promisses).then(() => mzfs.rmdir(dirToDelete));
       });
     }
-  });
-}
-
-
-function readdir(path: string): Promise<string[]> {
-  return new Promise<string[]>((resolve, reject) => {
-    fs.readdir(path, (error, files) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(files);
-      }
-    });
   });
 }
 
@@ -141,14 +84,14 @@ export function mkdirRecursive(folderName: string): Promise<void> {
 
 function fileOrFolderExists(path: string): Promise<boolean> {
   return new Promise(resolve => {
-    fs.lstat(path, (error, stats) => {
+    mzfs.lstat(path, (error, stats) => {
       resolve(!error);
     });
   });
 }
 
 function readTemplate(name: string) {
-  return fs.readFileSync(path.join(__dirname, 'templates', `${name}.tpl.html`), 'utf8');
+  return mzfs.readFileSync(path.join(__dirname, 'templates', `${name}.tpl.html`), 'utf8');
 }
 function compileTemplate(name: string) {
   return handlebars.compile(readTemplate(name));

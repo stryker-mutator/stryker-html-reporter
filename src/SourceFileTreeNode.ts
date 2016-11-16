@@ -56,12 +56,12 @@ export default class SourceFileTreeNode {
     if (!pathComponents) {
       pathComponents = result.sourceFilePath.split(path.sep);
     }
-    let nextPathComponent = pathComponents.shift();
-    let childNode = this.children.filter(n => n.name === nextPathComponent).pop();
+    const nextPathComponent = pathComponents.shift();
+    const childNode = this.children.filter(n => n.name === nextPathComponent).pop();
     if (childNode) {
       childNode.addMutantResult(result, pathComponents);
     } else {
-      let leaf = this.leafs.filter(leaf => leaf.file.path === result.sourceFilePath).pop();
+      const leaf = this.leafs.filter(leaf => leaf.file.path === result.sourceFilePath).pop();
       if (leaf) {
         leaf.results.push(result);
       } else {
