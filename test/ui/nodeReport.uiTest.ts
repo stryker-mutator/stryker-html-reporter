@@ -16,8 +16,8 @@ describe('Node results page', () => {
     page = new NodePage();
   });
 
-  it('should have title "\src - Stryker report"', () => {
-    return expect(page.title()).to.eventually.eq('/ - Stryker report');
+  it(`should have title "${path.sep}sampleProject${path.sep}src - Stryker report"`, () => {
+    return expect(page.title()).to.eventually.eq(`${path.sep}sampleProject${path.sep}src - Stryker report`);
   });
 
   it('should show the "stryker-image"', () => {
