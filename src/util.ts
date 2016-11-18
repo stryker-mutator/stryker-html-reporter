@@ -112,7 +112,7 @@ handlebars.registerHelper('code', function () {
     killed: 0,
     survived: 0,
     timeout: 0,
-    untested: 0
+    noCoverage: 0
   };
   let maxIndex = leaf.file.content.length - 1;
   let numberedMutants = _.sortBy(leaf.results, m => m.range[0] * 10000 + m.range[1] * -1)
@@ -130,7 +130,7 @@ handlebars.registerHelper('code', function () {
         currentCursorMutantStatusses.timeout += valueToAdd;
         break;
       case MutantStatus.NoCoverage:
-        currentCursorMutantStatusses.untested += valueToAdd;
+        currentCursorMutantStatusses.noCoverage += valueToAdd;
         break;
     }
   };
@@ -138,7 +138,7 @@ handlebars.registerHelper('code', function () {
   let determineBackground = () => {
     if (currentCursorMutantStatusses.survived > 0) {
       return getContextClassForStatus(MutantStatus.Survived);
-    } else if (currentCursorMutantStatusses.untested > 0) {
+    } else if (currentCursorMutantStatusses.noCoverage > 0) {
       return getContextClassForStatus(MutantStatus.NoCoverage);
     } else if (currentCursorMutantStatusses.timeout > 0) {
       return getContextClassForStatus(MutantStatus.TimedOut);

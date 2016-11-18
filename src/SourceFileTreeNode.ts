@@ -32,7 +32,7 @@ export default class SourceFileTreeNode {
     if (!pathComponents) {
       pathComponents = file.path.split(path.sep);
     }
-    let nextPathComponent = pathComponents.shift() || 'root';
+    let nextPathComponent = pathComponents.shift() || '';
 
     if (!pathComponents.length) {
       this.leafs.push(new SourceFileTreeLeaf(file));
@@ -87,21 +87,25 @@ export default class SourceFileTreeNode {
   }
 
   public calculateModel(urlPrefix: string) {
-    let totalKilled = 0, totalSurvived = 0, totalUntested = 0;
+    let totalKilled = 0, totalSurvived = 0, totalTimedOut = 0, totalNoCoverage = 0, totalErrors = 0;
     this.children.forEach(child => {
       child.calculateModel(`../${urlPrefix}`);
       totalKilled += child.model.totalKilled;
+      totalTimedOut += child.model.totalTimedOut;
       totalSurvived += child.model.totalSurvived;
-      totalUntested += child.model.totalUntested;
+      totalNoCoverage += child.model.totalNoCoverage;
+      totalErrors += child.model.totalErrors;
     });
 
     this.leafs.forEach(leaf => {
       leaf.calculateModel(urlPrefix);
       totalKilled += leaf.model.totalKilled;
       totalSurvived += leaf.model.totalSurvived;
-      totalUntested += leaf.model.totalUntested;
+      totalTimedOut += leaf.model.totalTimedOut;
+      totalNoCoverage += leaf.model.totalNoCoverage;
+      totalErrors += leaf.model.totalErrors;
     });
-    this.model = new HandlebarsModel(this.name, urlPrefix, `${this.name}/index.html`, totalKilled, totalSurvived, totalUntested);
+    this.model = new HandlebarsModel(this.name, urlPrefix, `${this.name}/index.html`, totalKilled, totalTimedOut, totalSurvived, totalNoCoverage, totalErrors);
   }
 
   public writeReportNodeRecursive(directory: string) {
