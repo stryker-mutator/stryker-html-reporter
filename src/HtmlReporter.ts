@@ -55,6 +55,7 @@ export default class HtmlReporter implements Reporter {
   private writeReport() {
     this.rootNode.calculateModel('');
     this.rootNode.writeReportNodeRecursive(this.baseFolder);
+    log.info(`Your report can be found at: file:///${this.baseFolder}/index.html`);
   }
 
 
