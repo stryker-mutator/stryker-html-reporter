@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html><head><title>ArrayDeclaratorMutator.js
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">ArrayDeclaratorMutator.js
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">All files</a></li><li class="breadcrumb-item"><a href="index.html">mutators</a></li>
+<li class="breadcrumb-item active">ArrayDeclaratorMutator.js</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>ArrayDeclaratorMutator.js</td>
+<td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="91.67" aria-valuemin="0" aria-valuemax="100" style="width: 91.67%;">91.67
+%</div></div></td>
+<th class="text-center text-success" style="width: 10%">91.67</th>
+<td class="text-center">22</td>
+<td class="text-center">2</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<th class="text-center">22</th>
+<th class="text-center">2</th>
+<th class="text-center">24</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(2)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(22)</label></div>
+
+
+
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="0"><span class="badge badge-danger">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">false</span><span class="stryker-original-code" data-mutant="0"><span class="bg-danger-light">true</span></span><span class="bg-null"> });
+var esprima_1 = require(&quot;esprima&quot;);
+/**
+ * Represents a mutator which can remove the content of an array&#039;s elements.
+ */
+var ArrayDeclaratorMutator = /** @class */ (function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="1"><span class="badge badge-success">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{
+}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success-light">{
+    function ArrayDeclaratorMutator() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="2"><span class="badge badge-danger">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{
+}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-danger-light">{
+        this.name = &#039;ArrayDeclarator&#039;;
+    }</span></span><span class="bg-success-light">
+    ArrayDeclaratorMutator.prototype.applyMutations = function (node, copy) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">{
+}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success-light">{
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="6"><span class="badge badge-success">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">(node.type === esprima_1.Syntax.CallExpression || node.type === esprima_1.Syntax.NewExpression) &amp;&amp; node.callee.type === esprima_1.Syntax.Identifier &amp;&amp; node.callee.name === &#039;Array&#039; || node.arguments.length &gt; 0</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">(node.type === esprima_1.Syntax.CallExpression || node.type === esprima_1.Syntax.NewExpression) &amp;&amp; node.callee.type === esprima_1.Syntax.Identifier || node.callee.name === &#039;Array&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">node.type === esprima_1.Syntax.CallExpression || node.type === esprima_1.Syntax.NewExpression || node.callee.type === esprima_1.Syntax.Identifier</span><span class="stryker-original-code" data-mutant="4"><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="stryker-original-code" data-mutant="7"><span class="stryker-original-code" data-mutant="8"><span class="bg-success-light">(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">node.type === esprima_1.Syntax.CallExpression &amp;&amp; node.type === esprima_1.Syntax.NewExpression</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">node.type !== esprima_1.Syntax.CallExpression</span><span class="stryker-original-code" data-mutant="9"><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">node.type === esprima_1.Syntax.CallExpression</span></span><span class="bg-success-light"> || </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="11"><span class="badge badge-success">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">node.type !== esprima_1.Syntax.NewExpression</span><span class="stryker-original-code" data-mutant="11"><span class="bg-success-light">node.type === esprima_1.Syntax.NewExpression</span></span></span><span class="bg-success-light">) &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">node.callee.type !== esprima_1.Syntax.Identifier</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success-light">node.callee.type === esprima_1.Syntax.Identifier</span></span></span><span class="bg-success-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">node.callee.name !== &#039;Array&#039;</span><span class="stryker-original-code" data-mutant="13"><span class="bg-success-light">node.callee.name === &#039;Array&#039;</span></span></span><span class="bg-success-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">node.arguments.length &gt;= 0</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="15"><span class="badge badge-success">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">node.arguments.length &lt;= 0</span><span class="stryker-original-code" data-mutant="14"><span class="stryker-original-code" data-mutant="15"><span class="bg-success-light">node.arguments.length &gt; 0</span></span></span></span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">{
+}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-success-light">{
+            var mutatedNode = copy(node);
+            mutatedNode.arguments = [];
+            return mutatedNode;
+        }</span></span><span class="bg-success-light">
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="17"><span class="badge badge-success">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="18"><span class="badge badge-success">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="19"><span class="badge badge-success">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">node.type === esprima_1.Syntax.ArrayExpression || node.elements.length &gt; 0</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="20"><span class="badge badge-success">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">node.type !== esprima_1.Syntax.ArrayExpression</span><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="stryker-original-code" data-mutant="19"><span class="stryker-original-code" data-mutant="20"><span class="bg-success-light">node.type === esprima_1.Syntax.ArrayExpression</span></span><span class="bg-success-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="21"><span class="badge badge-success">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">node.elements.length &lt;= 0</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="22"><span class="badge badge-success">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">node.elements.length &gt;= 0</span><span class="stryker-original-code" data-mutant="21"><span class="stryker-original-code" data-mutant="22"><span class="bg-success-light">node.elements.length &gt; 0</span></span></span></span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="23"><span class="badge badge-success">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{
+}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success-light">{
+            var mutatedNode = copy(node);
+            mutatedNode.elements = [];
+            return mutatedNode;
+        }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-success-light">;
+    return ArrayDeclaratorMutator;
+}</span></span><span class="bg-null">());
+exports.default = ArrayDeclaratorMutator;
+//# sourceMappingURL=ArrayDeclaratorMutator.js.ma</span>p</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>6
+:
+56</td>
+<td><code>{
+  ... ;
+}</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>1</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>11
+:
+12</td>
+<td><code>(    ...    ></code></td>
+<td><code></code></td></tr>
+<tr><th>2</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>11
+:
+12</td>
+<td><code>(    ...    ></code></td>
+<td><code></code></td></tr>
+<tr><th>3</th>
+<td>LogicalOperator</td>
+<td>Killed</td>
+<td>11
+:
+12</td>
+<td><code>(    ...    ></code></td>
+<td><code>(    ...    ></code></td></tr>
+<tr><th>4</th>
+<td>LogicalOperator</td>
+<td>Killed</td>
+<td>11
+:
+12</td>
+<td><code>(    ...    '</code></td>
+<td><code>(    ...    '</code></td></tr>
+<tr><th>5</th>
+<td>LogicalOperator</td>
+<td>Killed</td>
+<td>11
+:
+12</td>
+<td><code>(    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>6</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>10
+:
+76</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>7</th>
+<td>LogicalOperator</td>
+<td>Killed</td>
+<td>11
+:
+13</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>8</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>11
+:
+13</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>9</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>11
+:
+62</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>10</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>11
+:
+111</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>11</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>11
+:
+163</td>
+<td><code>.    ...    '</code></td>
+<td><code>.    ...    '</code></td></tr>
+<tr><th>12</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>11
+:
+195</td>
+<td><code>.    ...    ></code></td>
+<td><code>.    ...   >=</code></td></tr>
+<tr><th>13</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>11
+:
+195</td>
+<td><code>.    ...    ></code></td>
+<td><code>.    ...   <=</code></td></tr>
+<tr><th>14</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>11
+:
+222</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>15</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>16
+:
+12</td>
+<td><code>.    ...    ></code></td>
+<td><code></code></td></tr>
+<tr><th>16</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>1
+:
+54</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>17</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>16
+:
+12</td>
+<td><code>.    ...    ></code></td>
+<td><code></code></td></tr>
+<tr><th>18</th>
+<td>LogicalOperator</td>
+<td>Killed</td>
+<td>16
+:
+12</td>
+<td><code>.    ...    ></code></td>
+<td><code>.    ...    ></code></td></tr>
+<tr><th>19</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>16
+:
+12</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>20</th>
+<td>BlockStatement</td>
+<td>Survived</td>
+<td>7
+:
+38</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>21</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>16
+:
+62</td>
+<td><code>.    ...    ></code></td>
+<td><code>.    ...   <=</code></td></tr>
+<tr><th>22</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>16
+:
+62</td>
+<td><code>.    ...    ></code></td>
+<td><code>.    ...   >=</code></td></tr>
+<tr><th>23</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>16
+:
+88</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../__resources/stryker.js" defer="defer"></script></body></html>

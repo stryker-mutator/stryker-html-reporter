@@ -1,133 +1,779 @@
-<html>
-<head>
-    <title>ConfigReader.js - Stryker report</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="highlightjs/styles/default.css">
-    <link rel="stylesheet" href="stryker.css">
-</head>
+<!DOCTYPE html>
+<html><head><title>ConfigReader.js
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">ConfigReader.js
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">All files</a></li>
+<li class="breadcrumb-item active">ConfigReader.js</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>ConfigReader.js</td>
+<td><div class="progress"><div class="progress-bar bg-danger" role="progressbar" aria-valuenow="0.00" aria-valuemin="0" aria-valuemax="100" style="width: 0.00%;">0.00
+%</div></div></td>
+<th class="text-center text-danger" style="width: 10%">0.00</th>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">71</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<th class="text-center">0</th>
+<th class="text-center">71</th>
+<th class="text-center">71</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate"><div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="0" type="checkbox">
+NoCoverage
+ 
+(71)</label></div>
 
-<body>  
-    <img class="stryker-image" alt="Stryker" src="stryker-80x80.png">
 
-    <div class="container-fluid">
-        <h1>ConfigReader.js - Stryker report</h1><div class="col-md-12">
-    <h2>Summary</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th style="width: 20%">File</th>
-                        <th colspan="2">Based on all code</th>
-                        <th colspan="2" style="width: 20%">Based on code coverage</th>
-                    </tr>
-                </thead>                <tbody>
-                    <tr>
-                        <td><a href="ConfigReader.js.html">ConfigReader.js</a></td>
-                        <td>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 93%;">
-                                    93%
-                                </div>
-                            </div>
-                        </td>
-                        <td>30/32</td>
-                        <td>93%</td>
-                        <td>30/32</td>
-                    </tr>                </tbody>
-            </table>
-        </div>
-    </div>
-    <h2>Code</h2>
-    <div class="row">
-        <div class="col-sm-6">
-           <a href="#" class="stryker-collapse-expand-all">Expand all</a>
-        </div>
-        <div class="col-sm-offset-2 col-sm-4">
-            <label>
-                <input class="stryker-display-killed" type="checkbox"> Also show killed mutants
-            </label>
-        </div>
-    </div>
-    <pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
-var config_1 &#x3D; require(&#x27;stryker-api/config&#x27;);
-var log4js &#x3D; require(&#x27;log4js&#x27;);
-var _ &#x3D; require(&#x27;lodash&#x27;);
-exports.CONFIG_SYNTAX_HELP &#x3D; </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="0"><span class="label label-success">0</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="0">&#x27;  module.exports &#x3D; function(config) {\n&#x27; + &#x27;    config.set({\n&#x27; + &#x27;      // your config\n&#x27; + &#x27;    });\n&#x27; - &#x27;  };\n&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="1"><span class="label label-success">1</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="1">&#x27;  module.exports &#x3D; function(config) {\n&#x27; + &#x27;    config.set({\n&#x27; + &#x27;      // your config\n&#x27; - &#x27;    });\n&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="2"><span class="label label-success">2</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="2">&#x27;  module.exports &#x3D; function(config) {\n&#x27; + &#x27;    config.set({\n&#x27; - &#x27;      // your config\n&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="3"><span class="label label-danger">3</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="3">&#x27;  module.exports &#x3D; function(config) {\n&#x27; - &#x27;    config.set({\n&#x27;</span><span class="stryker-original-code" data-mutant="0"><span class="stryker-original-code" data-mutant="1"><span class="stryker-original-code" data-mutant="2"><span class="stryker-original-code" data-mutant="3"><span class="bg-danger">&#x27;  module.exports &#x3D; function(config) {\n&#x27; +
-    &#x27;    config.set({\n&#x27; </span></span><span class="bg-success">+
-    &#x27;      // your config\n&#x27; </span></span><span class="bg-success">+
-    &#x27;    });\n&#x27; </span></span><span class="bg-success">+
-    &#x27;  };\n&#x27;;</span></span><span class="bg-null">
-var log &#x3D; log4js.getLogger(&#x27;ConfigReader&#x27;);
-var ConfigReader &#x3D; (function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="4"><span class="label label-success">4</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="4">{
-}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-success">{
-    function ConfigReader(options) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="5"><span class="label label-success">5</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="5">{
-}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success">{
-        this.options &#x3D; options;
-    }</span></span><span class="bg-success">
-    ConfigReader.prototype.readConfig &#x3D; function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="6"><span class="label label-success">6</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="6">{
-}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-success">{
-        var configModule &#x3D; this.loadConfigModule();
-        var config &#x3D; new config_1.Config();
-        try </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="7"><span class="label label-danger">7</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="7">{
-}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-danger">{
+
+
+
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="0"><span class="badge badge-danger">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">false</span><span class="stryker-original-code" data-mutant="0"><span class="bg-danger-light">true</span></span><span class="bg-null"> });
+var config_1 = require(&quot;stryker-api/config&quot;);
+var fs = require(&quot;mz/fs&quot;);
+var log4js = require(&quot;log4js&quot;);
+var path = require(&quot;path&quot;);
+var _ = require(&quot;lodash&quot;);
+var VALID_COVERAGE_ANALYSIS_VALUES = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayDeclarator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="1"><span class="badge badge-danger">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">[]</span><span class="stryker-original-code" data-mutant="1"><span class="bg-danger-light">[&#039;perTest&#039;, &#039;all&#039;, &#039;off&#039;]</span></span><span class="bg-null">;
+exports.CONFIG_SYNTAX_HELP = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="2"><span class="badge badge-danger">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">&#039;  module.exports = function(config) {\n&#039; + &#039;    config.set({\n&#039; + &#039;      // your config\n&#039; + &#039;    });\n&#039; - &#039;  };&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="3"><span class="badge badge-danger">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">&#039;  module.exports = function(config) {\n&#039; + &#039;    config.set({\n&#039; + &#039;      // your config\n&#039; - &#039;    });\n&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="4"><span class="badge badge-danger">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">&#039;  module.exports = function(config) {\n&#039; + &#039;    config.set({\n&#039; - &#039;      // your config\n&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="5"><span class="badge badge-danger">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">&#039;  module.exports = function(config) {\n&#039; - &#039;    config.set({\n&#039;</span><span class="stryker-original-code" data-mutant="2"><span class="stryker-original-code" data-mutant="3"><span class="stryker-original-code" data-mutant="4"><span class="stryker-original-code" data-mutant="5"><span class="bg-danger-light">&#039;  module.exports = function(config) {\n&#039; +
+    &#039;    config.set({\n&#039;</span></span><span class="bg-danger-light"> +
+    &#039;      // your config\n&#039;</span></span><span class="bg-danger-light"> +
+    &#039;    });\n&#039;</span></span><span class="bg-danger-light"> +
+    &#039;  };&#039;</span></span><span class="bg-null">;
+var DEFAULT_CONFIG_FILE = &#039;stryker.conf.js&#039;;
+var ConfigReader = /** @class */ (function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="6"><span class="badge badge-danger">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">{
+}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-danger-light">{
+    function ConfigReader(cliOptions) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="7"><span class="badge badge-danger">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">{
+}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-danger-light">{
+        this.cliOptions = cliOptions;
+        this.log = log4js.getLogger(ConfigReader.name);
+    }</span></span><span class="bg-danger-light">
+    ConfigReader.prototype.readConfig = function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="8"><span class="badge badge-danger">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">{
+}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-danger-light">{
+        var configModule = this.loadConfigModule();
+        var config = new config_1.Config();
+        try </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="9"><span class="badge badge-danger">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">{
+}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-danger-light">{
             configModule(config);
-        }</span></span><span class="bg-success">
-        catch (e) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="8"><span class="label label-success">8</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="8">{
-}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-success">{
-            log.fatal(&#x27;Error in config file!\n&#x27;, e);
+        }</span></span><span class="bg-danger-light">
+        catch (e) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="10"><span class="badge badge-danger">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">{
+}</span><span class="stryker-original-code" data-mutant="10"><span class="bg-danger-light">{
+            this.log.fatal(&#039;Error in config file!\n&#039;, e);
             process.exit(1);
-        }</span></span><span class="bg-success">
-        config.set(this.options);
+        }</span></span><span class="bg-danger-light">
+        // merge the config from config file and cliOptions (precedence)
+        config.set(this.cliOptions);
+        this.validate(config);
         return config;
-    };</span></span><span class="bg-success">
-    ConfigReader.prototype.loadConfigModule &#x3D; function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="9"><span class="label label-success">9</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="9">{
-}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-success">{
-        var configModule;
-        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="10"><span class="label label-success">10</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="10">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="11"><span class="label label-success">11</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="11">false</span><span class="stryker-original-code" data-mutant="10"><span class="stryker-original-code" data-mutant="11"><span class="bg-success">this.options.configFile)</span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="12"><span class="label label-success">12</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="12">{
-}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success">{
-            log.debug(&#x27;Loading config %s&#x27;, this.options.configFile);
-            try </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="13"><span class="label label-success">13</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="13">{
-}</span><span class="stryker-original-code" data-mutant="13"><span class="bg-success">{
-                configModule &#x3D; require(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="14"><span class="label label-success">14</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="14">process.cwd() + &#x27;/&#x27; - this.options.configFile</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="15"><span class="label label-success">15</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="15">process.cwd() - &#x27;/&#x27;</span><span class="stryker-original-code" data-mutant="14"><span class="stryker-original-code" data-mutant="15"><span class="bg-success">process.cwd() + &quot;/&quot; </span></span><span class="bg-success">+ this.options.configFile)</span></span><span class="bg-success">;
-            }</span></span><span class="bg-success">
-            catch (e) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="16"><span class="label label-success">16</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="16">{
-}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-success">{
-                if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="17"><span class="label label-success">17</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="17">e.code &#x3D;&#x3D;&#x3D; &#x27;MODULE_NOT_FOUND&#x27; || e.message.indexOf(this.options.configFile) !&#x3D;&#x3D; -1</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="18"><span class="label label-success">18</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="18">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="19"><span class="label label-success">19</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="19">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="20"><span class="label label-success">20</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="20">e.code !&#x3D;&#x3D; &#x27;MODULE_NOT_FOUND&#x27;</span><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="stryker-original-code" data-mutant="19"><span class="stryker-original-code" data-mutant="20"><span class="bg-success">e.code &#x3D;&#x3D;&#x3D; &#x27;MODULE_NOT_FOUND&#x27; </span></span><span class="bg-success">&amp;&amp; </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="21"><span class="label label-success">21</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="21">e.message.indexOf(this.options.configFile) &#x3D;&#x3D;&#x3D; -1</span><span class="stryker-original-code" data-mutant="21"><span class="bg-success">e.message.indexOf(this.options.configFile) !&#x3D;&#x3D; </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="22"><span class="label label-success">22</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="22">+1</span><span class="stryker-original-code" data-mutant="22"><span class="bg-success">-1)</span></span></span></span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="23"><span class="label label-success">23</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="23">{
-}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success">{
-                    log.fatal(&#x27;File %s does not exist!&#x27;, this.options.configFile);
-                    log.fatal(e);
-                }</span></span><span class="bg-success">
-                else </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="24"><span class="label label-success">24</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="24">{
-}</span><span class="stryker-original-code" data-mutant="24"><span class="bg-success">{
-                    log.fatal(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="25"><span class="label label-success">25</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="25">&#x27;Invalid config file!\n  &#x27; - e.stack</span><span class="stryker-original-code" data-mutant="25"><span class="bg-success">&#x27;Invalid config file!\n  &#x27; + e.stack)</span></span><span class="bg-success">;
-                }</span></span><span class="bg-success">
+    }</span></span><span class="bg-danger-light">;
+    ConfigReader.prototype.loadConfigModule = function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="11"><span class="badge badge-danger">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{
+}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-danger-light">{
+        // Dummy module to be returned if no config file is loaded.
+        var configModule = function () { };
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="12"><span class="badge badge-danger">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="13"><span class="badge badge-danger">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="14"><span class="badge badge-danger">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">this.cliOptions.configFile</span><span class="stryker-original-code" data-mutant="12"><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="bg-danger-light">!this.cliOptions.configFile</span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="15"><span class="badge badge-danger">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">{
+}</span><span class="stryker-original-code" data-mutant="15"><span class="bg-danger-light">{
+            try </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="16"><span class="badge badge-danger">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">{
+}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-danger-light">{
+                fs.accessSync(path.resolve(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="17"><span class="badge badge-danger">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">&#039;./&#039; - DEFAULT_CONFIG_FILE</span><span class="stryker-original-code" data-mutant="17"><span class="bg-danger-light">&quot;./&quot; + DEFAULT_CONFIG_FILE</span></span><span class="bg-danger-light">));
+                this.log.info(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="18"><span class="badge badge-danger">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">&#039;Using &#039; + DEFAULT_CONFIG_FILE - &#039; in the current working directory.&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="19"><span class="badge badge-danger">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">&#039;Using &#039; - DEFAULT_CONFIG_FILE</span><span class="stryker-original-code" data-mutant="18"><span class="stryker-original-code" data-mutant="19"><span class="bg-danger-light">&quot;Using &quot; + DEFAULT_CONFIG_FILE</span></span><span class="bg-danger-light"> + &quot; in the current working directory.&quot;</span></span><span class="bg-danger-light">);
+                this.cliOptions.configFile = DEFAULT_CONFIG_FILE;
+            }</span></span><span class="bg-danger-light">
+            catch (e) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="20"><span class="badge badge-danger">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">{
+}</span><span class="stryker-original-code" data-mutant="20"><span class="bg-danger-light">{
+                this.log.info(&#039;No config file specified. Running with command line arguments.&#039;);
+                this.log.info(&#039;Use `stryker init` command to generate your config file.&#039;);
+            }</span></span><span class="bg-danger-light">
+        }</span></span><span class="bg-danger-light">
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="21"><span class="badge badge-danger">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="22"><span class="badge badge-danger">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">true</span><span class="stryker-original-code" data-mutant="21"><span class="stryker-original-code" data-mutant="22"><span class="bg-danger-light">this.cliOptions.configFile</span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="23"><span class="badge badge-danger">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{
+}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-danger-light">{
+            this.log.debug(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="24"><span class="badge badge-danger">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">&#039;Loading config &#039; - this.cliOptions.configFile</span><span class="stryker-original-code" data-mutant="24"><span class="bg-danger-light">&quot;Loading config &quot; + this.cliOptions.configFile</span></span><span class="bg-danger-light">);
+            try </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="25"><span class="badge badge-danger">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">{
+}</span><span class="stryker-original-code" data-mutant="25"><span class="bg-danger-light">{
+                configModule = require(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="26"><span class="badge badge-danger">26</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="26">process.cwd() + &#039;/&#039; - this.cliOptions.configFile</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="27"><span class="badge badge-danger">27</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="27">process.cwd() - &#039;/&#039;</span><span class="stryker-original-code" data-mutant="26"><span class="stryker-original-code" data-mutant="27"><span class="bg-danger-light">process.cwd() + &quot;/&quot;</span></span><span class="bg-danger-light"> + this.cliOptions.configFile</span></span><span class="bg-danger-light">);
+            }</span></span><span class="bg-danger-light">
+            catch (e) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="28"><span class="badge badge-danger">28</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="28">{
+}</span><span class="stryker-original-code" data-mutant="28"><span class="bg-danger-light">{
+                if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="29"><span class="badge badge-danger">29</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="29">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="30"><span class="badge badge-danger">30</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="30">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="31"><span class="badge badge-danger">31</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="31">e.code === &#039;MODULE_NOT_FOUND&#039; || e.message.indexOf(this.cliOptions.configFile) !== -1</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="32"><span class="badge badge-danger">32</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="32">e.code !== &#039;MODULE_NOT_FOUND&#039;</span><span class="stryker-original-code" data-mutant="29"><span class="stryker-original-code" data-mutant="30"><span class="stryker-original-code" data-mutant="31"><span class="stryker-original-code" data-mutant="32"><span class="bg-danger-light">e.code === &#039;MODULE_NOT_FOUND&#039;</span></span><span class="bg-danger-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="33"><span class="badge badge-danger">33</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="33">e.message.indexOf(this.cliOptions.configFile) === -1</span><span class="stryker-original-code" data-mutant="33"><span class="bg-danger-light">e.message.indexOf(this.cliOptions.configFile) !== </span><a href="#" class="stryker-mutant-button" tabindex="0" title="UnaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="34"><span class="badge badge-danger">34</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="34">+1</span><span class="stryker-original-code" data-mutant="34"><span class="bg-danger-light">-1</span></span></span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="35"><span class="badge badge-danger">35</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="35">{
+}</span><span class="stryker-original-code" data-mutant="35"><span class="bg-danger-light">{
+                    this.log.fatal(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="36"><span class="badge badge-danger">36</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="36">&#039;File &#039; + process.cwd() + &#039;/&#039; + this.cliOptions.configFile - &#039; does not exist!&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="37"><span class="badge badge-danger">37</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="37">&#039;File &#039; + process.cwd() + &#039;/&#039; - this.cliOptions.configFile</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="38"><span class="badge badge-danger">38</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="38">&#039;File &#039; + process.cwd() - &#039;/&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="39"><span class="badge badge-danger">39</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="39">&#039;File &#039; - process.cwd()</span><span class="stryker-original-code" data-mutant="36"><span class="stryker-original-code" data-mutant="37"><span class="stryker-original-code" data-mutant="38"><span class="stryker-original-code" data-mutant="39"><span class="bg-danger-light">&quot;File &quot; + process.cwd()</span></span><span class="bg-danger-light"> + &quot;/&quot;</span></span><span class="bg-danger-light"> + this.cliOptions.configFile</span></span><span class="bg-danger-light"> + &quot; does not exist!&quot;</span></span><span class="bg-danger-light">);
+                    this.log.fatal(e);
+                }</span></span><span class="bg-danger-light">
+                else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="40"><span class="badge badge-danger">40</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="40">{
+}</span><span class="stryker-original-code" data-mutant="40"><span class="bg-danger-light">{
+                    this.log.fatal(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="41"><span class="badge badge-danger">41</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="41">&#039;Invalid config file!\n  &#039; - e.stack</span><span class="stryker-original-code" data-mutant="41"><span class="bg-danger-light">&#039;Invalid config file!\n  &#039; + e.stack</span></span><span class="bg-danger-light">);
+                }</span></span><span class="bg-danger-light">
+                this.log.info(&#039;Stryker can help you setup a `stryker.conf` file for your project.&#039;);
+                this.log.info(&#039;Please execute `stryker init` in your project\&#039;s root directory.&#039;);
                 process.exit(1);
-            }</span></span><span class="bg-success">
-            if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="26"><span class="label label-success">26</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="26">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="27"><span class="label label-success">27</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="27">false</span><span class="stryker-original-code" data-mutant="26"><span class="stryker-original-code" data-mutant="27"><span class="bg-success">!_.isFunction(configModule))</span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="28"><span class="label label-success">28</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="28">{
-}</span><span class="stryker-original-code" data-mutant="28"><span class="bg-success">{
-                log.fatal(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="29"><span class="label label-success">29</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="29">&#x27;Config file must export a function!\n&#x27; - exports.CONFIG_SYNTAX_HELP</span><span class="stryker-original-code" data-mutant="29"><span class="bg-success">&#x27;Config file must export a function!\n&#x27; + exports.CONFIG_SYNTAX_HELP)</span></span><span class="bg-success">;
+            }</span></span><span class="bg-danger-light">
+            if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="42"><span class="badge badge-danger">42</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="42">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="43"><span class="badge badge-danger">43</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="43">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="44"><span class="badge badge-danger">44</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="44">_.isFunction(configModule)</span><span class="stryker-original-code" data-mutant="42"><span class="stryker-original-code" data-mutant="43"><span class="stryker-original-code" data-mutant="44"><span class="bg-danger-light">!_.isFunction(configModule)</span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="45"><span class="badge badge-danger">45</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="45">{
+}</span><span class="stryker-original-code" data-mutant="45"><span class="bg-danger-light">{
+                this.log.fatal(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="46"><span class="badge badge-danger">46</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="46">&#039;Config file must export a function!\n&#039; - exports.CONFIG_SYNTAX_HELP</span><span class="stryker-original-code" data-mutant="46"><span class="bg-danger-light">&#039;Config file must export a function!\n&#039; + exports.CONFIG_SYNTAX_HELP</span></span><span class="bg-danger-light">);
                 process.exit(1);
-            }</span></span><span class="bg-success">
-        }</span></span><span class="bg-success">
-        else </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="30"><span class="label label-success">30</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="30">{
-}</span><span class="stryker-original-code" data-mutant="30"><span class="bg-success">{
-            log.debug(&#x27;No config file specified.&#x27;);
-            configModule &#x3D; function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="31"><span class="label label-success">31</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="31">{
-}</span><span class="stryker-original-code" data-mutant="31"><span class="bg-success">{ };</span></span><span class="bg-success">
-        }</span></span><span class="bg-success">
+            }</span></span><span class="bg-danger-light">
+        }</span></span><span class="bg-danger-light">
         return configModule;
-    };</span></span><span class="bg-success">
+    }</span></span><span class="bg-danger-light">;
+    ConfigReader.prototype.validate = function (options) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="47"><span class="badge badge-danger">47</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="47">{
+}</span><span class="stryker-original-code" data-mutant="47"><span class="bg-danger-light">{
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="48"><span class="badge badge-danger">48</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="48">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="49"><span class="badge badge-danger">49</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="49">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="50"><span class="badge badge-danger">50</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="50">VALID_COVERAGE_ANALYSIS_VALUES.indexOf(options.coverageAnalysis) &lt;= 0</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="51"><span class="badge badge-danger">51</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="51">VALID_COVERAGE_ANALYSIS_VALUES.indexOf(options.coverageAnalysis) &gt;= 0</span><span class="stryker-original-code" data-mutant="48"><span class="stryker-original-code" data-mutant="49"><span class="stryker-original-code" data-mutant="50"><span class="stryker-original-code" data-mutant="51"><span class="bg-danger-light">VALID_COVERAGE_ANALYSIS_VALUES.indexOf(options.coverageAnalysis) &lt; 0</span></span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="52"><span class="badge badge-danger">52</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="52">{
+}</span><span class="stryker-original-code" data-mutant="52"><span class="bg-danger-light">{
+            this.log.fatal(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="53"><span class="badge badge-danger">53</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="53">&#039;Value &quot;&#039; + options.coverageAnalysis + &#039;&quot; is invalid for `coverageAnalysis`. Expected one of the folowing: &#039; - VALID_COVERAGE_ANALYSIS_VALUES.map(function (v) {
+    return &#039;&quot;&#039; + v + &#039;&quot;&#039;;
+}).join(&#039;, &#039;)</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="54"><span class="badge badge-danger">54</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="54">&#039;Value &quot;&#039; + options.coverageAnalysis - &#039;&quot; is invalid for `coverageAnalysis`. Expected one of the folowing: &#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="55"><span class="badge badge-danger">55</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="55">&#039;Value &quot;&#039; - options.coverageAnalysis</span><span class="stryker-original-code" data-mutant="53"><span class="stryker-original-code" data-mutant="54"><span class="stryker-original-code" data-mutant="55"><span class="bg-danger-light">&quot;Value \&quot;&quot; + options.coverageAnalysis</span></span><span class="bg-danger-light"> + &quot;\&quot; is invalid for `coverageAnalysis`. Expected one of the folowing: &quot;</span></span><span class="bg-danger-light"> + VALID_COVERAGE_ANALYSIS_VALUES.map(function (v) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="56"><span class="badge badge-danger">56</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="56">{
+}</span><span class="stryker-original-code" data-mutant="56"><span class="bg-danger-light">{ return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="57"><span class="badge badge-danger">57</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="57">&#039;&quot;&#039; + v - &#039;&quot;&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="58"><span class="badge badge-danger">58</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="58">&#039;&quot;&#039; - v</span><span class="stryker-original-code" data-mutant="57"><span class="stryker-original-code" data-mutant="58"><span class="bg-danger-light">&quot;\&quot;&quot; + v</span></span><span class="bg-danger-light"> + &quot;\&quot;&quot;</span></span><span class="bg-danger-light">; }</span></span><span class="bg-danger-light">).join(&#039;, &#039;)</span></span><span class="bg-danger-light">);
+            process.exit(1);
+        }</span></span><span class="bg-danger-light">
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="59"><span class="badge badge-danger">59</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="59">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="60"><span class="badge badge-danger">60</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="60">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="61"><span class="badge badge-danger">61</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="61">options.coverageAnalysis === &#039;perTest&#039; || !options.testFramework</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="62"><span class="badge badge-danger">62</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="62">options.coverageAnalysis !== &#039;perTest&#039;</span><span class="stryker-original-code" data-mutant="59"><span class="stryker-original-code" data-mutant="60"><span class="stryker-original-code" data-mutant="61"><span class="stryker-original-code" data-mutant="62"><span class="bg-danger-light">options.coverageAnalysis === &#039;perTest&#039;</span></span><span class="bg-danger-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="63"><span class="badge badge-danger">63</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="63">options.testFramework</span><span class="stryker-original-code" data-mutant="63"><span class="bg-danger-light">!options.testFramework</span></span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="64"><span class="badge badge-danger">64</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="64">{
+}</span><span class="stryker-original-code" data-mutant="64"><span class="bg-danger-light">{
+            var validCoverageAnalysisSettingsExceptPerTest = VALID_COVERAGE_ANALYSIS_VALUES.filter(function (v) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="65"><span class="badge badge-danger">65</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="65">{
+}</span><span class="stryker-original-code" data-mutant="65"><span class="bg-danger-light">{ return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="66"><span class="badge badge-danger">66</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="66">v === &#039;perTest&#039;</span><span class="stryker-original-code" data-mutant="66"><span class="bg-danger-light">v !== &#039;perTest&#039;</span></span><span class="bg-danger-light">; }</span></span><span class="bg-danger-light">).map(function (v) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="67"><span class="badge badge-danger">67</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="67">{
+}</span><span class="stryker-original-code" data-mutant="67"><span class="bg-danger-light">{ return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="68"><span class="badge badge-danger">68</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="68">&#039;&quot;&#039; + v - &#039;&quot;&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="69"><span class="badge badge-danger">69</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="69">&#039;&quot;&#039; - v</span><span class="stryker-original-code" data-mutant="68"><span class="stryker-original-code" data-mutant="69"><span class="bg-danger-light">&quot;\&quot;&quot; + v</span></span><span class="bg-danger-light"> + &quot;\&quot;&quot;</span></span><span class="bg-danger-light">; }</span></span><span class="bg-danger-light">).join(&#039;, &#039;);
+            this.log.fatal(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="70"><span class="badge badge-danger">70</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="70">&#039;Configured coverage analysis \&#039;perTest\&#039; requires a test framework to be configured. Either configure your test framework (for example testFramework: \&#039;jasmine\&#039;) or set coverageAnalysis setting to one of the following: &#039; - validCoverageAnalysisSettingsExceptPerTest</span><span class="stryker-original-code" data-mutant="70"><span class="bg-danger-light">&quot;Configured coverage analysis &#039;perTest&#039; requires a test framework to be configured. Either configure your test framework (for example testFramework: &#039;jasmine&#039;) or set coverageAnalysis setting to one of the following: &quot; + validCoverageAnalysisSettingsExceptPerTest</span></span><span class="bg-danger-light">);
+            process.exit(1);
+        }</span></span><span class="bg-danger-light">
+    }</span></span><span class="bg-danger-light">;
     return ConfigReader;
-}(</span></span><span class="bg-null">));
-Object.defineProperty(exports, &quot;__esModule&quot;, { value: true });
-exports.default &#x3D; ConfigReader;
-//# sourceMappingURL&#x3D;ConfigReader.js.ma</span>p</code></pre>
-</div><footer>
-    Generated with stryker-html-reporter generator. Visit the <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer>
-</div>
-<script src="stryker.js" defer></script>
-</body>
-</html>
+}</span></span><span class="bg-null">());
+exports.default = ConfigReader;
+//# sourceMappingURL=ConfigReader.js.ma</span>p</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>1
+:
+54</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>1</th>
+<td>ArrayDeclarator</td>
+<td>NoCoverage</td>
+<td>7
+:
+37</td>
+<td><code>['   ...   ']</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>2</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>8
+:
+29</td>
+<td><code>'    ...  };'</code></td>
+<td><code>'    ...  };'</code></td></tr>
+<tr><th>3</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>8
+:
+29</td>
+<td><code>'    ...);\ '</code></td>
+<td><code>'    ...);\ '</code></td></tr>
+<tr><th>4</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>8
+:
+29</td>
+<td><code>'    ...  \ '</code></td>
+<td><code>'    ...  \ '</code></td></tr>
+<tr><th>5</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>8
+:
+29</td>
+<td><code>'    ...({\ '</code></td>
+<td><code>'    ...({\ '</code></td></tr>
+<tr><th>6</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>14
+:
+46</td>
+<td><code>{
+  ... ;
+}</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>7</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>15
+:
+38</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>8</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>19
+:
+52</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>9</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>22
+:
+12</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>10</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>25
+:
+18</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>11</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>34
+:
+58</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>12</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>37
+:
+12</td>
+<td><code>!    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>13</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>37
+:
+12</td>
+<td><code>!    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>14</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>37
+:
+12</td>
+<td><code>!    ...    .</code></td>
+<td><code>.          .</code></td></tr>
+<tr><th>15</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>37
+:
+41</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>16</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>38
+:
+16</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>17</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>39
+:
+43</td>
+<td><code>"./" +</code></td>
+<td><code>'./' -</code></td></tr>
+<tr><th>18</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>40
+:
+30</td>
+<td><code>"    ...   ."</code></td>
+<td><code>'    ...   .'</code></td></tr>
+<tr><th>19</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>40
+:
+30</td>
+<td><code>"      " +</code></td>
+<td><code>'      ' -</code></td></tr>
+<tr><th>20</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>43
+:
+22</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>21</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>48
+:
+12</td>
+<td><code>.          .</code></td>
+<td><code></code></td></tr>
+<tr><th>22</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>48
+:
+12</td>
+<td><code>.          .</code></td>
+<td><code></code></td></tr>
+<tr><th>23</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>48
+:
+40</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>24</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>49
+:
+27</td>
+<td><code>"    ...    .</code></td>
+<td><code>'    ...    .</code></td></tr>
+<tr><th>25</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>50
+:
+16</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>26</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>51
+:
+39</td>
+<td><code>.   (...    .</code></td>
+<td><code>.   (...    .</code></td></tr>
+<tr><th>27</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>51
+:
+39</td>
+<td><code>.   () + "/"</code></td>
+<td><code>.   () - '/'</code></td></tr>
+<tr><th>28</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>53
+:
+22</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>29</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>54
+:
+20</td>
+<td><code>.    ...!== -</code></td>
+<td><code></code></td></tr>
+<tr><th>30</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>54
+:
+20</td>
+<td><code>.    ...!== -</code></td>
+<td><code></code></td></tr>
+<tr><th>31</th>
+<td>LogicalOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+20</td>
+<td><code>.    ...!== -</code></td>
+<td><code>.    ...!== -</code></td></tr>
+<tr><th>32</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+20</td>
+<td><code>.    ...    '</code></td>
+<td><code>.    ...    '</code></td></tr>
+<tr><th>33</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+53</td>
+<td><code>.    ...!== -</code></td>
+<td><code>.    ...=== -</code></td></tr>
+<tr><th>34</th>
+<td>UnaryOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+103</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr>
+<tr><th>35</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>54
+:
+107</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>36</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>55
+:
+35</td>
+<td><code>"    ...   !"</code></td>
+<td><code>'    ...   !'</code></td></tr>
+<tr><th>37</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>55
+:
+35</td>
+<td><code>"    ...    .</code></td>
+<td><code>'    ...    .</code></td></tr>
+<tr><th>38</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>55
+:
+35</td>
+<td><code>"    ...+ "/"</code></td>
+<td><code>'    ...- '/'</code></td></tr>
+<tr><th>39</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>55
+:
+35</td>
+<td><code>"    ...   ()</code></td>
+<td><code>'    ...   ()</code></td></tr>
+<tr><th>40</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>58
+:
+21</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>41</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>59
+:
+35</td>
+<td><code>'    ... +  .</code></td>
+<td><code>'    ... -  .</code></td></tr>
+<tr><th>42</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>65
+:
+16</td>
+<td><code>! .  ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>43</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>65
+:
+16</td>
+<td><code>! .  ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>44</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>65
+:
+16</td>
+<td><code>! .  ...    )</code></td>
+<td><code>.    ...    )</code></td></tr>
+<tr><th>45</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>65
+:
+45</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>46</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>66
+:
+31</td>
+<td><code>'    ...    .</code></td>
+<td><code>'    ...    .</code></td></tr>
+<tr><th>47</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>72
+:
+57</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>48</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>73
+:
+12</td>
+<td><code>.    ...  ) <</code></td>
+<td><code></code></td></tr>
+<tr><th>49</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>73
+:
+12</td>
+<td><code>.    ...  ) <</code></td>
+<td><code></code></td></tr>
+<tr><th>50</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>73
+:
+12</td>
+<td><code>.    ...  ) <</code></td>
+<td><code>.    ... ) <=</code></td></tr>
+<tr><th>51</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>73
+:
+12</td>
+<td><code>.    ...  ) <</code></td>
+<td><code>.    ... ) >=</code></td></tr>
+<tr><th>52</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>73
+:
+82</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>53</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>74
+:
+27</td>
+<td><code>"    ...', ')</code></td>
+<td><code>'    ...', ')</code></td></tr>
+<tr><th>54</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>74
+:
+27</td>
+<td><code>"    ...  : "</code></td>
+<td><code>'    ...  : '</code></td></tr>
+<tr><th>55</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>74
+:
+27</td>
+<td><code>"    ...    .</code></td>
+<td><code>'    ...    .</code></td></tr>
+<tr><th>56</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>74
+:
+188</td>
+<td><code>{    ...""; }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>57</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>74
+:
+197</td>
+<td><code>"\"" +   + "\""</code></td>
+<td><code>'"' +   - '"'</code></td></tr>
+<tr><th>58</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>74
+:
+197</td>
+<td><code>"\"" +</code></td>
+<td><code>'"' -</code></td></tr>
+<tr><th>59</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>77
+:
+12</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>60</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>77
+:
+12</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>61</th>
+<td>LogicalOperator</td>
+<td>NoCoverage</td>
+<td>77
+:
+12</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>62</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>77
+:
+12</td>
+<td><code>.    ...    '</code></td>
+<td><code>.    ...    '</code></td></tr>
+<tr><th>63</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>77
+:
+54</td>
+<td><code>!       .</code></td>
+<td><code>.</code></td></tr>
+<tr><th>64</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>77
+:
+78</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>65</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>78
+:
+112</td>
+<td><code>{    ... '; }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>66</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>78
+:
+121</td>
+<td><code>!== '       '</code></td>
+<td><code>=== '       '</code></td></tr>
+<tr><th>67</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>78
+:
+158</td>
+<td><code>{    ...""; }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>68</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>78
+:
+167</td>
+<td><code>"\"" +   + "\""</code></td>
+<td><code>'"' +   - '"'</code></td></tr>
+<tr><th>69</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>78
+:
+167</td>
+<td><code>"\"" +</code></td>
+<td><code>'"' -</code></td></tr>
+<tr><th>70</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>79
+:
+27</td>
+<td><code>"    ...: " +</code></td>
+<td><code>'    ...: ' -</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="__resources/stryker.js" defer="defer"></script></body></html>

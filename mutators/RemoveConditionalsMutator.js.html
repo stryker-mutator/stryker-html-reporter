@@ -1,104 +1,343 @@
-<html>
-<head>
-    <title>RemoveConditionalsMutator.js - Stryker report</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../highlightjs/styles/default.css">
-    <link rel="stylesheet" href="../stryker.css">
-</head>
+<!DOCTYPE html>
+<html><head><title>RemoveConditionalsMutator.js
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">RemoveConditionalsMutator.js
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">All files</a></li><li class="breadcrumb-item"><a href="index.html">mutators</a></li>
+<li class="breadcrumb-item active">RemoveConditionalsMutator.js</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>RemoveConditionalsMutator.js</td>
+<td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="92.31" aria-valuemin="0" aria-valuemax="100" style="width: 92.31%;">92.31
+%</div></div></td>
+<th class="text-center text-success" style="width: 10%">92.31</th>
+<td class="text-center">24</td>
+<td class="text-center">2</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<th class="text-center">24</th>
+<th class="text-center">2</th>
+<th class="text-center">26</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(2)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(24)</label></div>
 
-<body>  
-    <img class="stryker-image" alt="Stryker" src="../stryker-80x80.png">
 
-    <div class="container-fluid">
-        <h1>RemoveConditionalsMutator.js - Stryker report</h1><div class="col-md-12">
-    <h2>Summary</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th style="width: 20%">File</th>
-                        <th colspan="2">Based on all code</th>
-                        <th colspan="2" style="width: 20%">Based on code coverage</th>
-                    </tr>
-                </thead>                <tbody>
-                    <tr>
-                        <td><a href="RemoveConditionalsMutator.js.html">RemoveConditionalsMutator.js</a></td>
-                        <td>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 100%;">
-                                    100%
-                                </div>
-                            </div>
-                        </td>
-                        <td>16/16</td>
-                        <td>100%</td>
-                        <td>16/16</td>
-                    </tr>                </tbody>
-            </table>
-        </div>
-    </div>
-    <h2>Code</h2>
-    <div class="row">
-        <div class="col-sm-6">
-           <a href="#" class="stryker-collapse-expand-all">Expand all</a>
-        </div>
-        <div class="col-sm-offset-2 col-sm-4">
-            <label>
-                <input class="stryker-display-killed" type="checkbox"> Also show killed mutants
-            </label>
-        </div>
-    </div>
-    <pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
-var esprima_1 &#x3D; require(&#x27;esprima&#x27;);
-var RemoveConditionalsMutator &#x3D; (function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="0"><span class="label label-success">0</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="0">{
-}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success">{
-    function RemoveConditionalsMutator() </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="1"><span class="label label-success">1</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="1">{
-}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success">{
-        this.name &#x3D; &#x27;RemoveConditionals&#x27;;
-        this.types &#x3D; [esprima_1.Syntax.DoWhileStatement, esprima_1.Syntax.IfStatement, esprima_1.Syntax.ForStatement, esprima_1.Syntax.WhileStatement];
-    }</span></span><span class="bg-success">
-    RemoveConditionalsMutator.prototype.applyMutations &#x3D; function (node, copy) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="2"><span class="label label-success">2</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="2">{
-}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success">{
-        var nodes &#x3D; [];
-        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="3"><span class="label label-success">3</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="3">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="4"><span class="label label-success">4</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="4">false</span><span class="stryker-original-code" data-mutant="3"><span class="stryker-original-code" data-mutant="4"><span class="bg-success">this.canMutate(node))</span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="5"><span class="label label-success">5</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="5">{
-}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success">{
-            var mutatedFalseNode &#x3D; copy(node.test);
-            this.mutateTestExpression(mutatedFalseNode, false);
-            nodes.push(mutatedFalseNode);
-            if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="6"><span class="label label-success">6</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="6">node.type !&#x3D;&#x3D; esprima_1.Syntax.IfStatement</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="7"><span class="label label-success">7</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="7">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="8"><span class="label label-success">8</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="8">false</span><span class="stryker-original-code" data-mutant="6"><span class="stryker-original-code" data-mutant="7"><span class="stryker-original-code" data-mutant="8"><span class="bg-success">node.type &#x3D;&#x3D;&#x3D; esprima_1.Syntax.IfStatement)</span></span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="9"><span class="label label-success">9</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="9">{
-}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-success">{
-                var mutatedTrueNode &#x3D; copy(node.test);
-                this.mutateTestExpression(mutatedTrueNode, true);
-                nodes.push(mutatedTrueNode);
-            }</span></span><span class="bg-success">
-        }</span></span><span class="bg-success">
-        return nodes;
-    };</span></span><span class="bg-success">
-    RemoveConditionalsMutator.prototype.mutateTestExpression &#x3D; function (node, newValue) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="10"><span class="label label-success">10</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="10">{
-}</span><span class="stryker-original-code" data-mutant="10"><span class="bg-success">{
-        node.type &#x3D; esprima_1.Syntax.Literal;
-        node.value &#x3D; newValue;
-    };</span></span><span class="bg-success">
-    RemoveConditionalsMutator.prototype.canMutate &#x3D; function (node) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="11"><span class="label label-success">11</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="11">{
-}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-success">{
-        return !!(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="12"><span class="label label-success">12</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="12">node || this.types.indexOf(node.type) &gt;&#x3D; 0</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success">node &amp;&amp; </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="13"><span class="label label-success">13</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="13">this.types.indexOf(node.type) &lt; 0</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="14"><span class="label label-success">14</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="14">this.types.indexOf(node.type) &gt; 0</span><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="bg-success">this.types.indexOf(node.type) &gt;&#x3D; 0)</span></span></span></span><span class="bg-success">;
-    };</span></span><span class="bg-success">
-    ;
-    RemoveConditionalsMutator.prototype.copyNode &#x3D; function (node) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="15"><span class="label label-success">15</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="15">{
-}</span><span class="stryker-original-code" data-mutant="15"><span class="bg-success">{
-        return JSON.parse(JSON.stringify(node));
-    };</span></span><span class="bg-success">
+
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="0"><span class="badge badge-danger">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">false</span><span class="stryker-original-code" data-mutant="0"><span class="bg-danger-light">true</span></span><span class="bg-null"> });
+var esprima_1 = require(&quot;esprima&quot;);
+/**
+ * Represents a mutator which can remove the conditional clause from statements.
+ */
+var RemoveConditionalsMutator = /** @class */ (function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="1"><span class="badge badge-success">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{
+}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success-light">{
+    function RemoveConditionalsMutator() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="2"><span class="badge badge-success">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{
+}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">{
+        this.name = &#039;RemoveConditionals&#039;;
+        this.types = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayDeclarator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">[]</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success-light">[esprima_1.Syntax.DoWhileStatement, esprima_1.Syntax.IfStatement, esprima_1.Syntax.ForStatement, esprima_1.Syntax.WhileStatement, esprima_1.Syntax.ConditionalExpression]</span></span><span class="bg-success-light">;
+    }</span></span><span class="bg-success-light">
+    RemoveConditionalsMutator.prototype.applyMutations = function (node, copy) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">{
+}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">{
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="6"><span class="badge badge-success">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">true</span><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="bg-success-light">this.canMutate(node)</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">{
+}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-success-light">{
+            var nodes = [];
+            if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">true</span><span class="stryker-original-code" data-mutant="8"><span class="stryker-original-code" data-mutant="9"><span class="bg-success-light">node.test</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">{
+}</span><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">{
+                nodes.push(this.booleanLiteralNode(node.test.nodeID, </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="11"><span class="badge badge-success">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">true</span><span class="stryker-original-code" data-mutant="11"><span class="bg-success-light">false</span></span><span class="bg-success-light">));
+            }</span></span><span class="bg-success-light">
+            else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">{
+}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success-light">{
+                var mutatedNode = copy(node);
+                mutatedNode.test = this.booleanLiteralNode(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="UnaryOperator" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="13"><span class="badge badge-danger">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">+1</span><span class="stryker-original-code" data-mutant="13"><span class="bg-danger-light">-1</span></span><span class="bg-success-light">, </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">true</span><span class="stryker-original-code" data-mutant="14"><span class="bg-success-light">false</span></span><span class="bg-success-light">);
+                nodes.push(mutatedNode);
+            }</span></span><span class="bg-success-light">
+            if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="15"><span class="badge badge-success">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="17"><span class="badge badge-success">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">node.type === esprima_1.Syntax.IfStatement &amp;&amp; node.type === esprima_1.Syntax.ConditionalExpression</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="18"><span class="badge badge-success">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">node.type !== esprima_1.Syntax.IfStatement</span><span class="stryker-original-code" data-mutant="15"><span class="stryker-original-code" data-mutant="16"><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="bg-success-light">node.type === esprima_1.Syntax.IfStatement</span></span><span class="bg-success-light"> || </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="19"><span class="badge badge-success">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">node.type !== esprima_1.Syntax.ConditionalExpression</span><span class="stryker-original-code" data-mutant="19"><span class="bg-success-light">node.type === esprima_1.Syntax.ConditionalExpression</span></span></span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="20"><span class="badge badge-success">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">{
+}</span><span class="stryker-original-code" data-mutant="20"><span class="bg-success-light">{
+                nodes.push(this.booleanLiteralNode(node.test.nodeID, </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="21"><span class="badge badge-success">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">false</span><span class="stryker-original-code" data-mutant="21"><span class="bg-success-light">true</span></span><span class="bg-success-light">));
+            }</span></span><span class="bg-success-light">
+            return nodes;
+        }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-success-light">;
+    RemoveConditionalsMutator.prototype.booleanLiteralNode = function (nodeID, value) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="22"><span class="badge badge-success">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">{
+}</span><span class="stryker-original-code" data-mutant="22"><span class="bg-success-light">{
+        return {
+            nodeID: nodeID,
+            type: esprima_1.Syntax.Literal,
+            value: value,
+            raw: value.toString()
+        };
+    }</span></span><span class="bg-success-light">;
+    RemoveConditionalsMutator.prototype.canMutate = function (node) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="23"><span class="badge badge-success">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{
+}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success-light">{
+        return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="24"><span class="badge badge-success">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">this.types.indexOf(node.type) &gt; 0</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="25"><span class="badge badge-success">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">this.types.indexOf(node.type) &lt; 0</span><span class="stryker-original-code" data-mutant="24"><span class="stryker-original-code" data-mutant="25"><span class="bg-success-light">this.types.indexOf(node.type) &gt;= 0</span></span></span><span class="bg-success-light">;
+    }</span></span><span class="bg-success-light">;
     return RemoveConditionalsMutator;
-}(</span></span><span class="bg-null">));
-Object.defineProperty(exports, &quot;__esModule&quot;, { value: true });
-exports.default &#x3D; RemoveConditionalsMutator;
-//# sourceMappingURL&#x3D;RemoveConditionalsMutator.js.ma</span>p</code></pre>
-</div><footer>
-    Generated with stryker-html-reporter generator. Visit the <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer>
-</div>
-<script src="../stryker.js" defer></script>
-</body>
-</html>
+}</span></span><span class="bg-null">());
+exports.default = RemoveConditionalsMutator;
+//# sourceMappingURL=RemoveConditionalsMutator.js.ma</span>p</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>6
+:
+59</td>
+<td><code>{
+  ... ;
+}</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>1</th>
+<td>ArrayDeclarator</td>
+<td>Killed</td>
+<td>9
+:
+21</td>
+<td><code>[    ...    ]</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>2</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>12
+:
+12</td>
+<td><code>.    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>3</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>12
+:
+12</td>
+<td><code>.    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>4</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>12
+:
+34</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>5</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>14
+:
+16</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>7
+:
+41</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>7</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>14
+:
+16</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>8</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>14
+:
+27</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>9</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>11
+:
+79</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>10</th>
+<td>BooleanSubstitution</td>
+<td>Killed</td>
+<td>15
+:
+69</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>11</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>17
+:
+17</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>12</th>
+<td>BooleanSubstitution</td>
+<td>Killed</td>
+<td>19
+:
+63</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>13</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>22
+:
+16</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>14</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>22
+:
+16</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>15</th>
+<td>LogicalOperator</td>
+<td>Killed</td>
+<td>22
+:
+16</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>16</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>22
+:
+16</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>17</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>22
+:
+62</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>18</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>1
+:
+54</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>19</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>22
+:
+116</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>20</th>
+<td>BooleanSubstitution</td>
+<td>Killed</td>
+<td>23
+:
+69</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>21</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>37
+:
+15</td>
+<td><code>.    ... ) >=</code></td>
+<td><code>.    ...  ) ></code></td></tr>
+<tr><th>22</th>
+<td>BinaryOperator</td>
+<td>Killed</td>
+<td>37
+:
+15</td>
+<td><code>.    ... ) >=</code></td>
+<td><code>.    ...  ) <</code></td></tr>
+<tr><th>23</th>
+<td>UnaryOperator</td>
+<td>Survived</td>
+<td>19
+:
+59</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr>
+<tr><th>24</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>28
+:
+86</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>25</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>36
+:
+68</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../__resources/stryker.js" defer="defer"></script></body></html>

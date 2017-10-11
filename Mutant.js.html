@@ -1,157 +1,666 @@
-<html>
-<head>
-    <title>Mutant.js - Stryker report</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="highlightjs/styles/default.css">
-    <link rel="stylesheet" href="stryker.css">
-</head>
+<!DOCTYPE html>
+<html><head><title>Mutant.js
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">Mutant.js
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">All files</a></li>
+<li class="breadcrumb-item active">Mutant.js</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>Mutant.js</td>
+<td><div class="progress"><div class="progress-bar bg-danger" role="progressbar" aria-valuenow="0.00" aria-valuemin="0" aria-valuemax="100" style="width: 0.00%;">0.00
+%</div></div></td>
+<th class="text-center text-danger" style="width: 10%">0.00</th>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">56</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<th class="text-center">0</th>
+<th class="text-center">56</th>
+<th class="text-center">56</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate"><div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="0" type="checkbox">
+NoCoverage
+ 
+(56)</label></div>
 
-<body>  
-    <img class="stryker-image" alt="Stryker" src="stryker-80x80.png">
 
-    <div class="container-fluid">
-        <h1>Mutant.js - Stryker report</h1><div class="col-md-12">
-    <h2>Summary</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th style="width: 20%">File</th>
-                        <th colspan="2">Based on all code</th>
-                        <th colspan="2" style="width: 20%">Based on code coverage</th>
-                    </tr>
-                </thead>                <tbody>
-                    <tr>
-                        <td><a href="Mutant.js.html">Mutant.js</a></td>
-                        <td>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 100%;">
-                                    100%
-                                </div>
-                            </div>
-                        </td>
-                        <td>32/32</td>
-                        <td>100%</td>
-                        <td>32/32</td>
-                    </tr>                </tbody>
-            </table>
-        </div>
-    </div>
-    <h2>Code</h2>
-    <div class="row">
-        <div class="col-sm-6">
-           <a href="#" class="stryker-collapse-expand-all">Expand all</a>
-        </div>
-        <div class="col-sm-offset-2 col-sm-4">
-            <label>
-                <input class="stryker-display-killed" type="checkbox"> Also show killed mutants
-            </label>
-        </div>
-    </div>
-    <pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
-var StrykerTempFolder_1 &#x3D; require(&#x27;./utils/StrykerTempFolder&#x27;);
-var Mutant &#x3D; (function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="0"><span class="label label-success">0</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="0">{
-}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success">{
-    function Mutant(mutatorName, filename, originalCode, replacement, location, range) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="1"><span class="label label-success">1</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="1">{
-}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success">{
-        this.mutatorName &#x3D; mutatorName;
-        this.filename &#x3D; filename;
-        this.originalCode &#x3D; originalCode;
-        this.replacement &#x3D; replacement;
-        this.location &#x3D; location;
-        this.range &#x3D; range;
-        this.scopedTestsById &#x3D; [];
-        this._scopedTestIds &#x3D; [];
-        this.specsRan &#x3D; [];
-        this._timeSpentScopedTests &#x3D; 0;
-    }</span></span><span class="bg-success">
+
+
+
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="0"><span class="badge badge-danger">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">false</span><span class="stryker-original-code" data-mutant="0"><span class="bg-danger-light">true</span></span><span class="bg-null"> });
+var fileUtils = require(&quot;./utils/fileUtils&quot;);
+/**
+ * Represents a mutation which has been applied to a file.
+ */
+var Mutant = /** @class */ (function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="1"><span class="badge badge-danger">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{
+}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-danger-light">{
+    /**
+     * @param mutatorName - The name of the Mutator which created this mutant.
+     * @param filename - The name of the file which was mutated, including the path.
+     * @param originalCode - The original content of the file which has not been mutated.
+     * @param replacement - The mutated code which will replace a part of the originalCode.
+     * @param location - The location of the code to be mutated - line and column based
+     * @param range - The location of the code to be mutated - index based
+     */
+    function Mutant(mutatorName, filename, originalCode, replacement, location, range) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="2"><span class="badge badge-danger">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{
+}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-danger-light">{
+        this.mutatorName = mutatorName;
+        this.filename = filename;
+        this.originalCode = originalCode;
+        this.replacement = replacement;
+        this.location = location;
+        this.range = range;
+        this._scopedTestIds = [];
+        this.specsRan = [];
+        this._timeSpentScopedTests = 0;
+    }</span></span><span class="bg-danger-light">
     Object.defineProperty(Mutant.prototype, &quot;scopedTestIds&quot;, {
-        get: function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="2"><span class="label label-success">2</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="2">{
-}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success">{
+        get: function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="3"><span class="badge badge-danger">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">{
+}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-danger-light">{
             return this._scopedTestIds;
-        },</span></span><span class="bg-success">
-        enumerable: true,
-        configurable: true
+        }</span></span><span class="bg-danger-light">,
+        enumerable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="4"><span class="badge badge-danger">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">false</span><span class="stryker-original-code" data-mutant="4"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">,
+        configurable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="5"><span class="badge badge-danger">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">false</span><span class="stryker-original-code" data-mutant="5"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">
     });
     Object.defineProperty(Mutant.prototype, &quot;timeSpentScopedTests&quot;, {
-        get: function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="3"><span class="label label-success">3</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="3">{
-}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success">{
+        get: function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="6"><span class="badge badge-danger">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">{
+}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-danger-light">{
             return this._timeSpentScopedTests;
-        },</span></span><span class="bg-success">
-        enumerable: true,
-        configurable: true
+        }</span></span><span class="bg-danger-light">,
+        enumerable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="7"><span class="badge badge-danger">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">false</span><span class="stryker-original-code" data-mutant="7"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">,
+        configurable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="8"><span class="badge badge-danger">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">false</span><span class="stryker-original-code" data-mutant="8"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">
     });
-    Mutant.prototype.addRunResultForTest &#x3D; function (index, runResult) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="4"><span class="label label-success">4</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="4">{
-}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-success">{
+    Mutant.prototype.addAllTestResults = function (runResult) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="9"><span class="badge badge-danger">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">{
+}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-danger-light">{
+        var _this = this;
+        runResult.tests.forEach(function (testResult, id) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="10"><span class="badge badge-danger">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">{
+}</span><span class="stryker-original-code" data-mutant="10"><span class="bg-danger-light">{ return _this.addTestResult(id, testResult); }</span></span><span class="bg-danger-light">);
+    }</span></span><span class="bg-danger-light">;
+    Mutant.prototype.addTestResult = function (index, testResult) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="11"><span class="badge badge-danger">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{
+}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-danger-light">{
         this._scopedTestIds.push(index);
-        this._timeSpentScopedTests +&#x3D; runResult.timeSpent;
-        this.scopedTestsById[index] &#x3D; runResult;
-    };</span></span><span class="bg-success">
-    Mutant.prototype.isNewLine &#x3D; function (index) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="5"><span class="label label-success">5</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="5">{
-}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success">{
-        var char &#x3D; this.originalCode[index];
-        return </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="6"><span class="label label-success">6</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="6">char &#x3D;&#x3D;&#x3D; &#x27;\n&#x27; &amp;&amp; char &#x3D;&#x3D;&#x3D; &#x27;\r&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="7"><span class="label label-success">7</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="7">char !&#x3D;&#x3D; &#x27;\n&#x27;</span><span class="stryker-original-code" data-mutant="6"><span class="stryker-original-code" data-mutant="7"><span class="bg-success">char &#x3D;&#x3D;&#x3D; &#x27;\n&#x27; </span></span><span class="bg-success">|| </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="8"><span class="label label-success">8</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="8">char !&#x3D;&#x3D; &#x27;\r&#x27;</span><span class="stryker-original-code" data-mutant="8"><span class="bg-success">char &#x3D;&#x3D;&#x3D; &#x27;\r&#x27;;</span></span></span><span class="bg-success">
-    };</span></span><span class="bg-success">
-    Mutant.prototype.getMutationLineIndexes &#x3D; function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="9"><span class="label label-success">9</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="9">{
-}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-success">{
-        var startIndexLines &#x3D; this.range[0], endIndexLines &#x3D; this.range[1];
-        while (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="10"><span class="label label-success">10</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="10">startIndexLines &gt; 0 || !this.isNewLine(startIndexLines - 1)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="11"><span class="label label-success">11</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="11">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="12"><span class="label label-success">12</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="12">startIndexLines &gt;&#x3D; 0</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="13"><span class="label label-success">13</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="13">startIndexLines &lt;&#x3D; 0</span><span class="stryker-original-code" data-mutant="10"><span class="stryker-original-code" data-mutant="11"><span class="stryker-original-code" data-mutant="12"><span class="stryker-original-code" data-mutant="13"><span class="bg-success">startIndexLines &gt; 0 </span></span></span><span class="bg-success">&amp;&amp; !this.isNewLine(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="14"><span class="label label-success">14</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="14">startIndexLines + 1</span><span class="stryker-original-code" data-mutant="14"><span class="bg-success">startIndexLines - 1)</span></span><span class="bg-success">)</span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="15"><span class="label label-success">15</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="15">{
-}</span><span class="stryker-original-code" data-mutant="15"><span class="bg-success">{
-            </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="16"><span class="label label-success">16</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="16">startIndexLines++</span><span class="stryker-original-code" data-mutant="16"><span class="bg-success">startIndexLines--;</span></span><span class="bg-success">
-        }</span></span><span class="bg-success">
-        while (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="17"><span class="label label-success">17</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="17">endIndexLines &lt; this.originalCode.length || !this.isNewLine(endIndexLines)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="18"><span class="label label-success">18</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="18">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="19"><span class="label label-success">19</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="19">endIndexLines &gt;&#x3D; this.originalCode.length</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="20"><span class="label label-success">20</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="20">endIndexLines &lt;&#x3D; this.originalCode.length</span><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="stryker-original-code" data-mutant="19"><span class="stryker-original-code" data-mutant="20"><span class="bg-success">endIndexLines &lt; this.originalCode.length </span></span></span><span class="bg-success">&amp;&amp; !this.isNewLine(endIndexLines))</span></span></span><span class="bg-success"> </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="21"><span class="label label-success">21</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="21">{
-}</span><span class="stryker-original-code" data-mutant="21"><span class="bg-success">{
-            </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="22"><span class="label label-success">22</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="22">endIndexLines--</span><span class="stryker-original-code" data-mutant="22"><span class="bg-success">endIndexLines++;</span></span><span class="bg-success">
-        }</span></span><span class="bg-success">
-        return [startIndexLines, endIndexLines];
-    };</span></span><span class="bg-success">
+        this._timeSpentScopedTests += testResult.timeSpentMs;
+    }</span></span><span class="bg-danger-light">;
+    Mutant.prototype.isNewLine = function (index) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="12"><span class="badge badge-danger">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">{
+}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-danger-light">{
+        var char = this.originalCode[index];
+        return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="13"><span class="badge badge-danger">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">char === &#039;\n&#039; &amp;&amp; char === &#039;\r&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="14"><span class="badge badge-danger">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">char !== &#039;\n&#039;</span><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="bg-danger-light">char === &#039;\n&#039;</span></span><span class="bg-danger-light"> || </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="15"><span class="badge badge-danger">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">char !== &#039;\r&#039;</span><span class="stryker-original-code" data-mutant="15"><span class="bg-danger-light">char === &#039;\r&#039;</span></span></span><span class="bg-danger-light">;
+    }</span></span><span class="bg-danger-light">;
+    Mutant.prototype.getMutationLineIndexes = function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="16"><span class="badge badge-danger">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">{
+}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-danger-light">{
+        var startIndexLines = this.range[0], endIndexLines = this.range[1];
+        while (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="17"><span class="badge badge-danger">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="18"><span class="badge badge-danger">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">startIndexLines &gt; 0 || !this.isNewLine(startIndexLines - 1)</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="19"><span class="badge badge-danger">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">startIndexLines &gt;= 0</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="20"><span class="badge badge-danger">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">startIndexLines &lt;= 0</span><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="stryker-original-code" data-mutant="19"><span class="stryker-original-code" data-mutant="20"><span class="bg-danger-light">startIndexLines &gt; 0</span></span></span><span class="bg-danger-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="21"><span class="badge badge-danger">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">this.isNewLine(startIndexLines - 1)</span><span class="stryker-original-code" data-mutant="21"><span class="bg-danger-light">!this.isNewLine(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="22"><span class="badge badge-danger">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">startIndexLines + 1</span><span class="stryker-original-code" data-mutant="22"><span class="bg-danger-light">startIndexLines - 1</span></span><span class="bg-danger-light">)</span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="23"><span class="badge badge-danger">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{
+}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-danger-light">{
+            </span><a href="#" class="stryker-mutant-button" tabindex="0" title="UpdateOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="24"><span class="badge badge-danger">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">startIndexLines++</span><span class="stryker-original-code" data-mutant="24"><span class="bg-danger-light">startIndexLines--</span></span><span class="bg-danger-light">;
+        }</span></span><span class="bg-danger-light">
+        while (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="25"><span class="badge badge-danger">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="LogicalOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="26"><span class="badge badge-danger">26</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="26">endIndexLines &lt; this.originalCode.length || !this.isNewLine(endIndexLines)</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="27"><span class="badge badge-danger">27</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="27">endIndexLines &lt;= this.originalCode.length</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="28"><span class="badge badge-danger">28</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="28">endIndexLines &gt;= this.originalCode.length</span><span class="stryker-original-code" data-mutant="25"><span class="stryker-original-code" data-mutant="26"><span class="stryker-original-code" data-mutant="27"><span class="stryker-original-code" data-mutant="28"><span class="bg-danger-light">endIndexLines &lt; this.originalCode.length</span></span></span><span class="bg-danger-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="29"><span class="badge badge-danger">29</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="29">this.isNewLine(endIndexLines)</span><span class="stryker-original-code" data-mutant="29"><span class="bg-danger-light">!this.isNewLine(endIndexLines)</span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="30"><span class="badge badge-danger">30</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="30">{
+}</span><span class="stryker-original-code" data-mutant="30"><span class="bg-danger-light">{
+            </span><a href="#" class="stryker-mutant-button" tabindex="0" title="UpdateOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="31"><span class="badge badge-danger">31</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="31">endIndexLines--</span><span class="stryker-original-code" data-mutant="31"><span class="bg-danger-light">endIndexLines++</span></span><span class="bg-danger-light">;
+        }</span></span><span class="bg-danger-light">
+        return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayDeclarator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="32"><span class="badge badge-danger">32</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="32">[]</span><span class="stryker-original-code" data-mutant="32"><span class="bg-danger-light">[startIndexLines, endIndexLines]</span></span><span class="bg-danger-light">;
+    }</span></span><span class="bg-danger-light">;
     Object.defineProperty(Mutant.prototype, &quot;originalLines&quot;, {
-        get: function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="23"><span class="label label-success">23</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="23">{
-}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success">{
-            var _a &#x3D; this.getMutationLineIndexes(), startIndex &#x3D; _a[0], endIndex &#x3D; _a[1];
+        get: function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="33"><span class="badge badge-danger">33</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="33">{
+}</span><span class="stryker-original-code" data-mutant="33"><span class="bg-danger-light">{
+            var _a = this.getMutationLineIndexes(), startIndex = _a[0], endIndex = _a[1];
             return this.originalCode.substring(startIndex, endIndex);
-        },</span></span><span class="bg-success">
-        enumerable: true,
-        configurable: true
+        }</span></span><span class="bg-danger-light">,
+        enumerable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="34"><span class="badge badge-danger">34</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="34">false</span><span class="stryker-original-code" data-mutant="34"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">,
+        configurable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="35"><span class="badge badge-danger">35</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="35">false</span><span class="stryker-original-code" data-mutant="35"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">
     });
     Object.defineProperty(Mutant.prototype, &quot;mutatedLines&quot;, {
-        get: function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="24"><span class="label label-success">24</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="24">{
-}</span><span class="stryker-original-code" data-mutant="24"><span class="bg-success">{
-            var _a &#x3D; this.getMutationLineIndexes(), startIndex &#x3D; _a[0], endIndex &#x3D; _a[1];
-            return </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="25"><span class="label label-success">25</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="25">this.originalCode.substring(startIndex, this.range[0]) + this.replacement - this.originalCode.substring(this.range[1], endIndex)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="26"><span class="label label-success">26</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="26">this.originalCode.substring(startIndex, this.range[0]) - this.replacement</span><span class="stryker-original-code" data-mutant="25"><span class="stryker-original-code" data-mutant="26"><span class="bg-success">this.originalCode.substring(startIndex, this.range[0]) + this.replacement </span></span><span class="bg-success">+ this.originalCode.substring(this.range[1], endIndex);</span></span><span class="bg-success">
-        },</span></span><span class="bg-success">
-        enumerable: true,
-        configurable: true
+        get: function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="36"><span class="badge badge-danger">36</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="36">{
+}</span><span class="stryker-original-code" data-mutant="36"><span class="bg-danger-light">{
+            var _a = this.getMutationLineIndexes(), startIndex = _a[0], endIndex = _a[1];
+            return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="37"><span class="badge badge-danger">37</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="37">this.originalCode.substring(startIndex, this.range[0]) + this.replacement - this.originalCode.substring(this.range[1], endIndex)</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="38"><span class="badge badge-danger">38</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="38">this.originalCode.substring(startIndex, this.range[0]) - this.replacement</span><span class="stryker-original-code" data-mutant="37"><span class="stryker-original-code" data-mutant="38"><span class="bg-danger-light">this.originalCode.substring(startIndex, this.range[0]) + this.replacement</span></span><span class="bg-danger-light"> + this.originalCode.substring(this.range[1], endIndex)</span></span><span class="bg-danger-light">;
+        }</span></span><span class="bg-danger-light">,
+        enumerable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="39"><span class="badge badge-danger">39</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="39">false</span><span class="stryker-original-code" data-mutant="39"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">,
+        configurable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="40"><span class="badge badge-danger">40</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="40">false</span><span class="stryker-original-code" data-mutant="40"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">
     });
     Object.defineProperty(Mutant.prototype, &quot;mutatedCode&quot;, {
-        get: function () </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="27"><span class="label label-success">27</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="27">{
-}</span><span class="stryker-original-code" data-mutant="27"><span class="bg-success">{
-            return </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="28"><span class="label label-success">28</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="28">this.originalCode.substr(0, this.range[0]) + this.replacement - this.originalCode.substr(this.range[1])</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="29"><span class="label label-success">29</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="29">this.originalCode.substr(0, this.range[0]) - this.replacement</span><span class="stryker-original-code" data-mutant="28"><span class="stryker-original-code" data-mutant="29"><span class="bg-success">this.originalCode.substr(0, this.range[0]) + this.replacement </span></span><span class="bg-success">+ this.originalCode.substr(this.range[1]);</span></span><span class="bg-success">
-        },</span></span><span class="bg-success">
-        enumerable: true,
-        configurable: true
+        get: function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="41"><span class="badge badge-danger">41</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="41">{
+}</span><span class="stryker-original-code" data-mutant="41"><span class="bg-danger-light">{
+            return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="42"><span class="badge badge-danger">42</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="42">this.originalCode.substr(0, this.range[0]) + this.replacement - this.originalCode.substr(this.range[1])</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="43"><span class="badge badge-danger">43</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="43">this.originalCode.substr(0, this.range[0]) - this.replacement</span><span class="stryker-original-code" data-mutant="42"><span class="stryker-original-code" data-mutant="43"><span class="bg-danger-light">this.originalCode.substr(0, this.range[0]) + this.replacement</span></span><span class="bg-danger-light"> + this.originalCode.substr(this.range[1])</span></span><span class="bg-danger-light">;
+        }</span></span><span class="bg-danger-light">,
+        enumerable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="44"><span class="badge badge-danger">44</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="44">false</span><span class="stryker-original-code" data-mutant="44"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">,
+        configurable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="45"><span class="badge badge-danger">45</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="45">false</span><span class="stryker-original-code" data-mutant="45"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">
     });
-    Mutant.prototype.save &#x3D; function (filename) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="30"><span class="label label-success">30</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="30">{
-}</span><span class="stryker-original-code" data-mutant="30"><span class="bg-success">{
-        return StrykerTempFolder_1.default.writeFile(filename, this.mutatedCode);
-    };</span></span><span class="bg-success">
-    ;
-    Mutant.prototype.reset &#x3D; function (filename) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="31"><span class="label label-success">31</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="31">{
-}</span><span class="stryker-original-code" data-mutant="31"><span class="bg-success">{
-        return StrykerTempFolder_1.default.writeFile(filename, this.originalCode);
-    };</span></span><span class="bg-success">
-    ;
+    /**
+     * Saves the mutated code in a mutated file.
+     * @function
+     */
+    Mutant.prototype.save = function (filename) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="46"><span class="badge badge-danger">46</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="46">{
+}</span><span class="stryker-original-code" data-mutant="46"><span class="bg-danger-light">{
+        return fileUtils.writeFile(filename, this.mutatedCode);
+    }</span></span><span class="bg-danger-light">;
+    /**
+     * Removes the mutated file.
+     * @function
+     */
+    Mutant.prototype.reset = function (filename) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="47"><span class="badge badge-danger">47</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="47">{
+}</span><span class="stryker-original-code" data-mutant="47"><span class="bg-danger-light">{
+        return fileUtils.writeFile(filename, this.originalCode);
+    }</span></span><span class="bg-danger-light">;
+    Mutant.prototype.toString = function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="48"><span class="badge badge-danger">48</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="48">{
+}</span><span class="stryker-original-code" data-mutant="48"><span class="bg-danger-light">{
+        return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="49"><span class="badge badge-danger">49</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="49">this.mutatorName + &#039; (&#039; + this.filename + &#039;@&#039; + this.location.start.line + &#039;:&#039; + this.location.start.column - &#039;)&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="50"><span class="badge badge-danger">50</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="50">this.mutatorName + &#039; (&#039; + this.filename + &#039;@&#039; + this.location.start.line + &#039;:&#039; - this.location.start.column</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="51"><span class="badge badge-danger">51</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="51">this.mutatorName + &#039; (&#039; + this.filename + &#039;@&#039; + this.location.start.line - &#039;:&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="52"><span class="badge badge-danger">52</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="52">this.mutatorName + &#039; (&#039; + this.filename + &#039;@&#039; - this.location.start.line</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="53"><span class="badge badge-danger">53</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="53">this.mutatorName + &#039; (&#039; + this.filename - &#039;@&#039;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="54"><span class="badge badge-danger">54</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="54">this.mutatorName + &#039; (&#039; - this.filename</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryOperator" data-content="status: NoCoverage" data-mutant-status-annotation="danger" data-mutant-status="0" data-mutant="55"><span class="badge badge-danger">55</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="55">this.mutatorName - &#039; (&#039;</span><span class="stryker-original-code" data-mutant="49"><span class="stryker-original-code" data-mutant="50"><span class="stryker-original-code" data-mutant="51"><span class="stryker-original-code" data-mutant="52"><span class="stryker-original-code" data-mutant="53"><span class="stryker-original-code" data-mutant="54"><span class="stryker-original-code" data-mutant="55"><span class="bg-danger-light">this.mutatorName + &quot; (&quot;</span></span><span class="bg-danger-light"> + this.filename</span></span><span class="bg-danger-light"> + &quot;@&quot;</span></span><span class="bg-danger-light"> + this.location.start.line</span></span><span class="bg-danger-light"> + &quot;:&quot;</span></span><span class="bg-danger-light"> + this.location.start.column</span></span><span class="bg-danger-light"> + &quot;)&quot;</span></span><span class="bg-danger-light">;
+    }</span></span><span class="bg-danger-light">;
     return Mutant;
-}(</span></span><span class="bg-null">));
-Object.defineProperty(exports, &quot;__esModule&quot;, { value: true });
-exports.default &#x3D; Mutant;
-//# sourceMappingURL&#x3D;Mutant.js.ma</span>p</code></pre>
-</div><footer>
-    Generated with stryker-html-reporter generator. Visit the <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer>
-</div>
-<script src="stryker.js" defer></script>
-</body>
-</html>
+}</span></span><span class="bg-null">());
+exports.default = Mutant;
+//# sourceMappingURL=Mutant.js.ma</span>p</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>1
+:
+54</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>1</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>6
+:
+40</td>
+<td><code>{
+  ... ;
+}</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>2</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>15
+:
+87</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>3</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>27
+:
+25</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>4</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>30
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>5</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>31
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>34
+:
+25</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>7</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>37
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>8</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>38
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>9</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>40
+:
+62</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>10</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>42
+:
+58</td>
+<td><code>{    ... ); }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>11</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>44
+:
+66</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>12</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>48
+:
+50</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>13</th>
+<td>LogicalOperator</td>
+<td>NoCoverage</td>
+<td>50
+:
+15</td>
+<td><code>=== '... '\ '</code></td>
+<td><code>=== '... '\ '</code></td></tr>
+<tr><th>14</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>50
+:
+15</td>
+<td><code>=== '\ '</code></td>
+<td><code>!== '\ '</code></td></tr>
+<tr><th>15</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>50
+:
+32</td>
+<td><code>=== '\ '</code></td>
+<td><code>!== '\ '</code></td></tr>
+<tr><th>16</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>52
+:
+58</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>17</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>54
+:
+15</td>
+<td><code>>   &... -  )</code></td>
+<td><code></code></td></tr>
+<tr><th>18</th>
+<td>LogicalOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+15</td>
+<td><code>>   &... -  )</code></td>
+<td><code>>   |... -  )</code></td></tr>
+<tr><th>19</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+15</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
+<tr><th>20</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+15</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
+<tr><th>21</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>54
+:
+38</td>
+<td><code>!    ... -  )</code></td>
+<td><code>.    ... -  )</code></td></tr>
+<tr><th>22</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>54
+:
+54</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr>
+<tr><th>23</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>54
+:
+76</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>24</th>
+<td>UpdateOperator</td>
+<td>NoCoverage</td>
+<td>55
+:
+12</td>
+<td><code>--</code></td>
+<td><code>++</code></td></tr>
+<tr><th>25</th>
+<td>RemoveConditionals</td>
+<td>NoCoverage</td>
+<td>57
+:
+15</td>
+<td><code><    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>26</th>
+<td>LogicalOperator</td>
+<td>NoCoverage</td>
+<td>57
+:
+15</td>
+<td><code><    ...    )</code></td>
+<td><code><    ...    )</code></td></tr>
+<tr><th>27</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>57
+:
+15</td>
+<td><code><    ...    .</code></td>
+<td><code><=   ...    .</code></td></tr>
+<tr><th>28</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>57
+:
+15</td>
+<td><code><    ...    .</code></td>
+<td><code>>=   ...    .</code></td></tr>
+<tr><th>29</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>57
+:
+59</td>
+<td><code>!    ...    )</code></td>
+<td><code>.    ...    )</code></td></tr>
+<tr><th>30</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>57
+:
+91</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>31</th>
+<td>UpdateOperator</td>
+<td>NoCoverage</td>
+<td>58
+:
+12</td>
+<td><code>++</code></td>
+<td><code>--</code></td></tr>
+<tr><th>32</th>
+<td>ArrayDeclarator</td>
+<td>NoCoverage</td>
+<td>60
+:
+15</td>
+<td><code>[    ...    ]</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>33</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>63
+:
+25</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>34</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>67
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>35</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>68
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>36</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>71
+:
+25</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>37</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>73
+:
+19</td>
+<td><code>.    ...    )</code></td>
+<td><code>.    ...    )</code></td></tr>
+<tr><th>38</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>73
+:
+19</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>39</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>75
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>40</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>76
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>41</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>79
+:
+25</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>42</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>80
+:
+19</td>
+<td><code>.    ... [ ])</code></td>
+<td><code>.    ... [ ])</code></td></tr>
+<tr><th>43</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>80
+:
+19</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>44</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>82
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>45</th>
+<td>BooleanSubstitution</td>
+<td>NoCoverage</td>
+<td>83
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>46</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>89
+:
+48</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>47</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>96
+:
+49</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>48</th>
+<td>BlockStatement</td>
+<td>NoCoverage</td>
+<td>99
+:
+44</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>49</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>100
+:
+15</td>
+<td><code>.    ...+ ")"</code></td>
+<td><code>.    ...- ')'</code></td></tr>
+<tr><th>50</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>100
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>51</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>100
+:
+15</td>
+<td><code>.    ...+ ":"</code></td>
+<td><code>.    ...- ':'</code></td></tr>
+<tr><th>52</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>100
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>53</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>100
+:
+15</td>
+<td><code>.    ...+ "@"</code></td>
+<td><code>.    ...- '@'</code></td></tr>
+<tr><th>54</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>100
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>55</th>
+<td>BinaryOperator</td>
+<td>NoCoverage</td>
+<td>100
+:
+15</td>
+<td><code>.    ... " ("</code></td>
+<td><code>.    ... ' ('</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="__resources/stryker.js" defer="defer"></script></body></html>

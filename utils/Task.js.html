@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html><head><title>Task.js
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">Task.js
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">All files</a></li><li class="breadcrumb-item"><a href="index.html">utils</a></li>
+<li class="breadcrumb-item active">Task.js</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>Task.js</td>
+<td><div class="progress"><div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60.00" aria-valuemin="0" aria-valuemax="100" style="width: 60.00%;">60.00
+%</div></div></td>
+<th class="text-center text-warning" style="width: 10%">60.00</th>
+<td class="text-center">18</td>
+<td class="text-center">12</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">1</td>
+<td class="text-center">0</td>
+<th class="text-center">18</th>
+<th class="text-center">12</th>
+<th class="text-center">31</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(12)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(18)</label></div>
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="4" type="checkbox">
+RuntimeError
+ 
+(1)</label></div>
+
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">&quot;use strict&quot;;
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="0"><span class="badge badge-danger">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">false</span><span class="stryker-original-code" data-mutant="0"><span class="bg-danger-light">true</span></span><span class="bg-null"> });
+/**
+ * Wraps a promise in a Task api for convenience.
+ */
+var Task = /** @class */ (function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: RuntimeError" data-mutant-status-annotation="secondary" data-mutant-status="4" data-mutant="1"><span class="badge badge-secondary">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{
+}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-null">{
+    function Task(timeoutMs, timeoutHandler) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="2"><span class="badge badge-success">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{
+}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">{
+        var _this = this;
+        this.timeoutHandler = timeoutHandler;
+        this._isResolved = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="3"><span class="badge badge-danger">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">true</span><span class="stryker-original-code" data-mutant="3"><span class="bg-danger-light">false</span></span><span class="bg-success-light">;
+        this._promise = new Promise(function (resolve, reject) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">{
+}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">{
+            _this.resolveFn = resolve;
+            _this.rejectFn = reject;
+        }</span></span><span class="bg-success-light">);
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="6"><span class="badge badge-success">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">false</span><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="bg-success-light">timeoutMs</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">{
+}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-success-light">{
+            this.timeout = setTimeout(function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">{
+}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-success-light">{ return _this.handleTimeout(); }</span></span><span class="bg-success-light">, timeoutMs);
+        }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-null">
+    Object.defineProperty(Task.prototype, &quot;isResolved&quot;, {
+        get: function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="9"><span class="badge badge-danger">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">{
+}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-danger-light">{
+            return this._isResolved;
+        }</span></span><span class="bg-null">,
+        enumerable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="10"><span class="badge badge-danger">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">false</span><span class="stryker-original-code" data-mutant="10"><span class="bg-danger-light">true</span></span><span class="bg-null">,
+        configurable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="11"><span class="badge badge-danger">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">false</span><span class="stryker-original-code" data-mutant="11"><span class="bg-danger-light">true</span></span><span class="bg-null">
+    });
+    Object.defineProperty(Task.prototype, &quot;promise&quot;, {
+        get: function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">{
+}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success-light">{
+            return this._promise;
+        }</span></span><span class="bg-null">,
+        enumerable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="13"><span class="badge badge-danger">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">false</span><span class="stryker-original-code" data-mutant="13"><span class="bg-danger-light">true</span></span><span class="bg-null">,
+        configurable: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="14"><span class="badge badge-danger">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">false</span><span class="stryker-original-code" data-mutant="14"><span class="bg-danger-light">true</span></span><span class="bg-null">
+    });
+    Task.prototype.handleTimeout = function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="15"><span class="badge badge-success">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">{
+}</span><span class="stryker-original-code" data-mutant="15"><span class="bg-success-light">{
+        var _this = this;
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="17"><span class="badge badge-success">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">true</span><span class="stryker-original-code" data-mutant="16"><span class="stryker-original-code" data-mutant="17"><span class="bg-success-light">this.timeoutHandler</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="18"><span class="badge badge-success">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">{
+}</span><span class="stryker-original-code" data-mutant="18"><span class="bg-success-light">{
+            this.timeoutHandler().then(function (val) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="19"><span class="badge badge-success">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">{
+}</span><span class="stryker-original-code" data-mutant="19"><span class="bg-success-light">{ return _this.resolve(val); }</span></span><span class="bg-success-light">);
+        }</span></span><span class="bg-success-light">
+        else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="20"><span class="badge badge-success">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">{
+}</span><span class="stryker-original-code" data-mutant="20"><span class="bg-success-light">{
+            this.resolve(undefined);
+        }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-null">;
+    Task.prototype.chainTo = function (promise) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="21"><span class="badge badge-success">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">{
+}</span><span class="stryker-original-code" data-mutant="21"><span class="bg-success-light">{
+        var _this = this;
+        promise.then(function (value) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="22"><span class="badge badge-success">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">{
+}</span><span class="stryker-original-code" data-mutant="22"><span class="bg-success-light">{ return _this.resolve(value); }</span></span><span class="bg-success-light">, function (reason) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="23"><span class="badge badge-success">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{
+}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success-light">{ return _this.reject(reason); }</span></span><span class="bg-success-light">);
+    }</span></span><span class="bg-null">;
+    Task.prototype.resolve = function (result) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="24"><span class="badge badge-success">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">{
+}</span><span class="stryker-original-code" data-mutant="24"><span class="bg-success-light">{
+        this.resolveTimeout();
+        this.resolveFn(result);
+    }</span></span><span class="bg-null">;
+    Task.prototype.reject = function (reason) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="25"><span class="badge badge-success">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">{
+}</span><span class="stryker-original-code" data-mutant="25"><span class="bg-success-light">{
+        this.resolveTimeout();
+        this.rejectFn(reason);
+    }</span></span><span class="bg-null">;
+    Task.prototype.resolveTimeout = function () </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="26"><span class="badge badge-danger">26</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="26">{
+}</span><span class="stryker-original-code" data-mutant="26"><span class="bg-danger-light">{
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="27"><span class="badge badge-danger">27</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="27">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="RemoveConditionals" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="28"><span class="badge badge-danger">28</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="28">true</span><span class="stryker-original-code" data-mutant="27"><span class="stryker-original-code" data-mutant="28"><span class="bg-danger-light">this.timeout</span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BlockStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="29"><span class="badge badge-danger">29</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="29">{
+}</span><span class="stryker-original-code" data-mutant="29"><span class="bg-danger-light">{
+            clearTimeout(this.timeout);
+        }</span></span><span class="bg-danger-light">
+        this._isResolved = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="30"><span class="badge badge-danger">30</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="30">false</span><span class="stryker-original-code" data-mutant="30"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">;
+    }</span></span><span class="bg-null">;
+    return Task;
+}</span></span><span class="bg-null">());
+exports.default = Task;
+//# sourceMappingURL=Task.js.ma</span>p</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>BlockStatement</td>
+<td>RuntimeError</td>
+<td>5
+:
+38</td>
+<td><code>{
+  ... ;
+}</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>1</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>6
+:
+45</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>2</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>10
+:
+63</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>3</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>1
+:
+54</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>4</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>14
+:
+12</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>5</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>9
+:
+27</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>BlockStatement</td>
+<td>Survived</td>
+<td>19
+:
+25</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>7</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>14
+:
+12</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>8</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>15
+:
+50</td>
+<td><code>{    ...(); }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>9</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>26
+:
+25</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>10</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>14
+:
+23</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>11</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>22
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>12</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>23
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>13</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>34
+:
+12</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>14</th>
+<td>RemoveConditionals</td>
+<td>Killed</td>
+<td>34
+:
+12</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>15</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>30
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>16</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>29
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>17</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>34
+:
+33</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>18</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>32
+:
+47</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>19</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>35
+:
+54</td>
+<td><code>{    ... ); }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>20</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>37
+:
+13</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>21</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>45
+:
+47</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>22</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>43
+:
+38</td>
+<td><code>{    ... ); }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>23</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>41
+:
+48</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>24</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>43
+:
+90</td>
+<td><code>{    ... ); }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>25</th>
+<td>BlockStatement</td>
+<td>Killed</td>
+<td>49
+:
+46</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>26</th>
+<td>RemoveConditionals</td>
+<td>Survived</td>
+<td>54
+:
+12</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>27</th>
+<td>BlockStatement</td>
+<td>Survived</td>
+<td>53
+:
+48</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>28</th>
+<td>RemoveConditionals</td>
+<td>Survived</td>
+<td>54
+:
+12</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>29</th>
+<td>BlockStatement</td>
+<td>Survived</td>
+<td>54
+:
+26</td>
+<td><code>{
+  ...    }</code></td>
+<td><code>{
+}</code></td></tr>
+<tr><th>30</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>57
+:
+27</td>
+<td><code></code></td>
+<td><code></code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../__resources/stryker.js" defer="defer"></script></body></html>
