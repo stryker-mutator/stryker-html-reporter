@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html><head><title>SandboxPool.ts
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">SandboxPool.ts
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">All files</a></li>
+<li class="breadcrumb-item active">SandboxPool.ts</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>SandboxPool.ts</td>
+<td><div class="progress"><div class="progress-bar bg-warning" role="progressbar" aria-valuenow="73.91" aria-valuemin="0" aria-valuemax="100" style="width: 73.91%;">73.91
+%</div></div></td>
+<th class="text-center text-warning" style="width: 10%">73.91</th>
+<td class="text-center">17</td>
+<td class="text-center">6</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">4</td>
+<th class="text-center">17</th>
+<th class="text-center">6</th>
+<th class="text-center">27</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(6)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(17)</label></div>
+
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="5" type="checkbox">
+TranspileError
+ 
+(4)</label></div>
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">import * as os from &#039;os&#039;;
+import { getLogger } from &#039;log4js&#039;;
+import { Observable } from &#039;rxjs&#039;;
+import { Config } from &#039;stryker-api/config&#039;;
+import { File } from &#039;stryker-api/core&#039;;
+import { TestFramework } from &#039;stryker-api/test_framework&#039;;
+import Sandbox from &#039;./Sandbox&#039;;
+
+export default class SandboxPool {
+
+  private readonly log = getLogger(SandboxPool.name);
+  private readonly sandboxes: Sandbox[] = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="0"><span class="badge badge-secondary">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">[[]]</span><span class="stryker-original-code" data-mutant="0"><span class="bg-null">[]</span></span><span class="bg-null">;
+  private isDisposed: boolean = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="1"><span class="badge badge-danger">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">true</span><span class="stryker-original-code" data-mutant="1"><span class="bg-danger-light">false</span></span><span class="bg-null">;
+
+  constructor(private options: Config, private testFramework: TestFramework | null, private initialFiles: File[]) {
+  }
+
+  public streamSandboxes(): Observable&lt;Sandbox&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="2"><span class="badge badge-secondary">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-null">{
+    let numConcurrentRunners = os.cpus().length;
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">false</span><span class="stryker-original-code" data-mutant="3"><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">this.options.transpilers.length</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success-light">{
+      // If transpilers are configured, one core is reserved for the compiler (for now)
+      numConcurrentRunners--;
+    }</span></span><span class="bg-null">
+    let numConcurrentRunnersSource = &#039;CPU count&#039;;
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="6"><span class="badge badge-success">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">true</span><span class="stryker-original-code" data-mutant="6"><span class="stryker-original-code" data-mutant="7"><span class="bg-success-light">numConcurrentRunners </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">&lt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="9"><span class="badge badge-danger">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">&gt;=</span><span class="stryker-original-code" data-mutant="8"><span class="stryker-original-code" data-mutant="9"><span class="bg-danger-light">&gt;</span></span></span><span class="bg-success-light"> this.options.maxConcurrentTestRunners </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">||</span><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">&amp;&amp;</span></span><span class="bg-success-light"> this.options.maxConcurrentTestRunners </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="11"><span class="badge badge-success">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">&lt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">&gt;=</span><span class="stryker-original-code" data-mutant="11"><span class="stryker-original-code" data-mutant="12"><span class="bg-success-light">&gt;</span></span></span><span class="bg-success-light"> 0</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">{}</span><span class="stryker-original-code" data-mutant="13"><span class="bg-success-light">{
+      numConcurrentRunners = this.options.maxConcurrentTestRunners;
+      numConcurrentRunnersSource = &#039;maxConcurrentTestRunners config&#039;;
+    }</span></span><span class="bg-null">
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="15"><span class="badge badge-danger">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">false</span><span class="stryker-original-code" data-mutant="14"><span class="stryker-original-code" data-mutant="15"><span class="bg-danger-light">numConcurrentRunners </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">&gt;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="17"><span class="badge badge-danger">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">&lt;</span><span class="stryker-original-code" data-mutant="16"><span class="stryker-original-code" data-mutant="17"><span class="bg-danger-light">&lt;=</span></span></span><span class="bg-danger-light"> 0</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="18"><span class="badge badge-danger">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">{}</span><span class="stryker-original-code" data-mutant="18"><span class="bg-danger-light">{
+      numConcurrentRunners = 1;
+    }</span></span><span class="bg-null">
+    this.log.info(`Creating ${numConcurrentRunners} test runners (based on ${numConcurrentRunnersSource})`);
+
+    const sandboxes = Observable.range(0, numConcurrentRunners)
+      .flatMap(n =&gt; this.registerSandbox(Sandbox.create(this.options, n, this.initialFiles, this.testFramework)));
+    return sandboxes;
+  }</span></span><span class="bg-null">
+
+  private registerSandbox(promisedSandbox: Promise&lt;Sandbox&gt;): Promise&lt;Sandbox&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="19"><span class="badge badge-secondary">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">{}</span><span class="stryker-original-code" data-mutant="19"><span class="bg-null">{
+    return promisedSandbox.then(sandbox =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="20"><span class="badge badge-secondary">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">{}</span><span class="stryker-original-code" data-mutant="20"><span class="bg-null">{
+      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="21"><span class="badge badge-success">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="22"><span class="badge badge-danger">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">true</span><span class="stryker-original-code" data-mutant="21"><span class="stryker-original-code" data-mutant="22"><span class="bg-danger-light">this.isDisposed</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="23"><span class="badge badge-success">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success-light">{
+        // This sandbox is too late for the party. Dispose it to prevent hanging child processes
+        // See issue #396
+        sandbox.dispose();
+      }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="24"><span class="badge badge-success">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">{}</span><span class="stryker-original-code" data-mutant="24"><span class="bg-success-light">{
+        this.sandboxes.push(sandbox);
+      }</span></span><span class="bg-null">
+      return sandbox;
+    }</span></span><span class="bg-null">);
+  }</span></span><span class="bg-null">
+
+  public disposeAll() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="25"><span class="badge badge-success">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">{}</span><span class="stryker-original-code" data-mutant="25"><span class="bg-success-light">{
+    this.isDisposed = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="26"><span class="badge badge-success">26</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="26">false</span><span class="stryker-original-code" data-mutant="26"><span class="bg-success-light">true</span></span><span class="bg-success-light">;
+    return Promise.all(this.sandboxes.map(sandbox =&gt; sandbox.dispose()));
+  }</span></span><span class="bg-null">
+}</span>
+</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>ArrayLiteral</td>
+<td>TranspileError</td>
+<td>11
+:
+42</td>
+<td><code>[]</code></td>
+<td><code>[[]]</code></td></tr>
+<tr><th>1</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>17
+:
+48</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>2</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>19
+:
+8</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>3</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>19
+:
+8</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>4</th>
+<td>Block</td>
+<td>Killed</td>
+<td>19
+:
+41</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>5</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>24
+:
+8</td>
+<td><code>>    ...    ></code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>24
+:
+29</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
+<tr><th>7</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>24
+:
+8</td>
+<td><code>>    ...    ></code></td>
+<td><code></code></td></tr>
+<tr><th>8</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>12
+:
+32</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>9</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>24
+:
+110</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
+<tr><th>10</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>24
+:
+110</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
+<tr><th>11</th>
+<td>Block</td>
+<td>Killed</td>
+<td>24
+:
+115</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>12</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>28
+:
+8</td>
+<td><code><=</code></td>
+<td><code></code></td></tr>
+<tr><th>13</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>24
+:
+69</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
+<tr><th>14</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>24
+:
+29</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
+<tr><th>15</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>28
+:
+29</td>
+<td><code><=</code></td>
+<td><code>></code></td></tr>
+<tr><th>16</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>38
+:
+79</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>17</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>39
+:
+43</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>18</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>28
+:
+8</td>
+<td><code><=</code></td>
+<td><code></code></td></tr>
+<tr><th>19</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>28
+:
+29</td>
+<td><code><=</code></td>
+<td><code><</code></td></tr>
+<tr><th>20</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>40
+:
+10</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>21</th>
+<td>Block</td>
+<td>Killed</td>
+<td>40
+:
+27</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>22</th>
+<td>Block</td>
+<td>Killed</td>
+<td>44
+:
+13</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>23</th>
+<td>Block</td>
+<td>Survived</td>
+<td>28
+:
+35</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>24</th>
+<td>Block</td>
+<td>Killed</td>
+<td>51
+:
+22</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>25</th>
+<td>BooleanSubstitution</td>
+<td>Killed</td>
+<td>52
+:
+22</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>26</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>40
+:
+10</td>
+<td><code>.</code></td>
+<td><code></code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="__resources/stryker.js" defer="defer"></script></body></html>

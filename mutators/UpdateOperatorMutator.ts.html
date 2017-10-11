@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html><head><title>UpdateOperatorMutator.ts
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">UpdateOperatorMutator.ts
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">All files</a></li><li class="breadcrumb-item"><a href="index.html">mutators</a></li>
+<li class="breadcrumb-item active">UpdateOperatorMutator.ts</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>UpdateOperatorMutator.ts</td>
+<td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%;">100.00
+%</div></div></td>
+<th class="text-center text-success" style="width: 10%">100.00</th>
+<td class="text-center">2</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">4</td>
+<th class="text-center">2</th>
+<th class="text-center">0</th>
+<th class="text-center">6</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(2)</label></div>
+
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="5" type="checkbox">
+TranspileError
+ 
+(4)</label></div>
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">import { Syntax } from &#039;esprima&#039;;
+import * as estree from &#039;estree&#039;;
+import NodeMutator from &#039;./NodeMutator&#039;;
+import { IdentifiedNode } from &#039;./IdentifiedNode&#039;;
+
+export default class UpdateOperatorMutator implements NodeMutator {
+  name = &#039;UpdateOperator&#039;;
+  private type = Syntax.UpdateExpression;
+  private operators: { [targetedOperator: string]: estree.UpdateOperator } = {
+    &#039;++&#039;: &#039;--&#039;,
+    &#039;--&#039;: &#039;++&#039;
+  };
+
+  applyMutations(node: IdentifiedNode, copy: &lt;T extends IdentifiedNode&gt; (obj: T, deep?: boolean) =&gt; T): void | IdentifiedNode </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="0"><span class="badge badge-success">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">{}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success-light">{
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="1"><span class="badge badge-secondary">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="2"><span class="badge badge-secondary">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">false</span><span class="stryker-original-code" data-mutant="1"><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">node.type </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="3"><span class="badge badge-secondary">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">!==</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success-light">===</span></span><span class="bg-success-light"> this.type </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="4"><span class="badge badge-secondary">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">||</span><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">&amp;&amp;</span></span><span class="bg-success-light"> this.operators[node.operator]</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success-light">{
+      let mutatedNode = copy(node);
+      mutatedNode.operator = this.operators[node.operator];
+      return mutatedNode;
+    }</span></span><span class="bg-success-light">
+  }</span></span><span class="bg-null">
+</span>}</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>14
+:
+8</td>
+<td><code>.    ...    ]</code></td>
+<td><code></code></td></tr>
+<tr><th>1</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>14
+:
+8</td>
+<td><code>.    ...    ]</code></td>
+<td><code></code></td></tr>
+<tr><th>2</th>
+<td>BinaryExpression</td>
+<td>TranspileError</td>
+<td>14
+:
+32</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
+<tr><th>3</th>
+<td>BinaryExpression</td>
+<td>TranspileError</td>
+<td>14
+:
+18</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>4</th>
+<td>Block</td>
+<td>Killed</td>
+<td>13
+:
+126</td>
+<td><code>{
+   ...}
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>5</th>
+<td>Block</td>
+<td>Killed</td>
+<td>14
+:
+66</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../__resources/stryker.js" defer="defer"></script></body></html>

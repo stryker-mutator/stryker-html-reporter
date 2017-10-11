@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html><head><title>ChildProcessProxy.ts
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">ChildProcessProxy.ts
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">All files</a></li><li class="breadcrumb-item"><a href="index.html">child-proxy</a></li>
+<li class="breadcrumb-item active">ChildProcessProxy.ts</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>ChildProcessProxy.ts</td>
+<td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="92.86" aria-valuemin="0" aria-valuemax="100" style="width: 92.86%;">92.86
+%</div></div></td>
+<th class="text-center text-success" style="width: 10%">92.86</th>
+<td class="text-center">13</td>
+<td class="text-center">1</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">7</td>
+<th class="text-center">13</th>
+<th class="text-center">1</th>
+<th class="text-center">21</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(1)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(13)</label></div>
+
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="5" type="checkbox">
+TranspileError
+ 
+(7)</label></div>
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">import { fork, ChildProcess } from &#039;child_process&#039;;
+import { WorkerMessage, WorkerMessageKind, ParentMessage, autoStart } from &#039;./messageProtocol&#039;;
+import { serialize, deserialize } from &#039;../utils/objectUtils&#039;;
+import Task from &#039;../utils/Task&#039;;
+
+export type ChildProxy&lt;T&gt; = {
+  [K in keyof T]: (...args: any[]) =&gt; Promise&lt;any&gt;;
+};
+
+export default class ChildProcessProxy&lt;T&gt; {
+  readonly proxy: ChildProxy&lt;T&gt; = {} as ChildProxy&lt;T&gt;;
+
+  private worker: ChildProcess;
+  private initTask: Task;
+  private workerTasks: Task&lt;any&gt;[] = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="0"><span class="badge badge-secondary">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">[[]]</span><span class="stryker-original-code" data-mutant="0"><span class="bg-null">[]</span></span><span class="bg-null">;
+
+  private constructor(requirePath: string, logLevel: string, plugins: string[], private constructorFunction: { new(...params: any[]): T }, constructorParams: any[]) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="1"><span class="badge badge-success">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success-light">{
+    this.worker = fork(require.resolve(&#039;./ChildProcessProxyWorker&#039;), </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="2"><span class="badge badge-success">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">[]</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">[autoStart]</span></span><span class="bg-success-light">, { silent: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">true</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success-light">false</span></span><span class="bg-success-light">, execArgv: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="4"><span class="badge badge-secondary">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">[[]]</span><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">[]</span></span><span class="bg-success-light"> });
+    this.initTask = new Task();
+    this.send({
+      kind: WorkerMessageKind.Init,
+      logLevel,
+      plugins,
+      requirePath,
+      constructorArgs: constructorParams
+    });
+    this.listenToWorkerMessages();
+    this.initProxy();
+  }</span></span><span class="bg-null">
+
+  /**
+  * Creates a proxy where each function of the object created using the constructorFunction arg is ran inside of a child process
+  */
+  static create&lt;T, P1&gt;(requirePath: string, logLevel: string, plugins: string[], constructorFunction: { new(arg: P1): T }, arg: P1): ChildProcessProxy&lt;T&gt;;
+  /**
+  * Creates a proxy where each function of the object created using the constructorFunction arg is ran inside of a child process
+  */
+  static create&lt;T, P1, P2&gt;(requirePath: string, logLevel: string, plugins: string[], constructorFunction: { new(arg: P1, arg2: P2): T }, arg1: P1, arg2: P2): ChildProcessProxy&lt;T&gt;;
+  /**
+  * Creates a proxy where each function of the object created using the constructorFunction arg is ran inside of a child process
+  */
+  static create&lt;T&gt;(requirePath: string, logLevel: string, plugins: string[], constructorFunction: { new(...params: any[]): T }, ...constructorArgs: any[]) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="5"><span class="badge badge-secondary">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-null">{
+    return new ChildProcessProxy(requirePath, logLevel, plugins, constructorFunction, constructorArgs);
+  }</span></span><span class="bg-null">
+
+  private send(message: WorkerMessage) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="6"><span class="badge badge-success">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">{}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-success-light">{
+    this.worker.send(serialize(message));
+  }</span></span><span class="bg-null">
+
+  private initProxy() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">{}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-success-light">{
+    Object.keys(this.constructorFunction.prototype).forEach((methodName: keyof T) =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">{}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-success-light">{
+      this.proxyMethod(methodName);
+    }</span></span><span class="bg-success-light">);
+  }</span></span><span class="bg-null">
+
+  private proxyMethod(methodName: keyof T) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">{}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-success-light">{
+    this.proxy[methodName] = (...args: any[]) =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="10"><span class="badge badge-secondary">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">{}</span><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">{
+      const workerTask = new Task&lt;any&gt;();
+      this.initTask.promise.then(() =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="11"><span class="badge badge-success">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-success-light">{
+        const correlationId = this.workerTasks.push(workerTask) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">+</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success-light">-</span></span><span class="bg-success-light"> 1;
+        this.send({
+          kind: WorkerMessageKind.Work,
+          correlationId,
+          methodName,
+          args
+        });
+      }</span></span><span class="bg-success-light">);
+      return workerTask.promise;
+    }</span></span><span class="bg-success-light">;
+  }</span></span><span class="bg-null">
+
+  private listenToWorkerMessages() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">{}</span><span class="stryker-original-code" data-mutant="13"><span class="bg-success-light">{
+    this.worker.on(&#039;message&#039;, (serializedMessage: string) =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">{}</span><span class="stryker-original-code" data-mutant="14"><span class="bg-success-light">{
+      const message: ParentMessage = deserialize(serializedMessage);
+      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="15"><span class="badge badge-secondary">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="16"><span class="badge badge-secondary">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">false</span><span class="stryker-original-code" data-mutant="15"><span class="stryker-original-code" data-mutant="16"><span class="bg-success-light">message </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="17"><span class="badge badge-secondary">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">!==</span><span class="stryker-original-code" data-mutant="17"><span class="bg-success-light">===</span></span><span class="bg-success-light"> &#039;init_done&#039;</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="18"><span class="badge badge-success">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">{}</span><span class="stryker-original-code" data-mutant="18"><span class="bg-success-light">{
+        this.initTask.resolve(undefined);
+      }</span></span><span class="bg-success-light"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="19"><span class="badge badge-success">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">{}</span><span class="stryker-original-code" data-mutant="19"><span class="bg-success-light">{
+        this.workerTasks[message.correlationId].resolve(message.result);
+      }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-success-light">);
+  }</span></span><span class="bg-null">
+
+  public dispose() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="20"><span class="badge badge-danger">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">{}</span><span class="stryker-original-code" data-mutant="20"><span class="bg-danger-light">{
+    this.worker.kill();
+  }</span></span><span class="bg-null">
+</span>}</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>ArrayLiteral</td>
+<td>TranspileError</td>
+<td>14
+:
+37</td>
+<td><code>[]</code></td>
+<td><code>[[]]</code></td></tr>
+<tr><th>1</th>
+<td>ArrayLiteral</td>
+<td>TranspileError</td>
+<td>17
+:
+109</td>
+<td><code>[]</code></td>
+<td><code>[[]]</code></td></tr>
+<tr><th>2</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>41
+:
+155</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>3</th>
+<td>Block</td>
+<td>Killed</td>
+<td>16
+:
+165</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>4</th>
+<td>ArrayLiteral</td>
+<td>Killed</td>
+<td>17
+:
+69</td>
+<td><code>[         ]</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>5</th>
+<td>BooleanSubstitution</td>
+<td>Killed</td>
+<td>17
+:
+92</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>Block</td>
+<td>Killed</td>
+<td>49
+:
+22</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>7</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>56
+:
+49</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>8</th>
+<td>Block</td>
+<td>Killed</td>
+<td>50
+:
+85</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>9</th>
+<td>Block</td>
+<td>Killed</td>
+<td>45
+:
+39</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>10</th>
+<td>Block</td>
+<td>Killed</td>
+<td>55
+:
+43</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>11</th>
+<td>Block</td>
+<td>Killed</td>
+<td>58
+:
+39</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>12</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>74
+:
+10</td>
+<td><code>=== '         '</code></td>
+<td><code></code></td></tr>
+<tr><th>13</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>74
+:
+10</td>
+<td><code>=== '         '</code></td>
+<td><code></code></td></tr>
+<tr><th>14</th>
+<td>BinaryExpression</td>
+<td>TranspileError</td>
+<td>74
+:
+18</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>15</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>59
+:
+64</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr>
+<tr><th>16</th>
+<td>Block</td>
+<td>Killed</td>
+<td>71
+:
+35</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>17</th>
+<td>Block</td>
+<td>Killed</td>
+<td>74
+:
+35</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>18</th>
+<td>Block</td>
+<td>Survived</td>
+<td>82
+:
+19</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>19</th>
+<td>Block</td>
+<td>Killed</td>
+<td>72
+:
+61</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>20</th>
+<td>Block</td>
+<td>Killed</td>
+<td>76
+:
+13</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../__resources/stryker.js" defer="defer"></script></body></html>

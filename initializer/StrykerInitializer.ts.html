@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html><head><title>StrykerInitializer.ts
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">StrykerInitializer.ts
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">All files</a></li><li class="breadcrumb-item"><a href="index.html">initializer</a></li>
+<li class="breadcrumb-item active">StrykerInitializer.ts</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>StrykerInitializer.ts</td>
+<td><div class="progress"><div class="progress-bar bg-warning" role="progressbar" aria-valuenow="68.75" aria-valuemin="0" aria-valuemax="100" style="width: 68.75%;">68.75
+%</div></div></td>
+<th class="text-center text-warning" style="width: 10%">68.75</th>
+<td class="text-center">22</td>
+<td class="text-center">10</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">15</td>
+<th class="text-center">22</th>
+<th class="text-center">10</th>
+<th class="text-center">47</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(10)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(22)</label></div>
+
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="5" type="checkbox">
+TranspileError
+ 
+(15)</label></div>
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">import * as child from &#039;child_process&#039;;
+import { StrykerInquirer } from &#039;./StrykerInquirer&#039;;
+import NpmClient from &#039;./NpmClient&#039;;
+import PromptOption from &#039;./PromptOption&#039;;
+import { getLogger } from &#039;log4js&#039;;
+import { filterEmpty } from &#039;../utils/objectUtils&#039;;
+import StrykerConfigWriter from &#039;./StrykerConfigWriter&#039;;
+
+export default class StrykerInitializer {
+
+  private readonly log = getLogger(StrykerInitializer.name);
+  private inquirer = new StrykerInquirer();
+
+  constructor(private out = console.log, private client: NpmClient = new NpmClient()) { }
+
+  /**
+   * Runs the initializer will prompt the user for questions about his setup. After that, install plugins and configure Stryker.
+   * @function
+   */
+  async initialize(): Promise&lt;void&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="0"><span class="badge badge-success">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">{}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success-light">{
+    const configWriter = new StrykerConfigWriter(this.out);
+    configWriter.guardForExistingConfig();
+    this.patchProxies();
+    const selectedTestRunner = await this.selectTestRunner();
+    const selectedTestFramework = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="1"><span class="badge badge-secondary">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">false</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success-light">selectedTestRunner</span></span><span class="bg-success-light"> ? await this.selectTestFramework(selectedTestRunner) : null;
+    const selectedMutator = await this.selectMutator();
+    const selectedTranspilers = await this.selectTranspilers();
+    const selectedReporters = await this.selectReporters();
+    const npmDependencies = this.getSelectedNpmDependencies(
+        </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="2"><span class="badge badge-secondary">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">[]</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">[selectedTestRunner, selectedTestFramework, selectedMutator]</span></span><span class="bg-success-light">
+        .concat(selectedTranspilers)
+        .concat(selectedReporters)
+      );
+    this.installNpmDependencies(npmDependencies);
+    await configWriter.write(selectedTestRunner,
+      selectedTestFramework,
+      selectedMutator,
+      selectedTranspilers,
+      selectedReporters,
+      await this.fetchAdditionalConfig(npmDependencies));
+    this.out(&#039;Done configuring stryker. Please review `stryker.conf.js`, you might need to configure your files and test runner correctly.&#039;);
+    this.out(&#039;Let\&#039;s kill some mutants with this command: `stryker run`&#039;);
+  }</span></span><span class="bg-null">
+
+  /**
+  * The typed rest client works only with the specific HTTP_PROXY and HTTPS_PROXY env settings.
+  * Let&#039;s make sure they are available.
+  */
+  private patchProxies() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="3"><span class="badge badge-danger">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">{}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-danger-light">{
+    const copyEnvVariable = (from: string, to: string) =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="4"><span class="badge badge-danger">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">{}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-danger-light">{
+      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="5"><span class="badge badge-danger">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="6"><span class="badge badge-danger">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">false</span><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="bg-danger-light">process.env[from] </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="7"><span class="badge badge-danger">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">||</span><span class="stryker-original-code" data-mutant="7"><span class="bg-danger-light">&amp;&amp;</span></span><span class="bg-danger-light"> </span><a href="#" class="stryker-mutant-button" tabindex="0" title="UnaryNot" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="8"><span class="badge badge-danger">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">process.env[to]</span><a href="#" class="stryker-mutant-button" tabindex="0" title="PrefixUnaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="9"><span class="badge badge-danger">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">process.env[to]</span><span class="stryker-original-code" data-mutant="8"><span class="stryker-original-code" data-mutant="9"><span class="bg-danger-light">!process.env[to]</span></span></span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="10"><span class="badge badge-danger">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">{}</span><span class="stryker-original-code" data-mutant="10"><span class="bg-danger-light">{
+        process.env[to] = process.env[from];
+      }</span></span><span class="bg-danger-light">
+    }</span></span><span class="bg-danger-light">;
+    copyEnvVariable(&#039;http_proxy&#039;, &#039;HTTP_PROXY&#039;);
+    copyEnvVariable(&#039;https_proxy&#039;, &#039;HTTPS_PROXY&#039;);
+  }</span></span><span class="bg-null">
+
+  private async selectTestRunner(): Promise&lt;PromptOption | null&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="11"><span class="badge badge-secondary">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-null">{
+    const testRunnerOptions = await this.client.getTestRunnerOptions();
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">false</span><span class="stryker-original-code" data-mutant="12"><span class="stryker-original-code" data-mutant="13"><span class="bg-success-light">testRunnerOptions.length</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="14"><span class="badge badge-secondary">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">{}</span><span class="stryker-original-code" data-mutant="14"><span class="bg-null">{
+      this.log.debug(`Found test runners: ${JSON.stringify(testRunnerOptions)}`);
+      return await this.inquirer.promptTestRunners(testRunnerOptions);
+    }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="15"><span class="badge badge-secondary">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">{}</span><span class="stryker-original-code" data-mutant="15"><span class="bg-null">{
+      this.out(&#039;Unable to select a test runner. You will need to configure it manually.&#039;);
+      return null;
+    }</span></span><span class="bg-null">
+  }</span></span><span class="bg-null">
+
+  private async selectReporters(): Promise&lt;PromptOption[]&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="16"><span class="badge badge-secondary">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">{}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-null">{
+    let reporterOptions: PromptOption[];
+    reporterOptions = await this.client.getTestReporterOptions();
+    reporterOptions.push({
+      name: &#039;clear-text&#039;,
+      npm: null
+    }, {
+        name: &#039;progress&#039;,
+        npm: null
+      });
+    return this.inquirer.promptReporters(reporterOptions);
+  }</span></span><span class="bg-null">
+
+  private async selectTestFramework(testRunnerOption: PromptOption): Promise&lt;null | PromptOption&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="17"><span class="badge badge-secondary">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">{}</span><span class="stryker-original-code" data-mutant="17"><span class="bg-null">{
+    let selectedTestFramework: PromptOption | null = null;
+    const testFrameworkOptions = await this.client.getTestFrameworkOptions(testRunnerOption.npm);
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="18"><span class="badge badge-success">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="19"><span class="badge badge-success">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">false</span><span class="stryker-original-code" data-mutant="18"><span class="stryker-original-code" data-mutant="19"><span class="bg-success-light">testFrameworkOptions.length</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="20"><span class="badge badge-success">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">{}</span><span class="stryker-original-code" data-mutant="20"><span class="bg-success-light">{
+      this.log.debug(`Found test frameworks for ${testRunnerOption.name}: ${JSON.stringify(testFrameworkOptions)}`);
+      const none = {
+        name: &#039;None/other&#039;,
+        npm: null
+      };
+      testFrameworkOptions.push(none);
+      selectedTestFramework = await this.inquirer.promptTestFrameworks(testFrameworkOptions);
+      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="21"><span class="badge badge-success">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="22"><span class="badge badge-success">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">false</span><span class="stryker-original-code" data-mutant="21"><span class="stryker-original-code" data-mutant="22"><span class="bg-success-light">selectedTestFramework </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="23"><span class="badge badge-success">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">!==</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success-light">===</span></span><span class="bg-success-light"> none</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="24"><span class="badge badge-success">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">{}</span><span class="stryker-original-code" data-mutant="24"><span class="bg-success-light">{
+        selectedTestFramework = null;
+        this.out(&#039;OK, downgrading coverageAnalysis to &quot;all&quot;&#039;);
+      }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="25"><span class="badge badge-success">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">{}</span><span class="stryker-original-code" data-mutant="25"><span class="bg-success-light">{
+      this.out(`No stryker test framework plugin found that is compatible with ${testRunnerOption.name}, downgrading coverageAnalysis to &quot;all&quot;`);
+    }</span></span><span class="bg-null">
+    return selectedTestFramework;
+  }</span></span><span class="bg-null">
+
+  private async selectMutator(): Promise&lt;PromptOption | null&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="26"><span class="badge badge-secondary">26</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="26">{}</span><span class="stryker-original-code" data-mutant="26"><span class="bg-null">{
+    const mutatorOptions = await this.client.getMutatorOptions();
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="27"><span class="badge badge-success">27</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="27">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="28"><span class="badge badge-success">28</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="28">true</span><span class="stryker-original-code" data-mutant="27"><span class="stryker-original-code" data-mutant="28"><span class="bg-success-light">mutatorOptions.length</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="29"><span class="badge badge-secondary">29</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="29">{}</span><span class="stryker-original-code" data-mutant="29"><span class="bg-null">{
+      this.log.debug(`Found mutators: ${JSON.stringify(mutatorOptions)}`);
+      const es5 = {
+        name: &#039;es5&#039;,
+        npm: null
+      };
+      mutatorOptions.push(es5);
+      return await this.inquirer.promptMutator(mutatorOptions);
+    }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="30"><span class="badge badge-secondary">30</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="30">{}</span><span class="stryker-original-code" data-mutant="30"><span class="bg-null">{
+      this.out(&#039;Unable to select a mutator. You will need to configure it manually.&#039;);
+      return null;
+    }</span></span><span class="bg-null">
+  }</span></span><span class="bg-null">
+
+  private async selectTranspilers(): Promise&lt;PromptOption[] | null&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="31"><span class="badge badge-secondary">31</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="31">{}</span><span class="stryker-original-code" data-mutant="31"><span class="bg-null">{
+    const options = await this.client.getTranspilerOptions();
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="32"><span class="badge badge-success">32</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="32">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="33"><span class="badge badge-success">33</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="33">false</span><span class="stryker-original-code" data-mutant="32"><span class="stryker-original-code" data-mutant="33"><span class="bg-success-light">options.length</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="34"><span class="badge badge-secondary">34</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="34">{}</span><span class="stryker-original-code" data-mutant="34"><span class="bg-null">{
+      this.log.debug(`Found transpilers: ${JSON.stringify(options)}`);
+      return await this.inquirer.promptTranspilers(options);
+    }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="35"><span class="badge badge-secondary">35</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="35">{}</span><span class="stryker-original-code" data-mutant="35"><span class="bg-null">{
+      this.out(&#039;Unable to select transpilers. You will need to configure it manually, if you want to use any.&#039;);
+      return null;
+    }</span></span><span class="bg-null">
+  }</span></span><span class="bg-null">
+
+  private getSelectedNpmDependencies(selectedOptions: (PromptOption | null)[]) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="36"><span class="badge badge-secondary">36</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="36">{}</span><span class="stryker-original-code" data-mutant="36"><span class="bg-null">{
+    return filterEmpty(filterEmpty(selectedOptions)
+      .map(option =&gt; option.npm));
+  }</span></span><span class="bg-null">
+
+  /**
+  * Install the npm packages
+  * @function
+  */
+  private installNpmDependencies(dependencies: string[]): void </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="37"><span class="badge badge-success">37</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="37">{}</span><span class="stryker-original-code" data-mutant="37"><span class="bg-success-light">{
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="38"><span class="badge badge-success">38</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="38">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="39"><span class="badge badge-danger">39</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="39">true</span><span class="stryker-original-code" data-mutant="38"><span class="stryker-original-code" data-mutant="39"><span class="bg-danger-light">dependencies.length </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="40"><span class="badge badge-success">40</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="40">&lt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="41"><span class="badge badge-danger">41</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="41">&gt;=</span><span class="stryker-original-code" data-mutant="40"><span class="stryker-original-code" data-mutant="41"><span class="bg-danger-light">&gt;</span></span></span><span class="bg-danger-light"> 0</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="42"><span class="badge badge-success">42</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="42">{}</span><span class="stryker-original-code" data-mutant="42"><span class="bg-success-light">{
+      this.out(&#039;Installing NPM dependencies...&#039;);
+      const cmd = `npm i --save-dev stryker-api ${dependencies.join(&#039; &#039;)}`;
+      this.out(cmd);
+      try </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="43"><span class="badge badge-success">43</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="43">{}</span><span class="stryker-original-code" data-mutant="43"><span class="bg-success-light">{
+        child.execSync(cmd, { stdio: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="44"><span class="badge badge-success">44</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="44">[]</span><span class="stryker-original-code" data-mutant="44"><span class="bg-success-light">[0, 1, 2]</span></span><span class="bg-success-light"> });
+      }</span></span><span class="bg-success-light"> catch (_) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="45"><span class="badge badge-success">45</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="45">{}</span><span class="stryker-original-code" data-mutant="45"><span class="bg-success-light">{
+        this.out(`An error occurred during installation, please try it yourself: &quot;${cmd}&quot;`);
+      }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-success-light">
+  }</span></span><span class="bg-null">
+
+  private async fetchAdditionalConfig(dependencies: string[]): Promise&lt;object[]&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="46"><span class="badge badge-secondary">46</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="46">{}</span><span class="stryker-original-code" data-mutant="46"><span class="bg-null">{
+    return filterEmpty(await Promise.all(dependencies.map(dep =&gt;
+      this.client.getAdditionalConfig(dep))));
+  }</span></span><span class="bg-null">
+}</span>
+</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>ConditionalExpression</td>
+<td>TranspileError</td>
+<td>24
+:
+34</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>1</th>
+<td>ArrayLiteral</td>
+<td>TranspileError</td>
+<td>29
+:
+8</td>
+<td><code>[    ...    ]</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>2</th>
+<td>Block</td>
+<td>Killed</td>
+<td>19
+:
+36</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>3</th>
+<td>Block</td>
+<td>Survived</td>
+<td>48
+:
+25</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>4</th>
+<td>Block</td>
+<td>Survived</td>
+<td>49
+:
+58</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>5</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>50
+:
+10</td>
+<td><code>.   [... [  ]</code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>50
+:
+10</td>
+<td><code>.   [... [  ]</code></td>
+<td><code></code></td></tr>
+<tr><th>7</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>50
+:
+28</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
+<tr><th>8</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>58
+:
+65</td>
+<td><code>{
+   ...}
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>9</th>
+<td>UnaryNot</td>
+<td>Survived</td>
+<td>50
+:
+31</td>
+<td><code>!    ... [  ]</code></td>
+<td><code>.   [  ]</code></td></tr>
+<tr><th>10</th>
+<td>PrefixUnaryExpression</td>
+<td>Survived</td>
+<td>50
+:
+31</td>
+<td><code>!    ... [  ]</code></td>
+<td><code>.   [  ]</code></td></tr>
+<tr><th>11</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>60
+:
+34</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>12</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>63
+:
+11</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>13</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>69
+:
+59</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>14</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>82
+:
+98</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>15</th>
+<td>Block</td>
+<td>Survived</td>
+<td>50
+:
+49</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>16</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>60
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>17</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>60
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>18</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>85
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>19</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>85
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>20</th>
+<td>Block</td>
+<td>Killed</td>
+<td>85
+:
+37</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>21</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>93
+:
+10</td>
+<td><code>===</code></td>
+<td><code></code></td></tr>
+<tr><th>22</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>93
+:
+32</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>23</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>103
+:
+62</td>
+<td><code>{
+   ...}
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>24</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>93
+:
+10</td>
+<td><code>===</code></td>
+<td><code></code></td></tr>
+<tr><th>25</th>
+<td>Block</td>
+<td>Killed</td>
+<td>93
+:
+42</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>26</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>105
+:
+31</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>27</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>113
+:
+11</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>28</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>119
+:
+68</td>
+<td><code>{
+   ...}
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>29</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>105
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>30</th>
+<td>Block</td>
+<td>Killed</td>
+<td>97
+:
+11</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>31</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>121
+:
+24</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>32</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>124
+:
+11</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>33</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>130
+:
+79</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>34</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>105
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>35</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>121
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>36</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>121
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>37</th>
+<td>Block</td>
+<td>Killed</td>
+<td>139
+:
+63</td>
+<td><code>{
+   ...}
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>38</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>140
+:
+8</td>
+<td><code>.       ></code></td>
+<td><code></code></td></tr>
+<tr><th>39</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>140
+:
+28</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
+<tr><th>40</th>
+<td>Block</td>
+<td>Killed</td>
+<td>140
+:
+33</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>41</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>140
+:
+8</td>
+<td><code>.       ></code></td>
+<td><code></code></td></tr>
+<tr><th>42</th>
+<td>Block</td>
+<td>Killed</td>
+<td>144
+:
+10</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>43</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>152
+:
+81</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>44</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>140
+:
+28</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
+<tr><th>45</th>
+<td>Block</td>
+<td>Killed</td>
+<td>146
+:
+18</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>46</th>
+<td>ArrayLiteral</td>
+<td>Killed</td>
+<td>145
+:
+37</td>
+<td><code>[ ,  ,  ]</code></td>
+<td><code>[]</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../__resources/stryker.js" defer="defer"></script></body></html>

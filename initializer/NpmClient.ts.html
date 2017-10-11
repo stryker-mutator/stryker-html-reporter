@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html><head><title>NpmClient.ts
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../__resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../__resources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../__resources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../__resources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">NpmClient.ts
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">All files</a></li><li class="breadcrumb-item"><a href="index.html">initializer</a></li>
+<li class="breadcrumb-item active">NpmClient.ts</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>NpmClient.ts</td>
+<td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="83.33" aria-valuemin="0" aria-valuemax="100" style="width: 83.33%;">83.33
+%</div></div></td>
+<th class="text-center text-success" style="width: 10%">83.33</th>
+<td class="text-center">5</td>
+<td class="text-center">1</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">19</td>
+<th class="text-center">5</th>
+<th class="text-center">1</th>
+<th class="text-center">25</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(1)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(5)</label></div>
+
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="5" type="checkbox">
+TranspileError
+ 
+(19)</label></div>
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">import { RestClient, IRestResponse } from &#039;typed-rest-client/RestClient&#039;;
+import PromptOption from &#039;./PromptOption&#039;;
+import { getLogger } from &#039;log4js&#039;;
+import { errorToString } from &#039;../utils/objectUtils&#039;;
+
+interface NpmSearchPackageInfo {
+  package: {
+    name: string;
+    keywords: string[];
+  };
+}
+interface NpmSearchResult {
+  total: number;
+  results: NpmSearchPackageInfo[];
+}
+
+interface NpmPackage {
+  name: string;
+  initStrykerConfig?: object;
+}
+
+const BASE_NPM_SEARCH = &#039;https://api.npms.io&#039;;
+const BASE_NPM_PACKAGE = &#039;https://registry.npmjs.org&#039;;
+
+const getName = (packageName: string) =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="0"><span class="badge badge-secondary">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">{}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-null">{
+  return packageName.split(&#039;-&#039;)[1];
+}</span></span><span class="bg-null">;
+
+const mapSearchResultToPromptOption = (searchResults: NpmSearchResult): PromptOption[] =&gt; searchResults.results.map(result =&gt; ({
+  name: getName(result.package.name),
+  npm: result.package.name
+}));
+
+const handleResult = (from: string) =&gt; &lt;T&gt;(response: IRestResponse&lt;T&gt;): T =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="1"><span class="badge badge-secondary">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-null">{
+  if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="2"><span class="badge badge-success">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="3"><span class="badge badge-danger">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">true</span><span class="stryker-original-code" data-mutant="2"><span class="stryker-original-code" data-mutant="3"><span class="bg-danger-light">response.statusCode </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">!==</span><span class="stryker-original-code" data-mutant="4"><span class="bg-danger-light">===</span></span><span class="bg-danger-light"> 200</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="5"><span class="badge badge-secondary">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-null">{
+    return response.result;
+  }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="6"><span class="badge badge-secondary">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">{}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-null">{
+    throw new Error(`Query ${from} resulted in http status code: ${response.statusCode}.`);
+  }</span></span><span class="bg-null">
+}</span></span><span class="bg-null">;
+
+export default class NpmClient {
+
+  private readonly log = getLogger(NpmClient.name);
+
+  constructor(
+    private searchClient = new RestClient(&#039;npmSearch&#039;, BASE_NPM_SEARCH),
+    private packageClient = new RestClient(&#039;npm&#039;, BASE_NPM_PACKAGE)) {
+  }
+
+  getTestRunnerOptions(): Promise&lt;PromptOption[]&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="7"><span class="badge badge-secondary">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">{}</span><span class="stryker-original-code" data-mutant="7"><span class="bg-null">{
+    return this.search(&#039;/v2/search?q=keywords:stryker-test-runner&#039;)
+      .then(mapSearchResultToPromptOption);
+  }</span></span><span class="bg-null">
+
+  getTestFrameworkOptions(testRunnerFilter: string | null): Promise&lt;PromptOption[]&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="8"><span class="badge badge-secondary">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">{}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-null">{
+    return this.search(&#039;/v2/search?q=keywords:stryker-test-framework&#039;)
+      .then(searchResult =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="9"><span class="badge badge-secondary">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">{}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-null">{
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="10"><span class="badge badge-secondary">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="11"><span class="badge badge-secondary">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">false</span><span class="stryker-original-code" data-mutant="10"><span class="stryker-original-code" data-mutant="11"><span class="bg-null">testRunnerFilter</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">{}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-success-light">{
+          searchResult.results = searchResult.results.filter(framework =&gt; framework.package.keywords.indexOf(testRunnerFilter) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">&lt;</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">&gt;</span><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="bg-success-light">&gt;=</span></span></span><span class="bg-success-light"> 0);
+        }</span></span><span class="bg-null">
+        return searchResult;
+      }</span></span><span class="bg-null">)
+      .then(mapSearchResultToPromptOption);
+  }</span></span><span class="bg-null">
+
+  getMutatorOptions(): Promise&lt;PromptOption[]&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="15"><span class="badge badge-secondary">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">{}</span><span class="stryker-original-code" data-mutant="15"><span class="bg-null">{
+    return this.search(&#039;/v2/search?q=keywords:stryker-mutator&#039;)
+    .then(mapSearchResultToPromptOption);
+  }</span></span><span class="bg-null">
+
+  getTranspilerOptions(): Promise&lt;PromptOption[]&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="16"><span class="badge badge-secondary">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">{}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-null">{
+    return this.search(&#039;/v2/search?q=keywords:stryker-transpiler&#039;)
+    .then(mapSearchResultToPromptOption);
+  }</span></span><span class="bg-null">
+
+  getTestReporterOptions(): Promise&lt;PromptOption[]&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="17"><span class="badge badge-secondary">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">{}</span><span class="stryker-original-code" data-mutant="17"><span class="bg-null">{
+    return this.search(`/v2/search?q=keywords:stryker-reporter`)
+      .then(mapSearchResultToPromptOption);
+  }</span></span><span class="bg-null">
+
+  getAdditionalConfig(packageName: string): Promise&lt;object&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="18"><span class="badge badge-secondary">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">{}</span><span class="stryker-original-code" data-mutant="18"><span class="bg-null">{
+    return this.packageClient.get&lt;NpmPackage&gt;(`/${packageName}/latest`)
+      .then(handleResult(`${BASE_NPM_PACKAGE}/${packageName}`))
+      .then(pkg =&gt; pkg.initStrykerConfig </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="19"><span class="badge badge-secondary">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">&amp;&amp;</span><span class="stryker-original-code" data-mutant="19"><span class="bg-null">||</span></span><span class="bg-null"> {})
+      .catch(err =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="20"><span class="badge badge-secondary">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">{}</span><span class="stryker-original-code" data-mutant="20"><span class="bg-null">{
+        this.log.warn(`Could not fetch additional initialization config for dependency ${packageName}. You might need to configure it manually`, err);
+        return {};
+      }</span></span><span class="bg-null">);
+  }</span></span><span class="bg-null">
+
+  private search(query: string): Promise&lt;NpmSearchResult&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="21"><span class="badge badge-secondary">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">{}</span><span class="stryker-original-code" data-mutant="21"><span class="bg-null">{
+    const call = BASE_NPM_SEARCH </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="22"><span class="badge badge-secondary">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">-</span><span class="stryker-original-code" data-mutant="22"><span class="bg-null">+</span></span><span class="bg-null"> query;
+    this.log.debug(`Searching: ${call}`);
+    return this.searchClient.get&lt;NpmSearchResult&gt;(query)
+      .then(handleResult(call))
+      .catch(err =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="23"><span class="badge badge-secondary">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-null">{
+        this.log.error(`Unable to reach ${BASE_NPM_SEARCH} (for query ${query}). Please check your internet connection.`, errorToString(err));
+        const result: NpmSearchResult = {
+          total: 0,
+          results: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="24"><span class="badge badge-secondary">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">[[]]</span><span class="stryker-original-code" data-mutant="24"><span class="bg-null">[]</span></span><span class="bg-null">
+        };
+        return result;
+      }</span></span><span class="bg-null">);
+  }</span></span><span class="bg-null">
+</span>}</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>24
+:
+41</td>
+<td><code>{
+   ... ];
+}</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>1</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>33
+:
+77</td>
+<td><code>{
+   ...  }
+}</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>2</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>34
+:
+6</td>
+<td><code>.           ===</code></td>
+<td><code></code></td></tr>
+<tr><th>3</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>34
+:
+35</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>4</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>36
+:
+9</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>5</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>50
+:
+50</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>6</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>55
+:
+84</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>7</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>57
+:
+28</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>8</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>58
+:
+12</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>9</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>58
+:
+12</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>10</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>34
+:
+26</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>11</th>
+<td>Block</td>
+<td>Killed</td>
+<td>58
+:
+30</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>12</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>66
+:
+47</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>13</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>71
+:
+50</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>14</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>76
+:
+52</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>15</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>81
+:
+60</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>16</th>
+<td>BinaryExpression</td>
+<td>TranspileError</td>
+<td>84
+:
+41</td>
+<td><code>||</code></td>
+<td><code>&&</code></td></tr>
+<tr><th>17</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>85
+:
+20</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>18</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>91
+:
+58</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>19</th>
+<td>BinaryExpression</td>
+<td>TranspileError</td>
+<td>92
+:
+33</td>
+<td><code>+</code></td>
+<td><code>-</code></td></tr>
+<tr><th>20</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>96
+:
+20</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>21</th>
+<td>ArrayLiteral</td>
+<td>TranspileError</td>
+<td>100
+:
+19</td>
+<td><code>[]</code></td>
+<td><code>[[]]</code></td></tr>
+<tr><th>22</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>59
+:
+127</td>
+<td><code>>=</code></td>
+<td><code><</code></td></tr>
+<tr><th>23</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>34
+:
+6</td>
+<td><code>.           ===</code></td>
+<td><code></code></td></tr>
+<tr><th>24</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>59
+:
+127</td>
+<td><code>>=</code></td>
+<td><code>></code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
+<script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../__resources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../__resources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../__resources/stryker.js" defer="defer"></script></body></html>
