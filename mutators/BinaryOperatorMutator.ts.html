@@ -102,14 +102,6 @@ export default class BinaryOperatorMutator implements NodeMutator {
 <th>Original</th>
 <th>Replacement</th></tr></thead>
 <tbody><tr><th>0</th>
-<td>ArrayLiteral</td>
-<td>Survived</td>
-<td>14
-:
-9</td>
-<td><code>['<=', '>=']</code></td>
-<td><code>[]</code></td></tr>
-<tr><th>1</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>24
@@ -119,7 +111,7 @@ export default class BinaryOperatorMutator implements NodeMutator {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>2</th>
+<tr><th>1</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>25
@@ -127,6 +119,14 @@ export default class BinaryOperatorMutator implements NodeMutator {
 34</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
+<tr><th>2</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>27
+:
+8</td>
+<td><code>.    ...    ]</code></td>
+<td><code></code></td></tr>
 <tr><th>3</th>
 <td>IfStatement</td>
 <td>TranspileError</td>
@@ -136,14 +136,6 @@ export default class BinaryOperatorMutator implements NodeMutator {
 <td><code>.    ...    ]</code></td>
 <td><code></code></td></tr>
 <tr><th>4</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>27
-:
-8</td>
-<td><code>.    ...    ]</code></td>
-<td><code></code></td></tr>
-<tr><th>5</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>27
@@ -151,7 +143,7 @@ export default class BinaryOperatorMutator implements NodeMutator {
 32</td>
 <td><code>&&</code></td>
 <td><code>||</code></td></tr>
-<tr><th>6</th>
+<tr><th>5</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>27
@@ -159,14 +151,22 @@ export default class BinaryOperatorMutator implements NodeMutator {
 18</td>
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
-<tr><th>7</th>
+<tr><th>6</th>
 <td>ArrayLiteral</td>
 <td>Survived</td>
-<td>15
+<td>14
+:
+9</td>
+<td><code>['<=', '>=']</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>7</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>30
 :
 10</td>
-<td><code>['<', '>']</code></td>
-<td><code>[]</code></td></tr>
+<td><code>=== '      '</code></td>
+<td><code></code></td></tr>
 <tr><th>8</th>
 <td>IfStatement</td>
 <td>TranspileError</td>
@@ -176,14 +176,6 @@ export default class BinaryOperatorMutator implements NodeMutator {
 <td><code>=== '      '</code></td>
 <td><code></code></td></tr>
 <tr><th>9</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>30
-:
-10</td>
-<td><code>=== '      '</code></td>
-<td><code></code></td></tr>
-<tr><th>10</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>30
@@ -191,7 +183,7 @@ export default class BinaryOperatorMutator implements NodeMutator {
 34</td>
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
-<tr><th>11</th>
+<tr><th>10</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>30
@@ -200,6 +192,14 @@ export default class BinaryOperatorMutator implements NodeMutator {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>11</th>
+<td>ArrayLiteral</td>
+<td>Survived</td>
+<td>16
+:
+9</td>
+<td><code>['>=', '<=']</code></td>
+<td><code>[]</code></td></tr>
 <tr><th>12</th>
 <td>Block</td>
 <td>Killed</td>
@@ -212,18 +212,18 @@ export default class BinaryOperatorMutator implements NodeMutator {
 <tr><th>13</th>
 <td>ArrayLiteral</td>
 <td>Survived</td>
-<td>17
+<td>15
 :
 10</td>
-<td><code>['>', '<']</code></td>
+<td><code>['<', '>']</code></td>
 <td><code>[]</code></td></tr>
 <tr><th>14</th>
 <td>ArrayLiteral</td>
 <td>Survived</td>
-<td>16
+<td>17
 :
-9</td>
-<td><code>['>=', '<=']</code></td>
+10</td>
+<td><code>['>', '<']</code></td>
 <td><code>[]</code></td></tr>
 <tr><th>15</th>
 <td>ArrayLiteral</td>

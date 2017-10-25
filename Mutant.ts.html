@@ -249,13 +249,13 @@ export default class Mutant {
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
 <tr><th>11</th>
-<td>BinaryExpression</td>
+<td>WhileStatement</td>
 <td>Survived</td>
 <td>49
 :
-31</td>
-<td><code>&&</code></td>
-<td><code>||</code></td></tr>
+11</td>
+<td><code>>   &... -  )</code></td>
+<td><code></code></td></tr>
 <tr><th>12</th>
 <td>BinaryExpression</td>
 <td>Survived</td>
@@ -265,22 +265,14 @@ export default class Mutant {
 <td><code>></code></td>
 <td><code><=</code></td></tr>
 <tr><th>13</th>
-<td>WhileStatement</td>
-<td>Survived</td>
-<td>49
-:
-11</td>
-<td><code>>   &... -  )</code></td>
-<td><code></code></td></tr>
-<tr><th>14</th>
 <td>BinaryExpression</td>
 <td>Survived</td>
 <td>49
 :
-27</td>
-<td><code>></code></td>
-<td><code>>=</code></td></tr>
-<tr><th>15</th>
+31</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
+<tr><th>14</th>
 <td>UnaryNot</td>
 <td>Survived</td>
 <td>49
@@ -288,7 +280,7 @@ export default class Mutant {
 34</td>
 <td><code>!    ... -  )</code></td>
 <td><code>.    ... -  )</code></td></tr>
-<tr><th>16</th>
+<tr><th>15</th>
 <td>PrefixUnaryExpression</td>
 <td>Survived</td>
 <td>49
@@ -296,15 +288,15 @@ export default class Mutant {
 34</td>
 <td><code>!    ... -  )</code></td>
 <td><code>.    ... -  )</code></td></tr>
-<tr><th>17</th>
+<tr><th>16</th>
 <td>BinaryExpression</td>
 <td>Survived</td>
 <td>49
 :
-66</td>
-<td><code>-</code></td>
-<td><code>+</code></td></tr>
-<tr><th>18</th>
+27</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
+<tr><th>17</th>
 <td>Block</td>
 <td>Survived</td>
 <td>49
@@ -313,15 +305,15 @@ export default class Mutant {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>19</th>
+<tr><th>18</th>
 <td>BinaryExpression</td>
 <td>Survived</td>
-<td>52
+<td>49
 :
-52</td>
-<td><code>&&</code></td>
-<td><code>||</code></td></tr>
-<tr><th>20</th>
+66</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr>
+<tr><th>19</th>
 <td>WhileStatement</td>
 <td>Survived</td>
 <td>52
@@ -329,6 +321,14 @@ export default class Mutant {
 11</td>
 <td><code><    ...    )</code></td>
 <td><code></code></td></tr>
+<tr><th>20</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>52
+:
+52</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
 <tr><th>21</th>
 <td>BinaryExpression</td>
 <td>Survived</td>
@@ -338,14 +338,6 @@ export default class Mutant {
 <td><code><</code></td>
 <td><code><=</code></td></tr>
 <tr><th>22</th>
-<td>BinaryExpression</td>
-<td>Survived</td>
-<td>52
-:
-25</td>
-<td><code><</code></td>
-<td><code>>=</code></td></tr>
-<tr><th>23</th>
 <td>UnaryNot</td>
 <td>Survived</td>
 <td>52
@@ -353,7 +345,7 @@ export default class Mutant {
 55</td>
 <td><code>!    ...    )</code></td>
 <td><code>.    ...    )</code></td></tr>
-<tr><th>24</th>
+<tr><th>23</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>58
@@ -363,7 +355,7 @@ export default class Mutant {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>25</th>
+<tr><th>24</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>63
@@ -373,7 +365,7 @@ export default class Mutant {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>26</th>
+<tr><th>25</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>65
@@ -381,7 +373,7 @@ export default class Mutant {
 85</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>27</th>
+<tr><th>26</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>65
@@ -389,7 +381,7 @@ export default class Mutant {
 66</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>28</th>
+<tr><th>27</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>68
@@ -399,7 +391,7 @@ export default class Mutant {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>29</th>
+<tr><th>28</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>69
@@ -407,7 +399,7 @@ export default class Mutant {
 73</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>30</th>
+<tr><th>29</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>69
@@ -415,6 +407,14 @@ export default class Mutant {
 54</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
+<tr><th>30</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>52
+:
+25</td>
+<td><code><</code></td>
+<td><code>>=</code></td></tr>
 <tr><th>31</th>
 <td>PrefixUnaryExpression</td>
 <td>Survived</td>

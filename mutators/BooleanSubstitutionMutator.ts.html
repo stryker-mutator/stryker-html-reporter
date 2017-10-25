@@ -192,6 +192,14 @@ export default class BooleanSubstitutionMutator implements NodeMutator {
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
 <tr><th>13</th>
+<td>PrefixUnaryExpression</td>
+<td>Killed</td>
+<td>21
+:
+26</td>
+<td><code>!           .</code></td>
+<td><code>.</code></td></tr>
+<tr><th>14</th>
 <td>Block</td>
 <td>Killed</td>
 <td>19
@@ -200,14 +208,6 @@ export default class BooleanSubstitutionMutator implements NodeMutator {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>14</th>
-<td>PrefixUnaryExpression</td>
-<td>Killed</td>
-<td>21
-:
-26</td>
-<td><code>!           .</code></td>
-<td><code>.</code></td></tr>
 <tr><th>15</th>
 <td>UnaryNot</td>
 <td>Killed</td>

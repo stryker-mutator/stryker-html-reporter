@@ -113,10 +113,10 @@ export default class MutationTestExecutor {
 }
 
 function runInSandbox([transpiledMutant, sandbox]: [TranspiledMutant, Sandbox]): Promise&lt;{ sandbox: Sandbox, result: MutantResult }&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="8"><span class="badge badge-secondary">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">{}</span><span class="stryker-original-code" data-mutant="8"><span class="bg-null">{
-  if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">true</span><span class="stryker-original-code" data-mutant="9"><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">transpiledMutant.transpileResult.error</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="11"><span class="badge badge-secondary">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-null">{
+  if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">false</span><span class="stryker-original-code" data-mutant="9"><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">transpiledMutant.transpileResult.error</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="11"><span class="badge badge-secondary">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-null">{
     const result = transpiledMutant.mutant.result(MutantStatus.TranspileError, </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="12"><span class="badge badge-secondary">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">[[]]</span><span class="stryker-original-code" data-mutant="12"><span class="bg-null">[]</span></span><span class="bg-null">);
     return Promise.resolve({ sandbox, result });
-  }</span></span><span class="bg-null"> else if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="UnaryNot" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">transpiledMutant.mutant.selectedTests.length</span><a href="#" class="stryker-mutant-button" tabindex="0" title="PrefixUnaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="15"><span class="badge badge-success">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">transpiledMutant.mutant.selectedTests.length</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">true</span><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="stryker-original-code" data-mutant="15"><span class="stryker-original-code" data-mutant="16"><span class="bg-success-light">!transpiledMutant.mutant.selectedTests.length</span></span></span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="17"><span class="badge badge-secondary">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">{}</span><span class="stryker-original-code" data-mutant="17"><span class="bg-null">{
+  }</span></span><span class="bg-null"> else if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="PrefixUnaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="15"><span class="badge badge-success">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">transpiledMutant.mutant.selectedTests.length</span><a href="#" class="stryker-mutant-button" tabindex="0" title="UnaryNot" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">transpiledMutant.mutant.selectedTests.length</span><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="stryker-original-code" data-mutant="15"><span class="stryker-original-code" data-mutant="16"><span class="bg-success-light">!transpiledMutant.mutant.selectedTests.length</span></span></span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="17"><span class="badge badge-secondary">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">{}</span><span class="stryker-original-code" data-mutant="17"><span class="bg-null">{
     const result = transpiledMutant.mutant.result(MutantStatus.NoCoverage, </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="18"><span class="badge badge-secondary">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">[[]]</span><span class="stryker-original-code" data-mutant="18"><span class="bg-null">[]</span></span><span class="bg-null">);
     return Promise.resolve({ sandbox, result });
   }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="19"><span class="badge badge-secondary">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">{}</span><span class="stryker-original-code" data-mutant="19"><span class="bg-null">{
@@ -132,7 +132,7 @@ function createTuple&lt;T1, T2&gt;(a: T1, b: T2): [T1, T2] </span><a href="#" cl
 function collectMutantResult(mutant: TestableMutant, runResult: RunResult) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="22"><span class="badge badge-secondary">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">{}</span><span class="stryker-original-code" data-mutant="22"><span class="bg-null">{
   let status: MutantStatus = MutantStatus.NoCoverage;
   let testNames: string[];
-  if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="23"><span class="badge badge-danger">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="24"><span class="badge badge-success">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">false</span><span class="stryker-original-code" data-mutant="23"><span class="stryker-original-code" data-mutant="24"><span class="bg-danger-light">runResult</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="25"><span class="badge badge-secondary">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">{}</span><span class="stryker-original-code" data-mutant="25"><span class="bg-null">{
+  if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="23"><span class="badge badge-success">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="24"><span class="badge badge-danger">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">true</span><span class="stryker-original-code" data-mutant="23"><span class="stryker-original-code" data-mutant="24"><span class="bg-danger-light">runResult</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="25"><span class="badge badge-secondary">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">{}</span><span class="stryker-original-code" data-mutant="25"><span class="bg-null">{
     switch (runResult.status) {
       case RunStatus.Timeout:
         status = MutantStatus.TimedOut;
@@ -212,14 +212,6 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>4</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>41
-:
-10</td>
-<td><code></code></td>
-<td><code></code></td></tr>
-<tr><th>5</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>59
@@ -229,6 +221,14 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ...  }
 }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>5</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>41
+:
+10</td>
+<td><code></code></td>
+<td><code></code></td></tr>
 <tr><th>6</th>
 <td>IfStatement</td>
 <td>Survived</td>
@@ -239,15 +239,6 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 <td><code></code></td></tr>
 <tr><th>7</th>
 <td>Block</td>
-<td>Killed</td>
-<td>36
-:
-74</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>8</th>
-<td>Block</td>
 <td>TranspileError</td>
 <td>60
 :
@@ -256,7 +247,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>9</th>
+<tr><th>8</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>61
@@ -264,6 +255,15 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 79</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
+<tr><th>9</th>
+<td>Block</td>
+<td>Killed</td>
+<td>36
+:
+74</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>10</th>
 <td>Block</td>
 <td>Survived</td>
@@ -290,14 +290,6 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 <td><code>.    ...    .</code></td>
 <td><code></code></td></tr>
 <tr><th>13</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>63
-:
-13</td>
-<td><code>!    ...    .</code></td>
-<td><code></code></td></tr>
-<tr><th>14</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>63
@@ -307,7 +299,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>15</th>
+<tr><th>14</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>64
@@ -315,7 +307,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 75</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
-<tr><th>16</th>
+<tr><th>15</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>66
@@ -325,7 +317,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>17</th>
+<tr><th>16</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>72
@@ -335,7 +327,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ... ];
 }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>18</th>
+<tr><th>17</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>73
@@ -343,7 +335,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 9</td>
 <td><code>[ ,  ]</code></td>
 <td><code>[]</code></td></tr>
-<tr><th>19</th>
+<tr><th>18</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>76
@@ -353,23 +345,23 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ... );
 }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>19</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>63
+:
+13</td>
+<td><code>!    ...    .</code></td>
+<td><code></code></td></tr>
 <tr><th>20</th>
-<td>UnaryNot</td>
+<td>IfStatement</td>
 <td>Killed</td>
 <td>63
 :
 13</td>
 <td><code>!    ...    .</code></td>
-<td><code>.    ...    .</code></td></tr>
+<td><code></code></td></tr>
 <tr><th>21</th>
-<td>PrefixUnaryExpression</td>
-<td>Killed</td>
-<td>63
-:
-13</td>
-<td><code>!    ...    .</code></td>
-<td><code>.    ...    .</code></td></tr>
-<tr><th>22</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>79
@@ -379,17 +371,25 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>23</th>
-<td>IfStatement</td>
+<tr><th>22</th>
+<td>PrefixUnaryExpression</td>
 <td>Killed</td>
 <td>63
 :
 13</td>
 <td><code>!    ...    .</code></td>
-<td><code></code></td></tr>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>23</th>
+<td>UnaryNot</td>
+<td>Killed</td>
+<td>63
+:
+13</td>
+<td><code>!    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
 <tr><th>24</th>
 <td>IfStatement</td>
-<td>Survived</td>
+<td>Killed</td>
 <td>79
 :
 6</td>
@@ -413,21 +413,13 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 <td><code></code></td></tr>
 <tr><th>27</th>
 <td>IfStatement</td>
-<td>Killed</td>
+<td>Survived</td>
 <td>79
 :
 6</td>
 <td><code></code></td>
 <td><code></code></td></tr>
 <tr><th>28</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>88
-:
-47</td>
-<td><code>===</code></td>
-<td><code>!==</code></td></tr>
-<tr><th>29</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>98
@@ -437,7 +429,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>30</th>
+<tr><th>29</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>99
@@ -445,7 +437,7 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 16</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
-<tr><th>31</th>
+<tr><th>30</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>104
@@ -455,16 +447,15 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
    ... };
 }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>32</th>
-<td>Block</td>
+<tr><th>31</th>
+<td>BinaryExpression</td>
 <td>Killed</td>
-<td>90
+<td>88
 :
-15</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>33</th>
+47</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>32</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>109
@@ -473,6 +464,15 @@ function reportAll(reporter: StrictReporter) </span><a href="#" class="stryker-m
 <td><code>{
    ... };
 }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>33</th>
+<td>Block</td>
+<td>Killed</td>
+<td>90
+:
+15</td>
+<td><code>{
+   ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>34</th>
 <td>BinaryExpression</td>

@@ -79,19 +79,19 @@ export default class CoverageInstrumenterTranspiler implements Transpiler {
     this.log = getLogger(CoverageInstrumenterTranspiler.name);
   }</span></span><span class="bg-null">
 
-  transpile(files: File[]): TranspileResult </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="1"><span class="badge badge-secondary">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-null">{
+  public transpile(files: File[]): Promise&lt;TranspileResult&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="1"><span class="badge badge-secondary">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-null">{
     try </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="2"><span class="badge badge-secondary">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-null">{
       const result: TranspileResult = {
         outputFiles: files.map(file =&gt; this.instrumentFileIfNeeded(file)),
         error: null
       };
-      return this.addCollectCoverageFileIfNeeded(result);
+      return Promise.resolve(this.addCollectCoverageFileIfNeeded(result));
     }</span></span><span class="bg-null"> catch (error) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="3"><span class="badge badge-secondary">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">{}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-null">{
-      return this.errorResult(errorToString(error));
+      return Promise.resolve(this.errorResult(errorToString(error)));
     }</span></span><span class="bg-null">
   }</span></span><span class="bg-null">
 
-  getMappedLocation(sourceFileLocation: FileLocation): FileLocation </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="4"><span class="badge badge-secondary">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">{}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-null">{
+  public getMappedLocation(sourceFileLocation: FileLocation): FileLocation </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="4"><span class="badge badge-secondary">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">{}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-null">{
     return sourceFileLocation;
   }</span></span><span class="bg-null">
 
@@ -244,7 +244,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td>TranspileError</td>
 <td>26
 :
-44</td>
+60</td>
 <td><code>{
    ...}
   }</code></td>
@@ -272,7 +272,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td>TranspileError</td>
 <td>38
 :
-68</td>
+75</td>
 <td><code>{
    ...;
   }</code></td>
@@ -348,16 +348,6 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td><code>&&</code></td>
 <td><code>||</code></td></tr>
 <tr><th>12</th>
-<td>Block</td>
-<td>Killed</td>
-<td>21
-:
-96</td>
-<td><code>{
-   ...;
-  }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>13</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>73
@@ -365,7 +355,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
 69</td>
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
-<tr><th>14</th>
+<tr><th>13</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>73
@@ -374,7 +364,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>15</th>
+<tr><th>14</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>75
@@ -383,7 +373,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>16</th>
+<tr><th>15</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>80
@@ -393,7 +383,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
    ...}
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>17</th>
+<tr><th>16</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>81
@@ -402,7 +392,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>18</th>
+<tr><th>17</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>92
@@ -411,7 +401,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>19</th>
+<tr><th>18</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>97
@@ -421,6 +411,14 @@ Object.keys(coveragePerFile).forEach(function (file) {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>19</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>98
+:
+8</td>
+<td><code>.    ...    '</code></td>
+<td><code></code></td></tr>
 <tr><th>20</th>
 <td>Block</td>
 <td>Killed</td>
@@ -431,14 +429,6 @@ Object.keys(coveragePerFile).forEach(function (file) {
    ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>21</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>98
-:
-8</td>
-<td><code>.    ...    '</code></td>
-<td><code></code></td></tr>
-<tr><th>22</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>73
@@ -446,13 +436,21 @@ Object.keys(coveragePerFile).forEach(function (file) {
 46</td>
 <td><code>!==</code></td>
 <td><code>===</code></td></tr>
-<tr><th>23</th>
+<tr><th>22</th>
 <td>IfStatement</td>
 <td>Killed</td>
 <td>98
 :
 8</td>
 <td><code>.    ...    '</code></td>
+<td><code></code></td></tr>
+<tr><th>23</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>99
+:
+10</td>
+<td><code>.</code></td>
 <td><code></code></td></tr>
 <tr><th>24</th>
 <td>IfStatement</td>
@@ -463,14 +461,6 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td><code>.</code></td>
 <td><code></code></td></tr>
 <tr><th>25</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>99
-:
-10</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
-<tr><th>26</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>98
@@ -478,6 +468,16 @@ Object.keys(coveragePerFile).forEach(function (file) {
 54</td>
 <td><code>&&</code></td>
 <td><code>||</code></td></tr>
+<tr><th>26</th>
+<td>Block</td>
+<td>Killed</td>
+<td>21
+:
+96</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>27</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
@@ -505,14 +505,6 @@ Object.keys(coveragePerFile).forEach(function (file) {
    ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>30</th>
-<td>BooleanSubstitution</td>
-<td>Survived</td>
-<td>106
-:
-20</td>
-<td><code></code></td>
-<td><code></code></td></tr>
-<tr><th>31</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>119
@@ -522,7 +514,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>32</th>
+<tr><th>31</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>129
@@ -532,7 +524,7 @@ Object.keys(coveragePerFile).forEach(function (file) {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>33</th>
+<tr><th>32</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>132
@@ -540,6 +532,14 @@ Object.keys(coveragePerFile).forEach(function (file) {
 19</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
+<tr><th>33</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>106
+:
+20</td>
+<td><code></code></td>
+<td><code></code></td></tr>
 <tr><th>34</th>
 <td>BooleanSubstitution</td>
 <td>Survived</td>
@@ -549,14 +549,6 @@ Object.keys(coveragePerFile).forEach(function (file) {
 <td><code></code></td>
 <td><code></code></td></tr>
 <tr><th>35</th>
-<td>BooleanSubstitution</td>
-<td>Survived</td>
-<td>108
-:
-19</td>
-<td><code></code></td>
-<td><code></code></td></tr>
-<tr><th>36</th>
 <td>Block</td>
 <td>Killed</td>
 <td>112
@@ -564,7 +556,15 @@ Object.keys(coveragePerFile).forEach(function (file) {
 13</td>
 <td><code>{
    ...    }</code></td>
-<td><code>{}</code></td></tr></tbody></table></div></div></div></div>
+<td><code>{}</code></td></tr>
+<tr><th>36</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>108
+:
+19</td>
+<td><code></code></td>
+<td><code></code></td></tr></tbody></table></div></div></div></div>
 <footer>Generated with stryker-html-reporter generator. Visit the 
 <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
 <script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>

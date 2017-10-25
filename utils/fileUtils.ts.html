@@ -145,16 +145,6 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 <td><code>{}</code></td></tr>
 <tr><th>1</th>
 <td>Block</td>
-<td>Survived</td>
-<td>8
-:
-52</td>
-<td><code>{
-   ...;
-  }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>2</th>
-<td>Block</td>
 <td>TranspileError</td>
 <td>13
 :
@@ -162,6 +152,16 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 <td><code>{
    ...});
 }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>2</th>
+<td>Block</td>
+<td>Survived</td>
+<td>8
+:
+52</td>
+<td><code>{
+   ...;
+  }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>3</th>
 <td>BooleanSubstitution</td>
@@ -189,16 +189,6 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 <td><code></code></td></tr>
 <tr><th>6</th>
 <td>Block</td>
-<td>Survived</td>
-<td>14
-:
-48</td>
-<td><code>{
-   ...;
-  }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>7</th>
-<td>Block</td>
 <td>TranspileError</td>
 <td>20
 :
@@ -207,7 +197,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>8</th>
+<tr><th>7</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>24
@@ -218,15 +208,17 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
   ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>9</th>
+<tr><th>8</th>
 <td>Block</td>
 <td>Survived</td>
-<td>15
+<td>14
 :
-33</td>
-<td><code>{    ...(); }</code></td>
+48</td>
+<td><code>{
+   ...;
+  }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>10</th>
+<tr><th>9</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>37
@@ -236,7 +228,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...  ;
 }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>11</th>
+<tr><th>10</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>38
@@ -244,7 +236,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 39</td>
 <td><code>||</code></td>
 <td><code>&&</code></td></tr>
-<tr><th>12</th>
+<tr><th>11</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>38
@@ -252,7 +244,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 33</td>
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
-<tr><th>13</th>
+<tr><th>12</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>38
@@ -260,7 +252,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 67</td>
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
-<tr><th>14</th>
+<tr><th>13</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>41
@@ -270,7 +262,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
   '...   
 ]</code></td>
 <td><code>[]</code></td></tr>
-<tr><th>15</th>
+<tr><th>14</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>47
@@ -280,7 +272,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...- ;
 }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>16</th>
+<tr><th>15</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>48
@@ -288,7 +280,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 54</td>
 <td><code>></code></td>
 <td><code><=</code></td></tr>
-<tr><th>17</th>
+<tr><th>16</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>48
@@ -296,15 +288,15 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 54</td>
 <td><code>></code></td>
 <td><code>>=</code></td></tr>
-<tr><th>18</th>
-<td>ConditionalExpression</td>
+<tr><th>17</th>
+<td>Block</td>
 <td>Survived</td>
 <td>15
 :
-35</td>
-<td><code></code></td>
-<td><code></code></td></tr>
-<tr><th>19</th>
+33</td>
+<td><code>{    ...(); }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>18</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>57
@@ -314,17 +306,15 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...  }
 }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>20</th>
-<td>Block</td>
+<tr><th>19</th>
+<td>ConditionalExpression</td>
 <td>Survived</td>
-<td>19
+<td>15
 :
-54</td>
-<td><code>{
-   ...  }
-}</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>21</th>
+35</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>20</th>
 <td>Block</td>
 <td>Survived</td>
 <td>33
@@ -334,7 +324,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ... );
 }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>22</th>
+<tr><th>21</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>58
@@ -344,7 +334,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>23</th>
+<tr><th>22</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>60
@@ -354,12 +344,22 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>24</th>
+<tr><th>23</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>65
 :
 62</td>
+<td><code>{
+   ...  }
+}</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>24</th>
+<td>Block</td>
+<td>Survived</td>
+<td>19
+:
+54</td>
 <td><code>{
    ...  }
 }</code></td>
@@ -373,14 +373,6 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 <td><code>(        )</code></td>
 <td><code></code></td></tr>
 <tr><th>26</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>58
-:
-6</td>
-<td><code>.        (    )</code></td>
-<td><code></code></td></tr>
-<tr><th>27</th>
 <td>PrefixUnaryExpression</td>
 <td>Survived</td>
 <td>48
@@ -388,7 +380,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 56</td>
 <td><code>-</code></td>
 <td><code>+</code></td></tr>
-<tr><th>28</th>
+<tr><th>27</th>
 <td>IfStatement</td>
 <td>Killed</td>
 <td>68
@@ -396,15 +388,15 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
 8</td>
 <td><code>(        )</code></td>
 <td><code></code></td></tr>
-<tr><th>29</th>
+<tr><th>28</th>
 <td>IfStatement</td>
-<td>Survived</td>
+<td>Killed</td>
 <td>58
 :
 6</td>
 <td><code>.        (    )</code></td>
 <td><code></code></td></tr>
-<tr><th>30</th>
+<tr><th>29</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>68
@@ -414,7 +406,7 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>31</th>
+<tr><th>30</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>70
@@ -424,6 +416,14 @@ export function determineFileKind(fileName: string): FileKind </span><a href="#"
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>31</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>58
+:
+6</td>
+<td><code>.        (    )</code></td>
+<td><code></code></td></tr>
 <tr><th>32</th>
 <td>IfStatement</td>
 <td>Survived</td>

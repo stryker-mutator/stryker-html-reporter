@@ -106,7 +106,7 @@ export default class Task&lt;T = void&gt; {
   }</span></span><span class="bg-null">
 
   private resolveTimeout() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="16"><span class="badge badge-danger">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">{}</span><span class="stryker-original-code" data-mutant="16"><span class="bg-danger-light">{
-    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="17"><span class="badge badge-danger">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="18"><span class="badge badge-danger">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">false</span><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="bg-danger-light">this.timeout</span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="19"><span class="badge badge-danger">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">{}</span><span class="stryker-original-code" data-mutant="19"><span class="bg-danger-light">{
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="17"><span class="badge badge-danger">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="18"><span class="badge badge-danger">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">true</span><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="bg-danger-light">this.timeout</span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="19"><span class="badge badge-danger">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">{}</span><span class="stryker-original-code" data-mutant="19"><span class="bg-danger-light">{
       clearTimeout(this.timeout);
     }</span></span><span class="bg-danger-light">
     this._isResolved = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="20"><span class="badge badge-danger">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">false</span><span class="stryker-original-code" data-mutant="20"><span class="bg-danger-light">true</span></span><span class="bg-danger-light">;
@@ -119,15 +119,13 @@ export default class Task&lt;T = void&gt; {
 <th>Original</th>
 <th>Replacement</th></tr></thead>
 <tbody><tr><th>0</th>
-<td>Block</td>
-<td>Killed</td>
-<td>12
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>17
 :
-81</td>
-<td><code>{
-   ...}
-  }</code></td>
-<td><code>{}</code></td></tr>
+8</td>
+<td><code></code></td>
+<td><code></code></td></tr>
 <tr><th>1</th>
 <td>IfStatement</td>
 <td>TranspileError</td>
@@ -137,23 +135,16 @@ export default class Task&lt;T = void&gt; {
 <td><code></code></td>
 <td><code></code></td></tr>
 <tr><th>2</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>17
-:
-8</td>
-<td><code></code></td>
-<td><code></code></td></tr>
-<tr><th>3</th>
 <td>Block</td>
 <td>Killed</td>
-<td>13
+<td>12
 :
-56</td>
+81</td>
 <td><code>{
-   ...    }</code></td>
+   ...}
+  }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>4</th>
+<tr><th>3</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>22
@@ -163,7 +154,7 @@ export default class Task&lt;T = void&gt; {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>5</th>
+<tr><th>4</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>26
@@ -173,13 +164,22 @@ export default class Task&lt;T = void&gt; {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>6</th>
-<td>BooleanSubstitution</td>
-<td>Survived</td>
-<td>9
+<tr><th>5</th>
+<td>Block</td>
+<td>Killed</td>
+<td>13
 :
-24</td>
-<td><code></code></td>
+56</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>6</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>31
+:
+8</td>
+<td><code>.</code></td>
 <td><code></code></td></tr>
 <tr><th>7</th>
 <td>IfStatement</td>
@@ -190,12 +190,12 @@ export default class Task&lt;T = void&gt; {
 <td><code>.</code></td>
 <td><code></code></td></tr>
 <tr><th>8</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>31
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>9
 :
-8</td>
-<td><code>.</code></td>
+24</td>
+<td><code></code></td>
 <td><code></code></td></tr>
 <tr><th>9</th>
 <td>Block</td>
@@ -209,12 +209,11 @@ export default class Task&lt;T = void&gt; {
 <tr><th>10</th>
 <td>Block</td>
 <td>Killed</td>
-<td>30
+<td>31
 :
-18</td>
+29</td>
 <td><code>{
-   ...}
-  }</code></td>
+   ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>11</th>
 <td>Block</td>
@@ -228,15 +227,6 @@ export default class Task&lt;T = void&gt; {
 <tr><th>12</th>
 <td>Block</td>
 <td>Killed</td>
-<td>31
-:
-29</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>13</th>
-<td>Block</td>
-<td>Killed</td>
 <td>42
 :
 50</td>
@@ -244,12 +234,22 @@ export default class Task&lt;T = void&gt; {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>13</th>
+<td>Block</td>
+<td>Killed</td>
+<td>30
+:
+18</td>
+<td><code>{
+   ...}
+  }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>14</th>
 <td>Block</td>
-<td>Survived</td>
-<td>52
+<td>Killed</td>
+<td>38
 :
-27</td>
+31</td>
 <td><code>{
    ...;
   }</code></td>
@@ -264,10 +264,10 @@ export default class Task&lt;T = void&gt; {
 <td><code></code></td></tr>
 <tr><th>16</th>
 <td>Block</td>
-<td>Killed</td>
-<td>38
+<td>Survived</td>
+<td>52
 :
-31</td>
+27</td>
 <td><code>{
    ...;
   }</code></td>
@@ -282,6 +282,15 @@ export default class Task&lt;T = void&gt; {
 <td><code></code></td></tr>
 <tr><th>18</th>
 <td>Block</td>
+<td>Survived</td>
+<td>53
+:
+22</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>19</th>
+<td>Block</td>
 <td>Killed</td>
 <td>47
 :
@@ -289,15 +298,6 @@ export default class Task&lt;T = void&gt; {
 <td><code>{
    ...;
   }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>19</th>
-<td>Block</td>
-<td>Survived</td>
-<td>53
-:
-22</td>
-<td><code>{
-   ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>20</th>
 <td>BooleanSubstitution</td>

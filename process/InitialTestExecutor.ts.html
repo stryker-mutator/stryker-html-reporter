@@ -98,7 +98,7 @@ export default class InitialTestExecutor {
   private async initialRunInSandbox(): Promise&lt;InitialTestRunResult&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="9"><span class="badge badge-secondary">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">{}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-null">{
     const coverageInstrumenterTranspiler = this.createCoverageInstrumenterTranspiler();
     const transpilerFacade = this.createTranspilerFacade(coverageInstrumenterTranspiler);
-    const transpileResult = transpilerFacade.transpile(this.files);
+    const transpileResult = await transpilerFacade.transpile(this.files);
     if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="11"><span class="badge badge-danger">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">false</span><span class="stryker-original-code" data-mutant="10"><span class="stryker-original-code" data-mutant="11"><span class="bg-danger-light">transpileResult.error</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="12"><span class="badge badge-secondary">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">{}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-null">{
       throw new Error(`Could not transpile input files: ${transpileResult.error}`);
     }</span></span><span class="bg-null"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="13"><span class="badge badge-secondary">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">{}</span><span class="stryker-original-code" data-mutant="13"><span class="bg-null">{
@@ -153,11 +153,10 @@ export default class InitialTestExecutor {
    */
   private createTranspilerFacade(coverageInstrumenterTranspiler: CoverageInstrumenterTranspiler): Transpiler </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="27"><span class="badge badge-secondary">27</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="27">{}</span><span class="stryker-original-code" data-mutant="27"><span class="bg-null">{
     const transpilerSettings: TranspilerOptions = { config: this.options, keepSourceMaps: </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BooleanSubstitution" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="28"><span class="badge badge-danger">28</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="28">false</span><span class="stryker-original-code" data-mutant="28"><span class="bg-danger-light">true</span></span><span class="bg-null"> };
-    const transpiler = new TranspilerFacade(transpilerSettings, {
+    return new TranspilerFacade(transpilerSettings, {
       name: CoverageInstrumenterTranspiler.name,
       transpiler: coverageInstrumenterTranspiler
     });
-    return transpiler;
   }</span></span><span class="bg-null">
 
   private createCoverageInstrumenterTranspiler() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="29"><span class="badge badge-secondary">29</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="29">{}</span><span class="stryker-original-code" data-mutant="29"><span class="bg-null">{
@@ -219,6 +218,14 @@ export default class InitialTestExecutor {
   }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>1</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>31
+:
+8</td>
+<td><code>.     .       ></code></td>
+<td><code></code></td></tr>
+<tr><th>2</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>15
@@ -226,22 +233,14 @@ export default class InitialTestExecutor {
 38</td>
 <td><code>*</code></td>
 <td><code>/</code></td></tr>
-<tr><th>2</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>31
-:
-8</td>
-<td><code>.     .       ></code></td>
-<td><code></code></td></tr>
 <tr><th>3</th>
-<td>IfStatement</td>
+<td>BinaryExpression</td>
 <td>Killed</td>
-<td>31
+<td>15
 :
-8</td>
-<td><code>.     .       ></code></td>
-<td><code></code></td></tr>
+31</td>
+<td><code>*</code></td>
+<td><code>/</code></td></tr>
 <tr><th>4</th>
 <td>Block</td>
 <td>TranspileError</td>
@@ -271,22 +270,14 @@ export default class InitialTestExecutor {
   }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>7</th>
-<td>BinaryExpression</td>
+<td>IfStatement</td>
 <td>Killed</td>
 <td>31
 :
-26</td>
-<td><code>></code></td>
-<td><code><=</code></td></tr>
+8</td>
+<td><code>.     .       ></code></td>
+<td><code></code></td></tr>
 <tr><th>8</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>15
-:
-31</td>
-<td><code>*</code></td>
-<td><code>/</code></td></tr>
-<tr><th>9</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>46
@@ -295,7 +286,7 @@ export default class InitialTestExecutor {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>10</th>
+<tr><th>9</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>48
@@ -304,6 +295,14 @@ export default class InitialTestExecutor {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>10</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>31
+:
+26</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
 <tr><th>11</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
@@ -332,13 +331,29 @@ export default class InitialTestExecutor {
 <td><code>{}</code></td></tr>
 <tr><th>14</th>
 <td>IfStatement</td>
+<td>Survived</td>
+<td>46
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>15</th>
+<td>IfStatement</td>
 <td>Killed</td>
 <td>61
 :
 12</td>
 <td><code>.</code></td>
 <td><code></code></td></tr>
-<tr><th>15</th>
+<tr><th>16</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>61
+:
+12</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>17</th>
 <td>Block</td>
 <td>Killed</td>
 <td>61
@@ -347,7 +362,7 @@ export default class InitialTestExecutor {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>16</th>
+<tr><th>18</th>
 <td>IfStatement</td>
 <td>Killed</td>
 <td>64
@@ -355,31 +370,7 @@ export default class InitialTestExecutor {
 14</td>
 <td><code>.    ...  ===</code></td>
 <td><code></code></td></tr>
-<tr><th>17</th>
-<td>IfStatement</td>
-<td>Survived</td>
-<td>46
-:
-8</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
-<tr><th>18</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>61
-:
-12</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
 <tr><th>19</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>64
-:
-37</td>
-<td><code>===</code></td>
-<td><code>!==</code></td></tr>
-<tr><th>20</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>81
@@ -389,7 +380,7 @@ export default class InitialTestExecutor {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>21</th>
+<tr><th>20</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>85
@@ -397,7 +388,7 @@ export default class InitialTestExecutor {
 15</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
-<tr><th>22</th>
+<tr><th>21</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>86
@@ -405,7 +396,7 @@ export default class InitialTestExecutor {
 23</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
-<tr><th>23</th>
+<tr><th>22</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
 <td>88
@@ -413,7 +404,7 @@ export default class InitialTestExecutor {
 23</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
-<tr><th>24</th>
+<tr><th>23</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>98
@@ -423,34 +414,25 @@ export default class InitialTestExecutor {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>25</th>
-<td>IfStatement</td>
+<tr><th>24</th>
+<td>BinaryExpression</td>
 <td>Killed</td>
 <td>64
 :
-14</td>
-<td><code>.    ...  ===</code></td>
-<td><code></code></td></tr>
-<tr><th>26</th>
+37</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>25</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>107
+<td>106
 :
 49</td>
 <td><code>{
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>27</th>
-<td>Block</td>
-<td>Killed</td>
-<td>64
-:
-44</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>28</th>
+<tr><th>26</th>
 <td>Block</td>
 <td>Killed</td>
 <td>67
@@ -459,33 +441,32 @@ export default class InitialTestExecutor {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>27</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>64
+:
+14</td>
+<td><code>.    ...  ===</code></td>
+<td><code></code></td></tr>
+<tr><th>28</th>
+<td>Block</td>
+<td>Killed</td>
+<td>64
+:
+44</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>29</th>
 <td>BooleanSubstitution</td>
 <td>Killed</td>
-<td>108
+<td>107
 :
 64</td>
 <td><code></code></td>
 <td><code></code></td></tr>
 <tr><th>30</th>
-<td>Block</td>
-<td>Killed</td>
-<td>111
-:
-63</td>
-<td><code>{
-   ...}
-  }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>31</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>112
-:
-8</td>
-<td><code>.    ...   ()</code></td>
-<td><code></code></td></tr>
-<tr><th>32</th>
 <td>BooleanSubstitution</td>
 <td>Survived</td>
 <td>99
@@ -493,20 +474,38 @@ export default class InitialTestExecutor {
 90</td>
 <td><code></code></td>
 <td><code></code></td></tr>
-<tr><th>33</th>
+<tr><th>31</th>
+<td>Block</td>
+<td>Killed</td>
+<td>110
+:
+63</td>
+<td><code>{
+   ...}
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>32</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>117
+<td>116
 :
 53</td>
 <td><code>{
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>33</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>111
+:
+8</td>
+<td><code>.    ...   ()</code></td>
+<td><code></code></td></tr>
 <tr><th>34</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>112
+<td>111
 :
 40</td>
 <td><code>&&</code></td>
@@ -514,7 +513,7 @@ export default class InitialTestExecutor {
 <tr><th>35</th>
 <td>IfStatement</td>
 <td>Killed</td>
-<td>112
+<td>111
 :
 8</td>
 <td><code>.    ...   ()</code></td>
@@ -522,110 +521,110 @@ export default class InitialTestExecutor {
 <tr><th>36</th>
 <td>Block</td>
 <td>Killed</td>
-<td>112
+<td>111
 :
 70</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>37</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>118
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>128
 :
-66</td>
-<td><code>===</code></td>
-<td><code>!==</code></td></tr>
+10</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
 <tr><th>38</th>
 <td>IfStatement</td>
 <td>TranspileError</td>
-<td>129
+<td>128
 :
 10</td>
 <td><code>.    ...    .</code></td>
 <td><code></code></td></tr>
 <tr><th>39</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>129
-:
-10</td>
-<td><code>.    ...    .</code></td>
-<td><code></code></td></tr>
-<tr><th>40</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
-<td>129
+<td>128
 :
 31</td>
 <td><code>&&</code></td>
 <td><code>||</code></td></tr>
-<tr><th>41</th>
+<tr><th>40</th>
 <td>Block</td>
 <td>Killed</td>
-<td>125
+<td>124
 :
 70</td>
 <td><code>{
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>42</th>
+<tr><th>41</th>
 <td>Block</td>
 <td>Killed</td>
-<td>127
-:
-32</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>43</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>137
-:
-8</td>
-<td><code>.    ...    .</code></td>
-<td><code></code></td></tr>
-<tr><th>44</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>137
-:
-8</td>
-<td><code>.    ...    .</code></td>
-<td><code></code></td></tr>
-<tr><th>45</th>
-<td>BinaryExpression</td>
-<td>TranspileError</td>
-<td>137
-:
-32</td>
-<td><code>&&</code></td>
-<td><code>||</code></td></tr>
-<tr><th>46</th>
-<td>Block</td>
-<td>Killed</td>
-<td>129
-:
-63</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>47</th>
-<td>Block</td>
-<td>Killed</td>
-<td>121
+<td>120
 :
 58</td>
 <td><code>{
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>42</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>136
+:
+8</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>43</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>136
+:
+8</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>44</th>
+<td>BinaryExpression</td>
+<td>TranspileError</td>
+<td>136
+:
+32</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
+<tr><th>45</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>117
+:
+66</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>46</th>
+<td>Block</td>
+<td>Killed</td>
+<td>126
+:
+32</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>47</th>
+<td>Block</td>
+<td>Killed</td>
+<td>128
+:
+63</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>48</th>
 <td>Block</td>
 <td>Killed</td>
-<td>135
+<td>134
 :
 54</td>
 <td><code>{
@@ -635,21 +634,21 @@ export default class InitialTestExecutor {
 <tr><th>49</th>
 <td>Block</td>
 <td>Killed</td>
-<td>143
+<td>136
+:
+67</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>50</th>
+<td>Block</td>
+<td>Killed</td>
+<td>142
 :
 53</td>
 <td><code>{
    ...;
   }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>50</th>
-<td>Block</td>
-<td>Killed</td>
-<td>137
-:
-67</td>
-<td><code>{
-   ...    }</code></td>
 <td><code>{}</code></td></tr></tbody></table></div></div></div></div>
 <footer>Generated with stryker-html-reporter generator. Visit the 
 <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>

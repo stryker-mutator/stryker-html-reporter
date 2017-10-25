@@ -84,7 +84,7 @@ export default class PluginLoader {
           let plugins = fs.readdirSync(pluginDirectory)
             .filter(pluginName =&gt; IGNORED_PACKAGES.indexOf(pluginName) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="15"><span class="badge badge-success">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">!==</span><span class="stryker-original-code" data-mutant="15"><span class="bg-success-light">===</span></span><span class="bg-success-light"> </span><a href="#" class="stryker-mutant-button" tabindex="0" title="PrefixUnaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">+1</span><span class="stryker-original-code" data-mutant="16"><span class="bg-success-light">-1</span></span><span class="bg-success-light"> </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="17"><span class="badge badge-success">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">||</span><span class="stryker-original-code" data-mutant="17"><span class="bg-success-light">&amp;&amp;</span></span><span class="bg-success-light"> regexp.test(pluginName))
             .map(pluginName =&gt; pluginDirectory </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="18"><span class="badge badge-secondary">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">-</span><span class="stryker-original-code" data-mutant="18"><span class="bg-success-light">+</span></span><span class="bg-success-light"> &#039;/&#039; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="19"><span class="badge badge-secondary">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">-</span><span class="stryker-original-code" data-mutant="19"><span class="bg-success-light">+</span></span><span class="bg-success-light"> pluginName);
-          if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="20"><span class="badge badge-danger">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="21"><span class="badge badge-danger">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">true</span><span class="stryker-original-code" data-mutant="20"><span class="stryker-original-code" data-mutant="21"><span class="bg-danger-light">plugins.length </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="22"><span class="badge badge-danger">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">!==</span><span class="stryker-original-code" data-mutant="22"><span class="bg-danger-light">===</span></span><span class="bg-danger-light"> 0</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="23"><span class="badge badge-danger">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-danger-light">{
+          if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="20"><span class="badge badge-danger">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="21"><span class="badge badge-danger">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">false</span><span class="stryker-original-code" data-mutant="20"><span class="stryker-original-code" data-mutant="21"><span class="bg-danger-light">plugins.length </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="22"><span class="badge badge-danger">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">!==</span><span class="stryker-original-code" data-mutant="22"><span class="bg-danger-light">===</span></span><span class="bg-danger-light"> 0</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="23"><span class="badge badge-danger">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">{}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-danger-light">{
             this.log.debug(&#039;Expression %s not resulted in plugins to load&#039;, pluginExpression);
           }</span></span><span class="bg-success-light">
           plugins
@@ -110,7 +110,7 @@ export default class PluginLoader {
     try </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="28"><span class="badge badge-success">28</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="28">{}</span><span class="stryker-original-code" data-mutant="28"><span class="bg-success-light">{
       importModule(name);
     }</span></span><span class="bg-success-light"> catch (e) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="29"><span class="badge badge-success">29</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="29">{}</span><span class="stryker-original-code" data-mutant="29"><span class="bg-success-light">{
-      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="30"><span class="badge badge-success">30</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="30">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="31"><span class="badge badge-success">31</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="31">true</span><span class="stryker-original-code" data-mutant="30"><span class="stryker-original-code" data-mutant="31"><span class="bg-success-light">e.code </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="32"><span class="badge badge-success">32</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="32">!==</span><span class="stryker-original-code" data-mutant="32"><span class="bg-success-light">===</span></span><span class="bg-success-light"> &#039;MODULE_NOT_FOUND&#039; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="33"><span class="badge badge-success">33</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="33">||</span><span class="stryker-original-code" data-mutant="33"><span class="bg-success-light">&amp;&amp;</span></span><span class="bg-success-light"> e.message.indexOf(name) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="34"><span class="badge badge-danger">34</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="34">===</span><span class="stryker-original-code" data-mutant="34"><span class="bg-danger-light">!==</span></span><span class="bg-success-light"> </span><a href="#" class="stryker-mutant-button" tabindex="0" title="PrefixUnaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="35"><span class="badge badge-success">35</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="35">+1</span><span class="stryker-original-code" data-mutant="35"><span class="bg-success-light">-1</span></span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="36"><span class="badge badge-success">36</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="36">{}</span><span class="stryker-original-code" data-mutant="36"><span class="bg-success-light">{
+      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="30"><span class="badge badge-success">30</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="30">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="31"><span class="badge badge-success">31</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="31">false</span><span class="stryker-original-code" data-mutant="30"><span class="stryker-original-code" data-mutant="31"><span class="bg-success-light">e.code </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="32"><span class="badge badge-success">32</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="32">!==</span><span class="stryker-original-code" data-mutant="32"><span class="bg-success-light">===</span></span><span class="bg-success-light"> &#039;MODULE_NOT_FOUND&#039; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="33"><span class="badge badge-success">33</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="33">||</span><span class="stryker-original-code" data-mutant="33"><span class="bg-success-light">&amp;&amp;</span></span><span class="bg-success-light"> e.message.indexOf(name) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="34"><span class="badge badge-danger">34</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="34">===</span><span class="stryker-original-code" data-mutant="34"><span class="bg-danger-light">!==</span></span><span class="bg-success-light"> </span><a href="#" class="stryker-mutant-button" tabindex="0" title="PrefixUnaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="35"><span class="badge badge-success">35</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="35">+1</span><span class="stryker-original-code" data-mutant="35"><span class="bg-success-light">-1</span></span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="36"><span class="badge badge-success">36</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="36">{}</span><span class="stryker-original-code" data-mutant="36"><span class="bg-success-light">{
         this.log.warn(&#039;Cannot find plugin &quot;%s&quot;.\n  Did you forget to install it ?\n&#039; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="37"><span class="badge badge-secondary">37</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="37">-</span><span class="stryker-original-code" data-mutant="37"><span class="bg-success-light">+</span></span><span class="bg-success-light">
           &#039;  npm install %s --save-dev&#039;, name, name);
       }</span></span><span class="bg-success-light"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="38"><span class="badge badge-success">38</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="38">{}</span><span class="stryker-original-code" data-mutant="38"><span class="bg-success-light">{
@@ -180,6 +180,14 @@ export default class PluginLoader {
 <td><code>.    ...    )</code></td>
 <td><code></code></td></tr>
 <tr><th>6</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>20
+:
+12</td>
+<td><code>.    ...!== -</code></td>
+<td><code></code></td></tr>
+<tr><th>7</th>
 <td>Block</td>
 <td>Killed</td>
 <td>19
@@ -188,23 +196,7 @@ export default class PluginLoader {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>7</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>20
-:
-12</td>
-<td><code>.    ...!== -</code></td>
-<td><code></code></td></tr>
 <tr><th>8</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>20
-:
-12</td>
-<td><code>.    ...!== -</code></td>
-<td><code></code></td></tr>
-<tr><th>9</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>20
@@ -212,7 +204,7 @@ export default class PluginLoader {
 42</td>
 <td><code>!==</code></td>
 <td><code>===</code></td></tr>
-<tr><th>10</th>
+<tr><th>9</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>24
@@ -220,7 +212,7 @@ export default class PluginLoader {
 59</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>11</th>
+<tr><th>10</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>25
@@ -228,7 +220,7 @@ export default class PluginLoader {
 40</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>12</th>
+<tr><th>11</th>
 <td>PrefixUnaryExpression</td>
 <td>Killed</td>
 <td>20
@@ -236,7 +228,7 @@ export default class PluginLoader {
 46</td>
 <td><code>-</code></td>
 <td><code>+</code></td></tr>
-<tr><th>13</th>
+<tr><th>12</th>
 <td>Block</td>
 <td>Killed</td>
 <td>20
@@ -246,7 +238,7 @@ export default class PluginLoader {
 
   ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>14</th>
+<tr><th>13</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>29
@@ -254,7 +246,7 @@ export default class PluginLoader {
 78</td>
 <td><code>&&</code></td>
 <td><code>||</code></td></tr>
-<tr><th>15</th>
+<tr><th>14</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>30
@@ -262,7 +254,7 @@ export default class PluginLoader {
 53</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>16</th>
+<tr><th>15</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>30
@@ -270,14 +262,22 @@ export default class PluginLoader {
 47</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>17</th>
-<td>PrefixUnaryExpression</td>
+<tr><th>16</th>
+<td>BinaryExpression</td>
 <td>Killed</td>
 <td>29
 :
-75</td>
-<td><code>-</code></td>
-<td><code>+</code></td></tr>
+71</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>17</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>20
+:
+12</td>
+<td><code>.    ...!== -</code></td>
+<td><code></code></td></tr>
 <tr><th>18</th>
 <td>IfStatement</td>
 <td>Survived</td>
@@ -287,27 +287,28 @@ export default class PluginLoader {
 <td><code>.    ...    )</code></td>
 <td><code></code></td></tr>
 <tr><th>19</th>
-<td>BinaryExpression</td>
+<td>PrefixUnaryExpression</td>
 <td>Killed</td>
 <td>29
 :
-71</td>
-<td><code>===</code></td>
-<td><code>!==</code></td></tr>
+75</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr>
 <tr><th>20</th>
-<td>BinaryExpression</td>
-<td>Survived</td>
-<td>31
-:
-29</td>
-<td><code>===</code></td>
-<td><code>!==</code></td></tr>
-<tr><th>21</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>36
 :
 27</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>21</th>
+<td>Block</td>
+<td>Killed</td>
+<td>41
+:
+15</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
@@ -322,23 +323,6 @@ export default class PluginLoader {
 <tr><th>23</th>
 <td>Block</td>
 <td>Killed</td>
-<td>41
-:
-15</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>24</th>
-<td>IfStatement</td>
-<td>Survived</td>
-<td>31
-:
-14</td>
-<td><code>.       ===</code></td>
-<td><code></code></td></tr>
-<tr><th>25</th>
-<td>Block</td>
-<td>Killed</td>
 <td>52
 :
 38</td>
@@ -346,12 +330,29 @@ export default class PluginLoader {
    ...}
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>26</th>
+<tr><th>24</th>
 <td>Block</td>
 <td>Killed</td>
 <td>54
 :
 8</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>25</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>31
+:
+29</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>26</th>
+<td>Block</td>
+<td>Survived</td>
+<td>31
+:
+36</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
@@ -373,21 +374,20 @@ export default class PluginLoader {
 <td><code>.    ...!== -</code></td>
 <td><code></code></td></tr>
 <tr><th>29</th>
-<td>Block</td>
-<td>Survived</td>
-<td>31
-:
-36</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>30</th>
 <td>IfStatement</td>
 <td>Killed</td>
 <td>57
 :
 10</td>
 <td><code>.    ...!== -</code></td>
+<td><code></code></td></tr>
+<tr><th>30</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>31
+:
+14</td>
+<td><code>.       ===</code></td>
 <td><code></code></td></tr>
 <tr><th>31</th>
 <td>BinaryExpression</td>
@@ -406,14 +406,6 @@ export default class PluginLoader {
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
 <tr><th>33</th>
-<td>PrefixUnaryExpression</td>
-<td>Killed</td>
-<td>57
-:
-71</td>
-<td><code>-</code></td>
-<td><code>+</code></td></tr>
-<tr><th>34</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
 <td>58
@@ -421,21 +413,29 @@ export default class PluginLoader {
 85</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>35</th>
-<td>Block</td>
-<td>Killed</td>
-<td>57
-:
-75</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>36</th>
+<tr><th>34</th>
 <td>Block</td>
 <td>Survived</td>
 <td>44
 :
 13</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>35</th>
+<td>PrefixUnaryExpression</td>
+<td>Killed</td>
+<td>57
+:
+71</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr>
+<tr><th>36</th>
+<td>Block</td>
+<td>Killed</td>
+<td>57
+:
+75</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>

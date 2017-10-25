@@ -72,7 +72,7 @@ export default class SandboxPool {
 
   public streamSandboxes(): Observable&lt;Sandbox&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="2"><span class="badge badge-secondary">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-null">{
     let numConcurrentRunners = os.cpus().length;
-    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">false</span><span class="stryker-original-code" data-mutant="3"><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">this.options.transpilers.length</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success-light">{
+    if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">true</span><span class="stryker-original-code" data-mutant="3"><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">this.options.transpilers.length</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success-light">{
       // If transpilers are configured, one core is reserved for the compiler (for now)
       numConcurrentRunners--;
     }</span></span><span class="bg-null">
@@ -184,14 +184,6 @@ export default class SandboxPool {
 <td><code>>    ...    ></code></td>
 <td><code></code></td></tr>
 <tr><th>8</th>
-<td>BooleanSubstitution</td>
-<td>Survived</td>
-<td>12
-:
-32</td>
-<td><code></code></td>
-<td><code></code></td></tr>
-<tr><th>9</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>24
@@ -199,7 +191,7 @@ export default class SandboxPool {
 110</td>
 <td><code>></code></td>
 <td><code><=</code></td></tr>
-<tr><th>10</th>
+<tr><th>9</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>24
@@ -207,7 +199,23 @@ export default class SandboxPool {
 110</td>
 <td><code>></code></td>
 <td><code>>=</code></td></tr>
+<tr><th>10</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>24
+:
+69</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
 <tr><th>11</th>
+<td>BooleanSubstitution</td>
+<td>Survived</td>
+<td>12
+:
+32</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>12</th>
 <td>Block</td>
 <td>Killed</td>
 <td>24
@@ -216,7 +224,7 @@ export default class SandboxPool {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>12</th>
+<tr><th>13</th>
 <td>IfStatement</td>
 <td>Killed</td>
 <td>28
@@ -224,14 +232,6 @@ export default class SandboxPool {
 8</td>
 <td><code><=</code></td>
 <td><code></code></td></tr>
-<tr><th>13</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>24
-:
-69</td>
-<td><code>&&</code></td>
-<td><code>||</code></td></tr>
 <tr><th>14</th>
 <td>BinaryExpression</td>
 <td>Survived</td>
@@ -241,14 +241,6 @@ export default class SandboxPool {
 <td><code>></code></td>
 <td><code>>=</code></td></tr>
 <tr><th>15</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>28
-:
-29</td>
-<td><code><=</code></td>
-<td><code>></code></td></tr>
-<tr><th>16</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>38
@@ -258,7 +250,7 @@ export default class SandboxPool {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>17</th>
+<tr><th>16</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>39
@@ -267,23 +259,15 @@ export default class SandboxPool {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>18</th>
-<td>IfStatement</td>
-<td>Survived</td>
-<td>28
-:
-8</td>
-<td><code><=</code></td>
-<td><code></code></td></tr>
-<tr><th>19</th>
+<tr><th>17</th>
 <td>BinaryExpression</td>
-<td>Survived</td>
+<td>Killed</td>
 <td>28
 :
 29</td>
 <td><code><=</code></td>
-<td><code><</code></td></tr>
-<tr><th>20</th>
+<td><code>></code></td></tr>
+<tr><th>18</th>
 <td>IfStatement</td>
 <td>Killed</td>
 <td>40
@@ -291,7 +275,7 @@ export default class SandboxPool {
 10</td>
 <td><code>.</code></td>
 <td><code></code></td></tr>
-<tr><th>21</th>
+<tr><th>19</th>
 <td>Block</td>
 <td>Killed</td>
 <td>40
@@ -300,7 +284,15 @@ export default class SandboxPool {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>22</th>
+<tr><th>20</th>
+<td>IfStatement</td>
+<td>Survived</td>
+<td>40
+:
+10</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>21</th>
 <td>Block</td>
 <td>Killed</td>
 <td>44
@@ -309,6 +301,14 @@ export default class SandboxPool {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>22</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>28
+:
+29</td>
+<td><code><=</code></td>
+<td><code><</code></td></tr>
 <tr><th>23</th>
 <td>Block</td>
 <td>Survived</td>
@@ -339,10 +339,10 @@ export default class SandboxPool {
 <tr><th>26</th>
 <td>IfStatement</td>
 <td>Survived</td>
-<td>40
+<td>28
 :
-10</td>
-<td><code>.</code></td>
+8</td>
+<td><code><=</code></td>
 <td><code></code></td></tr></tbody></table></div></div></div></div>
 <footer>Generated with stryker-html-reporter generator. Visit the 
 <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>

@@ -27,22 +27,22 @@
 <td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%;">100.00
 %</div></div></td>
 <th class="text-center text-success" style="width: 10%">100.00</th>
-<td class="text-center">39</td>
+<td class="text-center">44</td>
 <td class="text-center">0</td>
 <td class="text-center">0</td>
 <td class="text-center">0</td>
 <td class="text-center">0</td>
 <td class="text-center">24</td>
-<th class="text-center">39</th>
+<th class="text-center">44</th>
 <th class="text-center">0</th>
-<th class="text-center">63</th></tr>
+<th class="text-center">68</th></tr>
 </tbody></table></div></div>
 <div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
 
 <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
 Killed
  
-(39)</label></div>
+(44)</label></div>
 
 
 <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="5" type="checkbox">
@@ -57,9 +57,11 @@ import { MutationScoreThresholds } from &#039;stryker-api/core&#039;;
 import { MutantResult, MutantStatus, ScoreResult } from &#039;stryker-api/report&#039;;
 import { freezeRecursively, setExitCode } from &#039;./utils/objectUtils&#039;;
 
+const defaultScoreIfNoValidMutants = 100;
+
 export default class ScoreResultCalculator {
   private readonly log = getLogger(ScoreResultCalculator.name);
-  
+
   calculate(results: MutantResult[]): ScoreResult </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="0"><span class="badge badge-secondary">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">{}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-null">{
     const scoreResult = this.calculateScoreResult(results, &#039;&#039;);
     return this.wrapIfSingleFileScoreResult(scoreResult);
@@ -69,7 +71,7 @@ export default class ScoreResultCalculator {
     const breaking = thresholds </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="2"><span class="badge badge-secondary">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">||</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">&amp;&amp;</span></span><span class="bg-success-light"> thresholds.break;
     const formattedScore = score.mutationScore.toFixed(2);
     if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="3"><span class="badge badge-secondary">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="4"><span class="badge badge-secondary">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">false</span><span class="stryker-original-code" data-mutant="3"><span class="stryker-original-code" data-mutant="4"><span class="bg-success-light">typeof breaking </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="5"><span class="badge badge-secondary">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">!==</span><span class="stryker-original-code" data-mutant="5"><span class="bg-success-light">===</span></span><span class="bg-success-light"> &#039;number&#039;</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="6"><span class="badge badge-success">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">{}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-success-light">{
-      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">false</span><span class="stryker-original-code" data-mutant="7"><span class="stryker-original-code" data-mutant="8"><span class="bg-success-light">score.mutationScore </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">&lt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">&gt;=</span><span class="stryker-original-code" data-mutant="9"><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">&lt;</span></span></span><span class="bg-success-light"> breaking</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="11"><span class="badge badge-success">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-success-light">{
+      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">false</span><span class="stryker-original-code" data-mutant="7"><span class="stryker-original-code" data-mutant="8"><span class="bg-success-light">score.mutationScore </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">&gt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">&lt;=</span><span class="stryker-original-code" data-mutant="9"><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">&lt;</span></span></span><span class="bg-success-light"> breaking</span></span></span><span class="bg-success-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="11"><span class="badge badge-success">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-success-light">{
         this.log.error(`Final mutation score ${formattedScore} under breaking threshold ${breaking}, setting exit code to 1 (failure).`);
         this.log.info(&#039;(improve mutation score or set `thresholds.break = null` to prevent this error in the future)&#039;);
         setExitCode(1);
@@ -170,6 +172,8 @@ export default class ScoreResultCalculator {
     const totalValid = totalUndetected </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="54"><span class="badge badge-success">54</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="54">-</span><span class="stryker-original-code" data-mutant="54"><span class="bg-success-light">+</span></span><span class="bg-null"> totalDetected;
     const totalInvalid = runtimeErrors </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="55"><span class="badge badge-success">55</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="55">-</span><span class="stryker-original-code" data-mutant="55"><span class="bg-success-light">+</span></span><span class="bg-null"> transpileErrors;
     const totalMutants = totalValid </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="56"><span class="badge badge-success">56</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="56">-</span><span class="stryker-original-code" data-mutant="56"><span class="bg-success-light">+</span></span><span class="bg-null"> totalInvalid;
+    const mutationScore = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="57"><span class="badge badge-success">57</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="57">false</span><span class="stryker-original-code" data-mutant="57"><span class="bg-success-light">totalValid </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="58"><span class="badge badge-success">58</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="58">&lt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="59"><span class="badge badge-success">59</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="59">&gt;=</span><span class="stryker-original-code" data-mutant="58"><span class="stryker-original-code" data-mutant="59"><span class="bg-success-light">&gt;</span></span></span><span class="bg-success-light"> 0</span></span><span class="bg-null"> ? totalDetected </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="60"><span class="badge badge-success">60</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="60">*</span><span class="stryker-original-code" data-mutant="60"><span class="bg-success-light">/</span></span><span class="bg-null"> totalValid </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="61"><span class="badge badge-success">61</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="61">/</span><span class="stryker-original-code" data-mutant="61"><span class="bg-success-light">*</span></span><span class="bg-null"> 100 : defaultScoreIfNoValidMutants;
+    const mutationScoreBasedOnCoveredCode = </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="62"><span class="badge badge-success">62</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="62">false</span><span class="stryker-original-code" data-mutant="62"><span class="bg-success-light">totalValid </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="63"><span class="badge badge-success">63</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="63">&lt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="64"><span class="badge badge-success">64</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="64">&gt;=</span><span class="stryker-original-code" data-mutant="63"><span class="stryker-original-code" data-mutant="64"><span class="bg-success-light">&gt;</span></span></span><span class="bg-success-light"> 0</span></span><span class="bg-null"> ? totalDetected </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="65"><span class="badge badge-success">65</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="65">*</span><span class="stryker-original-code" data-mutant="65"><span class="bg-success-light">/</span></span><span class="bg-null"> totalCovered </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="66"><span class="badge badge-success">66</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="66">/</span><span class="stryker-original-code" data-mutant="66"><span class="bg-success-light">*</span></span><span class="bg-null"> 100 </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="67"><span class="badge badge-success">67</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="67">&amp;&amp;</span><span class="stryker-original-code" data-mutant="67"><span class="bg-success-light">||</span></span><span class="bg-null"> 0 : defaultScoreIfNoValidMutants;
     return {
       killed,
       survived,
@@ -183,8 +187,8 @@ export default class ScoreResultCalculator {
       totalValid,
       totalInvalid,
       totalMutants,
-      mutationScore: totalDetected </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="57"><span class="badge badge-success">57</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="57">*</span><span class="stryker-original-code" data-mutant="57"><span class="bg-success-light">/</span></span><span class="bg-null"> totalValid </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="58"><span class="badge badge-success">58</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="58">/</span><span class="stryker-original-code" data-mutant="58"><span class="bg-success-light">*</span></span><span class="bg-null"> 100 </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="59"><span class="badge badge-success">59</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="59">&amp;&amp;</span><span class="stryker-original-code" data-mutant="59"><span class="bg-success-light">||</span></span><span class="bg-null"> 0,
-      mutationScoreBasedOnCoveredCode: totalDetected </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="60"><span class="badge badge-success">60</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="60">*</span><span class="stryker-original-code" data-mutant="60"><span class="bg-success-light">/</span></span><span class="bg-null"> totalCovered </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="61"><span class="badge badge-success">61</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="61">/</span><span class="stryker-original-code" data-mutant="61"><span class="bg-success-light">*</span></span><span class="bg-null"> 100 </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="62"><span class="badge badge-success">62</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="62">&amp;&amp;</span><span class="stryker-original-code" data-mutant="62"><span class="bg-success-light">||</span></span><span class="bg-null"> 0
+      mutationScore,
+      mutationScoreBasedOnCoveredCode
     };
   }</span></span><span class="bg-null">
 }</span>
@@ -198,7 +202,7 @@ export default class ScoreResultCalculator {
 <tbody><tr><th>0</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>10
+<td>12
 :
 50</td>
 <td><code>{
@@ -208,7 +212,7 @@ export default class ScoreResultCalculator {
 <tr><th>1</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
-<td>16
+<td>18
 :
 32</td>
 <td><code>&&</code></td>
@@ -216,7 +220,7 @@ export default class ScoreResultCalculator {
 <tr><th>2</th>
 <td>IfStatement</td>
 <td>TranspileError</td>
-<td>18
+<td>20
 :
 8</td>
 <td><code>=== '      '</code></td>
@@ -224,7 +228,7 @@ export default class ScoreResultCalculator {
 <tr><th>3</th>
 <td>IfStatement</td>
 <td>TranspileError</td>
-<td>18
+<td>20
 :
 8</td>
 <td><code>=== '      '</code></td>
@@ -232,7 +236,7 @@ export default class ScoreResultCalculator {
 <tr><th>4</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
-<td>18
+<td>20
 :
 24</td>
 <td><code>===</code></td>
@@ -240,7 +244,7 @@ export default class ScoreResultCalculator {
 <tr><th>5</th>
 <td>Block</td>
 <td>Killed</td>
-<td>15
+<td>17
 :
 89</td>
 <td><code>{
@@ -250,7 +254,7 @@ export default class ScoreResultCalculator {
 <tr><th>6</th>
 <td>Block</td>
 <td>Killed</td>
-<td>18
+<td>20
 :
 38</td>
 <td><code>{
@@ -259,96 +263,98 @@ export default class ScoreResultCalculator {
 <tr><th>7</th>
 <td>IfStatement</td>
 <td>Killed</td>
-<td>19
+<td>21
 :
 10</td>
 <td><code>.    ...    <</code></td>
 <td><code></code></td></tr>
 <tr><th>8</th>
-<td>IfStatement</td>
+<td>BinaryExpression</td>
 <td>Killed</td>
-<td>19
+<td>21
 :
-10</td>
-<td><code>.    ...    <</code></td>
-<td><code></code></td></tr>
+30</td>
+<td><code><</code></td>
+<td><code>>=</code></td></tr>
 <tr><th>9</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>19
+<td>21
 :
 30</td>
 <td><code><</code></td>
 <td><code><=</code></td></tr>
 <tr><th>10</th>
 <td>Block</td>
-<td>Killed</td>
-<td>19
-:
-42</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>11</th>
-<td>Block</td>
 <td>TranspileError</td>
-<td>31
+<td>33
 :
 77</td>
 <td><code>{
    ...}
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>12</th>
+<tr><th>11</th>
 <td>Block</td>
 <td>Killed</td>
-<td>23
+<td>25
 :
 13</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>13</th>
+<tr><th>12</th>
 <td>Block</td>
 <td>Killed</td>
-<td>26
+<td>21
 :
-11</td>
+42</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>14</th>
+<tr><th>13</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>32
+<td>34
 :
 36</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>15</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>32
-:
-8</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
-<tr><th>16</th>
+<tr><th>14</th>
 <td>Block</td>
-<td>TranspileError</td>
-<td>38
+<td>Killed</td>
+<td>28
 :
 11</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>15</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>40
+:
+11</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>16</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>45
+:
+87</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>17</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>43
+<td>51
 :
-87</td>
+84</td>
 <td><code>{
    ...;
   }</code></td>
@@ -356,309 +362,307 @@ export default class ScoreResultCalculator {
 <tr><th>18</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>49
-:
-84</td>
-<td><code>{
-   ...;
-  }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>19</th>
-<td>Block</td>
-<td>TranspileError</td>
-<td>53
+<td>55
 :
 68</td>
 <td><code>{
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>19</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>34
+:
+8</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
 <tr><th>20</th>
 <td>IfStatement</td>
 <td>Killed</td>
-<td>32
+<td>34
 :
 8</td>
 <td><code>.</code></td>
 <td><code></code></td></tr>
 <tr><th>21</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>21
+:
+10</td>
+<td><code>.    ...    <</code></td>
+<td><code></code></td></tr>
+<tr><th>22</th>
 <td>ArrayLiteral</td>
 <td>Killed</td>
-<td>34
+<td>36
 :
 60</td>
 <td><code>[
    ...    ]</code></td>
 <td><code>[]</code></td></tr>
-<tr><th>22</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>60
-:
-48</td>
-<td><code>&&</code></td>
-<td><code>||</code></td></tr>
 <tr><th>23</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>60
-:
-42</td>
-<td><code>===</code></td>
-<td><code>!==</code></td></tr>
-<tr><th>24</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>64
+<td>66
 :
 62</td>
 <td><code>{
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>25</th>
+<tr><th>24</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>65
+<td>67
 :
 52</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>25</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>62
+:
+48</td>
+<td><code>&&</code></td>
+<td><code>||</code></td></tr>
 <tr><th>26</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>60
+<td>62
 :
-66</td>
-<td><code>></code></td>
-<td><code><=</code></td></tr>
+42</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
 <tr><th>27</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>67
+<td>Block</td>
+<td>TranspileError</td>
+<td>69
 :
-10</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
+38</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>28</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>67
+<td>71
 :
-38</td>
+13</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>29</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>69
-:
-13</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>30</th>
-<td>Block</td>
-<td>TranspileError</td>
-<td>76
+<td>78
 :
 94</td>
 <td><code>{
    ...}
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>31</th>
+<tr><th>30</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>60
+<td>62
 :
 66</td>
 <td><code>></code></td>
-<td><code>>=</code></td></tr>
-<tr><th>32</th>
+<td><code><=</code></td></tr>
+<tr><th>31</th>
 <td>BinaryExpression</td>
 <td>TranspileError</td>
-<td>77
+<td>79
 :
 81</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>33</th>
+<tr><th>32</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>19
+<td>62
 :
-30</td>
-<td><code><</code></td>
+66</td>
+<td><code>></code></td>
 <td><code>>=</code></td></tr>
+<tr><th>33</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>69
+:
+10</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
 <tr><th>34</th>
 <td>IfStatement</td>
 <td>Killed</td>
-<td>67
+<td>69
 :
 10</td>
 <td><code>.</code></td>
 <td><code></code></td></tr>
 <tr><th>35</th>
-<td>ConditionalExpression</td>
-<td>Killed</td>
-<td>77
-:
-29</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
-<tr><th>36</th>
 <td>IfStatement</td>
 <td>Killed</td>
-<td>81
+<td>83
 :
 8</td>
 <td><code>.       ></code></td>
 <td><code></code></td></tr>
-<tr><th>37</th>
+<tr><th>36</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>81
+<td>83
 :
 32</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>38</th>
+<tr><th>37</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>87
+<td>89
 :
 11</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>39</th>
+<tr><th>38</th>
 <td>ArrayLiteral</td>
 <td>TranspileError</td>
-<td>88
+<td>90
 :
 13</td>
 <td><code>[]</code></td>
 <td><code>[[]]</code></td></tr>
-<tr><th>40</th>
+<tr><th>39</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>92
+<td>94
 :
 77</td>
 <td><code>{
    ...}
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>40</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>79
+:
+29</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
 <tr><th>41</th>
-<td>BinaryExpression</td>
+<td>IfStatement</td>
 <td>Killed</td>
-<td>81
+<td>83
 :
-27</td>
-<td><code>></code></td>
-<td><code><=</code></td></tr>
+8</td>
+<td><code>.       ></code></td>
+<td><code></code></td></tr>
 <tr><th>42</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>81
-:
-27</td>
-<td><code>></code></td>
-<td><code>>=</code></td></tr>
-<tr><th>43</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>96
+<td>98
 :
 38</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>44</th>
+<tr><th>43</th>
 <td>IfStatement</td>
 <td>Killed</td>
-<td>81
+<td>98
 :
 8</td>
-<td><code>.       ></code></td>
+<td><code>.</code></td>
 <td><code></code></td></tr>
-<tr><th>45</th>
+<tr><th>44</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>100
+<td>102
 :
 11</td>
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>46</th>
+<tr><th>45</th>
 <td>Block</td>
 <td>TranspileError</td>
-<td>105
+<td>107
 :
 54</td>
 <td><code>{
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>46</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>83
+:
+27</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
 <tr><th>47</th>
 <td>IfStatement</td>
 <td>Killed</td>
-<td>96
+<td>98
 :
 8</td>
 <td><code>.</code></td>
 <td><code></code></td></tr>
 <tr><th>48</th>
-<td>IfStatement</td>
+<td>BinaryExpression</td>
 <td>Killed</td>
-<td>96
+<td>83
 :
-8</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
+27</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
 <tr><th>49</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>98
+<td>108
 :
-132</td>
+85</td>
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
 <tr><th>50</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>114
+<td>100
 :
-35</td>
-<td><code>+</code></td>
-<td><code>-</code></td></tr>
-<tr><th>51</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>106
-:
-85</td>
+132</td>
 <td><code>===</code></td>
 <td><code>!==</code></td></tr>
-<tr><th>52</th>
+<tr><th>51</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
 <td>116
 :
-39</td>
+35</td>
+<td><code>+</code></td>
+<td><code>-</code></td></tr>
+<tr><th>52</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>117
+:
+37</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
 <tr><th>53</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>115
+<td>119
 :
-37</td>
+39</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
 <tr><th>54</th>
@@ -672,67 +676,107 @@ export default class ScoreResultCalculator {
 <tr><th>55</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>117
+<td>120
 :
 39</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
 <tr><th>56</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>122
+:
+26</td>
+<td><code>></code></td>
+<td><code></code></td></tr>
+<tr><th>57</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>119
+<td>122
+:
+37</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
+<tr><th>58</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>122
+:
+37</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
+<tr><th>59</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>122
+:
+57</td>
+<td><code>/</code></td>
+<td><code>*</code></td></tr>
+<tr><th>60</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>122
+:
+70</td>
+<td><code>*</code></td>
+<td><code>/</code></td></tr>
+<tr><th>61</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>123
+:
+44</td>
+<td><code>></code></td>
+<td><code></code></td></tr>
+<tr><th>62</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>123
+:
+55</td>
+<td><code>></code></td>
+<td><code><=</code></td></tr>
+<tr><th>63</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>121
 :
 36</td>
 <td><code>+</code></td>
 <td><code>-</code></td></tr>
-<tr><th>57</th>
+<tr><th>64</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>133
+<td>123
 :
-54</td>
-<td><code>||</code></td>
-<td><code>&&</code></td></tr>
-<tr><th>58</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>133
-:
-35</td>
-<td><code>/</code></td>
-<td><code>*</code></td></tr>
-<tr><th>59</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>134
-:
-74</td>
-<td><code>||</code></td>
-<td><code>&&</code></td></tr>
-<tr><th>60</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>134
-:
-68</td>
+90</td>
 <td><code>*</code></td>
 <td><code>/</code></td></tr>
-<tr><th>61</th>
+<tr><th>65</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
-<td>134
+<td>123
 :
-53</td>
+55</td>
+<td><code>></code></td>
+<td><code>>=</code></td></tr>
+<tr><th>66</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>123
+:
+96</td>
+<td><code>||</code></td>
+<td><code>&&</code></td></tr>
+<tr><th>67</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>123
+:
+75</td>
 <td><code>/</code></td>
-<td><code>*</code></td></tr>
-<tr><th>62</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>133
-:
-48</td>
-<td><code>*</code></td>
-<td><code>/</code></td></tr></tbody></table></div></div></div></div>
+<td><code>*</code></td></tr></tbody></table></div></div></div></div>
 <footer>Generated with stryker-html-reporter generator. Visit the 
 <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
 <script src="__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>

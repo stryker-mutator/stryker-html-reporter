@@ -75,7 +75,7 @@ export default class TestFrameworkOrchestrator {
   private determineFrameworkWithCoverageAnalysis(): TestFramework | null </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="6"><span class="badge badge-secondary">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">{}</span><span class="stryker-original-code" data-mutant="6"><span class="bg-null">{
     let testFramework: TestFramework | null = null;
     if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="7"><span class="badge badge-secondary">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="8"><span class="badge badge-secondary">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">false</span><span class="stryker-original-code" data-mutant="7"><span class="stryker-original-code" data-mutant="8"><span class="bg-null">this.options.testFramework</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="9"><span class="badge badge-danger">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">{}</span><span class="stryker-original-code" data-mutant="9"><span class="bg-danger-light">{
-      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="10"><span class="badge badge-secondary">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="11"><span class="badge badge-danger">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">true</span><span class="stryker-original-code" data-mutant="10"><span class="stryker-original-code" data-mutant="11"><span class="bg-danger-light">this.testFrameworkExists(this.options.testFramework)</span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="12"><span class="badge badge-danger">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">{}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-danger-light">{
+      if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="10"><span class="badge badge-danger">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="11"><span class="badge badge-secondary">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">false</span><span class="stryker-original-code" data-mutant="10"><span class="stryker-original-code" data-mutant="11"><span class="bg-danger-light">this.testFrameworkExists(this.options.testFramework)</span></span></span><span class="bg-danger-light">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="12"><span class="badge badge-danger">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">{}</span><span class="stryker-original-code" data-mutant="12"><span class="bg-danger-light">{
         this.log.debug(`Using testFramework ${this.options.testFramework} based on \`testFramework\` setting`);
         testFramework = this.createTestFramework(this.options.testFramework);
       }</span></span><span class="bg-danger-light"> else </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="13"><span class="badge badge-danger">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">{}</span><span class="stryker-original-code" data-mutant="13"><span class="bg-danger-light">{
@@ -124,6 +124,22 @@ export default class TestFrameworkOrchestrator {
 <td><code>.    ...    '</code></td>
 <td><code></code></td></tr>
 <tr><th>2</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>11
+:
+8</td>
+<td><code>.    ...    '</code></td>
+<td><code></code></td></tr>
+<tr><th>3</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>11
+:
+38</td>
+<td><code>!==</code></td>
+<td><code>===</code></td></tr>
+<tr><th>4</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>11
@@ -132,7 +148,7 @@ export default class TestFrameworkOrchestrator {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>3</th>
+<tr><th>5</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>14
@@ -141,7 +157,7 @@ export default class TestFrameworkOrchestrator {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>4</th>
+<tr><th>6</th>
 <td>Block</td>
 <td>TranspileError</td>
 <td>19
@@ -151,47 +167,23 @@ export default class TestFrameworkOrchestrator {
    ...;
   }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>5</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>21
-:
-8</td>
-<td><code>.       .</code></td>
-<td><code></code></td></tr>
-<tr><th>6</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>21
-:
-8</td>
-<td><code>.       .</code></td>
-<td><code></code></td></tr>
 <tr><th>7</th>
-<td>BinaryExpression</td>
-<td>Killed</td>
-<td>11
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>21
 :
-38</td>
-<td><code>!==</code></td>
-<td><code>===</code></td></tr>
+8</td>
+<td><code>.       .</code></td>
+<td><code></code></td></tr>
 <tr><th>8</th>
 <td>IfStatement</td>
-<td>Killed</td>
-<td>11
+<td>TranspileError</td>
+<td>21
 :
 8</td>
-<td><code>.    ...    '</code></td>
+<td><code>.       .</code></td>
 <td><code></code></td></tr>
 <tr><th>9</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>22
-:
-10</td>
-<td><code>.    ...    )</code></td>
-<td><code></code></td></tr>
-<tr><th>10</th>
 <td>Block</td>
 <td>Survived</td>
 <td>21
@@ -200,9 +192,17 @@ export default class TestFrameworkOrchestrator {
 <td><code>{
    ...    }</code></td>
 <td><code>{}</code></td></tr>
-<tr><th>11</th>
+<tr><th>10</th>
 <td>IfStatement</td>
 <td>Survived</td>
+<td>22
+:
+10</td>
+<td><code>.    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>11</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
 <td>22
 :
 10</td>
@@ -219,15 +219,6 @@ export default class TestFrameworkOrchestrator {
 <td><code>{}</code></td></tr>
 <tr><th>13</th>
 <td>Block</td>
-<td>Killed</td>
-<td>28
-:
-11</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>14</th>
-<td>Block</td>
 <td>TranspileError</td>
 <td>38
 :
@@ -235,6 +226,15 @@ export default class TestFrameworkOrchestrator {
 <td><code>{
    ...;
   }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>14</th>
+<td>Block</td>
+<td>Killed</td>
+<td>28
+:
+11</td>
+<td><code>{
+   ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>15</th>
 <td>Block</td>
@@ -248,9 +248,9 @@ export default class TestFrameworkOrchestrator {
 <tr><th>16</th>
 <td>Block</td>
 <td>Survived</td>
-<td>34
+<td>41
 :
-43</td>
+54</td>
 <td><code>{
    ...;
   }</code></td>
@@ -258,9 +258,9 @@ export default class TestFrameworkOrchestrator {
 <tr><th>17</th>
 <td>Block</td>
 <td>Survived</td>
-<td>41
+<td>34
 :
-54</td>
+43</td>
 <td><code>{
    ...;
   }</code></td>
@@ -274,21 +274,21 @@ export default class TestFrameworkOrchestrator {
 <td><code>></code></td>
 <td><code>>=</code></td></tr>
 <tr><th>19</th>
-<td>PrefixUnaryExpression</td>
-<td>Survived</td>
-<td>42
-:
-82</td>
-<td><code>-</code></td>
-<td><code>+</code></td></tr>
-<tr><th>20</th>
 <td>BinaryExpression</td>
 <td>Survived</td>
 <td>42
 :
 80</td>
 <td><code>></code></td>
-<td><code><=</code></td></tr></tbody></table></div></div></div></div>
+<td><code><=</code></td></tr>
+<tr><th>20</th>
+<td>PrefixUnaryExpression</td>
+<td>Survived</td>
+<td>42
+:
+82</td>
+<td><code>-</code></td>
+<td><code>+</code></td></tr></tbody></table></div></div></div></div>
 <footer>Generated with stryker-html-reporter generator. Visit the 
 <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
 <script src="__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>

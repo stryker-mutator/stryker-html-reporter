@@ -58,7 +58,7 @@ abstract class ProgressKeeper implements Reporter {
   };
 
   onAllMutantsMatchedWithTests(matchedMutants: ReadonlyArray&lt;MatchedMutant&gt;): void </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="0"><span class="badge badge-success">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">{}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success-light">{
-    this.progress.total = matchedMutants.filter(m =&gt; m.scopedTestIds.length </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="1"><span class="badge badge-success">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">&lt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="2"><span class="badge badge-success">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">&gt;=</span><span class="stryker-original-code" data-mutant="1"><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">&gt;</span></span></span><span class="bg-success-light"> 0).length;
+    this.progress.total = matchedMutants.filter(m =&gt; m.scopedTestIds.length </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="1"><span class="badge badge-success">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">&gt;=</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="2"><span class="badge badge-success">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">&lt;=</span><span class="stryker-original-code" data-mutant="1"><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">&gt;</span></span></span><span class="bg-success-light"> 0).length;
   }</span></span><span class="bg-null">
 
   onMutantTested(result: MutantResult): void </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">{}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success-light">{
@@ -97,7 +97,7 @@ export default ProgressKeeper</span>;</code></pre></div>
 :
 76</td>
 <td><code>></code></td>
-<td><code><=</code></td></tr>
+<td><code>>=</code></td></tr>
 <tr><th>2</th>
 <td>BinaryExpression</td>
 <td>Killed</td>
@@ -105,7 +105,7 @@ export default ProgressKeeper</span>;</code></pre></div>
 :
 76</td>
 <td><code>></code></td>
-<td><code>>=</code></td></tr>
+<td><code><=</code></td></tr>
 <tr><th>3</th>
 <td>Block</td>
 <td>Killed</td>

@@ -69,11 +69,11 @@ export default class TranspilerFacade implements Transpiler {
     }</span></span><span class="bg-success-light">
   }</span></span><span class="bg-null">
 
-  transpile(files: File[]): TranspileResult </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="4"><span class="badge badge-secondary">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">{}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-null">{
+  public transpile(files: File[]): Promise&lt;TranspileResult&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="4"><span class="badge badge-secondary">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">{}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-null">{
     return this.performTranspileChain(this.createPassThruTranspileResult(files));
   }</span></span><span class="bg-null">
 
-  getMappedLocation(sourceFileLocation: FileLocation): FileLocation </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="5"><span class="badge badge-secondary">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-null">{
+  public getMappedLocation(sourceFileLocation: FileLocation): FileLocation </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="5"><span class="badge badge-secondary">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">{}</span><span class="stryker-original-code" data-mutant="5"><span class="bg-null">{
     return this.performMappedLocationChain(sourceFileLocation);
   }</span></span><span class="bg-null">
 
@@ -89,13 +89,13 @@ export default class TranspilerFacade implements Transpiler {
     }</span></span><span class="bg-null">
   }</span></span><span class="bg-null">
 
-  private performTranspileChain(
+  private async performTranspileChain(
     currentResult: TranspileResult,
     remainingChain: NamedTranspiler[] = this.innerTranspilers.slice()
-  ): TranspileResult </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="11"><span class="badge badge-secondary">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-null">{
+  ): Promise&lt;TranspileResult&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="11"><span class="badge badge-secondary">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">{}</span><span class="stryker-original-code" data-mutant="11"><span class="bg-null">{
     const next = remainingChain.shift();
     if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="12"><span class="badge badge-secondary">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="13"><span class="badge badge-secondary">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">false</span><span class="stryker-original-code" data-mutant="12"><span class="stryker-original-code" data-mutant="13"><span class="bg-null">next</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="14"><span class="badge badge-secondary">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">{}</span><span class="stryker-original-code" data-mutant="14"><span class="bg-null">{
-      const nextResult = next.transpiler.transpile(currentResult.outputFiles);
+      const nextResult = await next.transpiler.transpile(currentResult.outputFiles);
       if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="15"><span class="badge badge-secondary">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">true</span><span class="stryker-original-code" data-mutant="15"><span class="stryker-original-code" data-mutant="16"><span class="bg-success-light">nextResult.error</span></span></span><span class="bg-null">) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="17"><span class="badge badge-secondary">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">{}</span><span class="stryker-original-code" data-mutant="17"><span class="bg-null">{
         nextResult.error = `Execute ${next.name}: ${nextResult.error}`;
         return nextResult;
@@ -141,7 +141,7 @@ export default class TranspilerFacade implements Transpiler {
 <td>TranspileError</td>
 <td>19
 :
-44</td>
+60</td>
 <td><code>{
    ...;
   }</code></td>
@@ -151,7 +151,7 @@ export default class TranspilerFacade implements Transpiler {
 <td>TranspileError</td>
 <td>23
 :
-68</td>
+75</td>
 <td><code>{
    ...;
   }</code></td>
@@ -205,7 +205,7 @@ export default class TranspilerFacade implements Transpiler {
 <td>TranspileError</td>
 <td>42
 :
-21</td>
+30</td>
 <td><code>{
    ...}
   }</code></td>
@@ -236,51 +236,6 @@ export default class TranspilerFacade implements Transpiler {
    ...    }</code></td>
 <td><code>{}</code></td></tr>
 <tr><th>13</th>
-<td>IfStatement</td>
-<td>TranspileError</td>
-<td>46
-:
-10</td>
-<td><code>.</code></td>
-<td><code></code></td></tr>
-<tr><th>14</th>
-<td>Block</td>
-<td>TranspileError</td>
-<td>46
-:
-28</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>15</th>
-<td>Block</td>
-<td>TranspileError</td>
-<td>49
-:
-13</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>16</th>
-<td>Block</td>
-<td>TranspileError</td>
-<td>52
-:
-11</td>
-<td><code>{
-   ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>17</th>
-<td>Block</td>
-<td>TranspileError</td>
-<td>57
-:
-72</td>
-<td><code>{
-   ...;
-  }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>18</th>
 <td>Block</td>
 <td>Killed</td>
 <td>11
@@ -290,7 +245,60 @@ export default class TranspilerFacade implements Transpiler {
    ...}
   }</code></td>
 <td><code>{}</code></td></tr>
+<tr><th>14</th>
+<td>IfStatement</td>
+<td>TranspileError</td>
+<td>46
+:
+10</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>15</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>46
+:
+28</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>16</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>49
+:
+13</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>17</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>52
+:
+11</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>18</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>57
+:
+72</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
 <tr><th>19</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>46
+:
+10</td>
+<td><code>.</code></td>
+<td><code></code></td></tr>
+<tr><th>20</th>
 <td>Block</td>
 <td>Killed</td>
 <td>14
@@ -298,15 +306,7 @@ export default class TranspilerFacade implements Transpiler {
 30</td>
 <td><code>{
    ...    }</code></td>
-<td><code>{}</code></td></tr>
-<tr><th>20</th>
-<td>IfStatement</td>
-<td>Killed</td>
-<td>46
-:
-10</td>
-<td><code>.</code></td>
-<td><code></code></td></tr></tbody></table></div></div></div></div>
+<td><code>{}</code></td></tr></tbody></table></div></div></div></div>
 <footer>Generated with stryker-html-reporter generator. Visit the 
 <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer></div>
 <script src="../__resources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
